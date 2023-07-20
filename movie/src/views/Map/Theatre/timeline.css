@@ -1,0 +1,8 @@
+.tl-slidenav-next .tl-slidenav-title, .tl-slidenav-next .tl-slidenav-description {
+  margin-left: -50px !important;
+}
+
+.tl-timeline .tl-caption, .tl-timeline .tl-credit {
+  width: 100% !important;
+  text-align: center !important;
+}

@@ -1,0 +1,3228 @@
+{
+  "title": {
+    "text": {
+      "headline": "上海影戏院大事记",
+      "text": "穿越时光，通过珍贵的历史资料和时空展示，回顾上海影戏院历史"
+    }
+  },
+  "events": [
+    {
+      "start_date": {
+        "year": "1867"
+      },
+      "text": {
+        "headline": "兰心戏院落成",
+        "text": "1867年3月1日英国侨民集资在诺门路圆明园路口创建的兰心戏院落成"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1871"
+      },
+      "text": {
+        "headline": "兰溪戏院毁于火灾",
+        "text": "1871年3月2日兰溪戏院毁于火灾"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1872"
+      },
+      "text": {
+        "headline": "重建“兰心”",
+        "text": "1872年5月，A.D.C剧团募集到资金，在博物院路（今虎丘路142-146号）、香港路和圆明园路交界处买地重建“兰心”"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1874"
+      },
+      "text": {
+        "headline": "兰心戏院开幕",
+        "text": "1874年1月27日，兰心戏院开幕，A.D.C剧团第37期公演"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1906"
+      },
+      "text": {
+        "headline": "“文明大舞台”租地建造",
+        "text": "1906年（光绪三十二年）由巡捕房包探头目童子卿以协兴公司名义斥银12万两，向哈同洋行租地建造。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/fjvpqmj7hch7kspu.jpg",
+        "caption": "图为1907年11月3日至5日（农历九月二十九日至十月一日）王钟声创建的中国境内首家新剧团春阳社在兰心上演《黑奴吁天录》剧照演出后合影，该剧采用西洋布景、灯光和服装，并有分幕形式，轰动一时",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/fjvpqmj7hch7kspu"
+      },
+      "start_date": {
+        "year": "1907"
+      },
+      "text": {
+        "headline": "“春阳社”在“兰心”公演",
+        "text": "1907年10月7日-11月5日，“春阳社”作为第一个在“兰心”公演的中国剧团以一部《黑奴吁天录》引起轰动。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1909",
+        "month": "12",
+        "day": "30"
+      },
+      "text": {
+        "headline": "“文明大舞台”落成开业",
+        "text": "1909年12月30日（宣统元年11月18日）落成开业，取名文明大舞台，首演邀“内庭供奉”刘永春、吕月樵，赵如泉、沈韵秋等。大舞台班底为杨小楼、王又宸、小子和、刘鸿声等京剧名角。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1912"
+      },
+      "text": {
+        "headline": "吕月樵等排演",
+        "text": "1912年吕月樵、赵如泉与沈韵秋等运用该台灯光布景、电动机械转台等条件，排演全本《目莲救母》，冯子和的《新茶花女》，林树森、金少山、高雪樵的《大刀王五》等。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/rw81ypxzuspbe86o.jpg",
+        "caption": "图为1913年新民社演出《恶家庭》剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/rw81ypxzuspbe86o"
+      },
+      "start_date": {
+        "year": "1913"
+      },
+      "text": {
+        "headline": "新民社首演《恶家庭》",
+        "text": "1913年8月，新民社首演《恶家庭》于兰心大戏院，该剧由知名剧人郑正秋合其《苦丫头》、《奶娘怨》两戏而成，因剧情贴近现实生活而受到市民欢迎。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1914"
+      },
+      "text": {
+        "headline": "梅兰芳、王凤卿登台献艺",
+        "text": "1914年梅兰芳与王凤卿在大舞台登台献艺。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1916"
+      },
+      "text": {
+        "headline": "“小达子”领衔排演",
+        "text": "1916年小达子（李桂春）领衔排演连台本戏《宏碧缘》、《狸猫换太子》等红极一时。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1919"
+      },
+      "text": {
+        "headline": "更名荣记大舞台",
+        "text": "1919年大舞台由上海大亨黄金荣接办，更名为荣记大舞台。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1922"
+      },
+      "text": {
+        "headline": "“长江剧场”兴建",
+        "text": "1922年由英国人投资兴建，匈牙利设计师邬达克设计。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1923",
+        "month": "2",
+        "day": "9"
+      },
+      "text": {
+        "headline": "“卡尔登大戏院”定名",
+        "text": "1923年2月9日开幕，定名为卡尔登大戏院，英文名CarltonTheatre。并与美国派拉蒙制片公司达成协议，作为其首轮影戏院。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1925"
+      },
+      "text": {
+        "headline": "伦敦剧团于兰心大戏院演出",
+        "text": "1925年4月9日，英国伦敦剧团来沪演出于博物院路兰心大戏院，共演6天。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1925"
+      },
+      "text": {
+        "headline": "卢根任经理",
+        "text": "1925年起任用英籍粤人卢根为经理。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/0tj8ce1qoe4n4476.jpg",
+        "caption": "图为1928年12月23日《申报》刊登的大光明影戏院开幕广告。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/0tj8ce1qoe4n4476"
+      },
+      "start_date": {
+        "year": "1928",
+        "month": "12",
+        "day": "23"
+      },
+      "text": {
+        "headline": "梅兰芳大光明影戏院揭幕",
+        "text": "1928年12月23日，大光明影戏院开幕，院方特邀京剧名伶梅兰芳负责揭幕。首场上映美国寰球影片公司出品、根据法国著名作家雨果经典小说《笑面人》改编而成的影片《笑声鸳影》（The Man Who Laughs）。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/bvj214atbdc822eh.jpg",
+        "caption": "图为1928年12月24日《申报》刊登的周瘦鹃撰写《梅开光明记》一文",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/bvj214atbdc822eh"
+      },
+      "start_date": {
+        "year": "1928",
+        "month": "12",
+        "day": "24"
+      },
+      "text": {
+        "headline": "《梅开光明记》",
+        "text": "1928年12月24日《申报》刊登的周瘦鹃撰写《梅开光明记》一文，详细记叙开幕日志，作者时任大光明戏院广告部主任与《申报•自由谈》主编。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/b7cih6hfatnpig27.jpg",
+        "caption": "1928年大光明影戏院建筑外景照",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/b7cih6hfatnpig27"
+      },
+      "start_date": {
+        "year": "1928",
+        "month": "7"
+      },
+      "text": {
+        "headline": "卡尔登跳舞场改建",
+        "text": "1928年7月，潮州商人高永清（原名高勇醒）与美国投资商合作，以每月银元6000两的价格租下静安寺路50号（现南京西路216号）四亩多土地（约2600平方米），并耗资20万两将原土地上刚停业不久的卡尔登跳舞场改建成一座新式影院，取名大光明影戏院（Grand Theatre），俗称“老大光明”（与1933年邬达克设计的“新大光明”以示区分）。设计者为道达洋行（DOWDALL  READ  TULASHE  ARCHITECTS），该洋行在上海一般为世人所熟悉的主要建筑作品有位于今天外滩源地区的新天安堂，以及赫赫有名的徐家汇天主堂。戏院建成后，于同年12月23日正式开幕。1931年11月，因受到“不怕死事件”的影响，经营不善而宣告停业。如今，这座建筑已在1933年的重建中消失不见，唯有在照片中一睹其当年丰采。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1929"
+      },
+      "text": {
+        "headline": "联怡公司租地",
+        "text": "1929年何挺然名下的联怡公司向潮州同乡会馆租地，在上海八仙桥爱多亚路（后改名延安东路）523号投资建造南京大戏院。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1929",
+        "month": "5"
+      },
+      "text": {
+        "headline": "南京大戏院设计完成",
+        "text": "1929年5月范文照完成了南京大戏院的图纸设计，至此奠定了南京大戏院的整体风格。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1929"
+      },
+      "text": {
+        "headline": "“兰心”出售",
+        "text": "1929年1月，A.D.C.剧团董事会以17.5万两银子的代价，将“兰心”的土地权和房产权卖给一个中国人并于当年4月迁出。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/uiiomc1snyy7o54n.jpg",
+        "caption": "图为1929年9月1日大光明在《申报》公开发表开映有声影片宣言",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/uiiomc1snyy7o54n"
+      },
+      "start_date": {
+        "year": "1929",
+        "month": "9",
+        "day": "1"
+      },
+      "text": {
+        "headline": "大光明开映有声影片",
+        "text": "1929年9月1日大光明在《申报》公开发表开映有声影片宣言。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1929",
+        "month": "9",
+        "day": "6"
+      },
+      "text": {
+        "headline": "蒋介石夫妇观影",
+        "text": "1929年9月6日，蒋介石夫妇同赴大光明，观看摄有蒋介石演说三民主义镜头的有声新闻片。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/klvhu1ei1inw78dn.jpg",
+        "caption": "1930年3月19日《申报》刊登南京大戏院即将开业广告",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/klvhu1ei1inw78dn"
+      },
+      "start_date": {
+        "year": "1930",
+        "month": "3",
+        "day": "26"
+      },
+      "text": {
+        "headline": "南京大戏院正式营业",
+        "text": "1930年3月26日南京大戏院正式营业放映，首映的是美国环球电影公司的歌舞片《百老汇》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1930",
+        "month": "2",
+        "day": "22"
+      },
+      "text": {
+        "headline": "“不怕死”事件",
+        "text": "1930年2月22日，剧作家洪深在大光明观看大光明戏院看美国喜剧演员罗克主演的《不怕死》一片，因该剧出现诸多形貌猥琐之中国人形象而在放映现场发表演说，抗议演出。之后更用一纸诉状将大光明告上了法庭，进而引发了一场声势浩大的抵制辱华影片运动，史称“不怕死”事件。最终，在国人抵制下，大光明影戏院营业每况愈下，不得不呈文上海市电影检查委员会，表示愿意登报向国人道歉、检查所有放映影片和不再放映罗克主演的电影。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1930"
+      },
+      "text": {
+        "headline": "新光大戏院建成",
+        "text": "1930年新光大戏院建成，由英籍华人陈伯藻出资，哈沙德洋行设计，杨瑞记营造厂承建。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1930",
+        "month": "11",
+        "day": "21"
+      },
+      "text": {
+        "headline": "新光影艺苑开幕",
+        "text": "1930年11月21日开幕，占地1160平方米。3层钢筋混凝土结构，面积2860平方米，设座1260只。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1930"
+      },
+      "text": {
+        "headline": "《万里寻兄词》",
+        "text": "1930年孙瑜导演《野草闲花》时，为影片写的主题曲《万里寻兄词》，由影片男女主角金焰和阮玲玉演唱，卡尔登乐队担任伴奏。孙瑜预先请大中华唱片公司录成唱片，然后在放映时配合演员开口唱歌的画面，播出唱片。这首《万里寻兄词》也因此成为我国影坛的第一首电影主题曲。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1931"
+      },
+      "text": {
+        "headline": "再建“兰心”",
+        "text": "1931年2月，A.D.C.剧团在法租界蒲石路（今长乐路）迈尔西爱路口（今茂名南路57号）购得土地再建“兰心”，戏院由新瑞和洋行（Messrs. Davies & Thomas Civil Engineers and Architects）承建。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1931"
+      },
+      "text": {
+        "headline": "兰心大戏院开幕典礼",
+        "text": "1931年2月5日，下午5时半，上海兰心大戏院举行新院建成开幕典礼。英国戏剧爱好者俱乐部（A.D.C.）首次在该院演出了轻音乐喜剧《上海之光》，茵·斯通主演。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1931"
+      },
+      "text": {
+        "headline": "工部局乐队定期举行音乐会",
+        "text": "1931年起，工部局乐队定期举行音乐会"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1931"
+      },
+      "text": {
+        "headline": "兰心戏院兼放映电影",
+        "text": "1931年12月8日起，兰心戏院兼放映电影。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/1ywpxpfvcvar5nbz.jpg",
+        "caption": "图为1931年10月1日，大光明暂停营业启事。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/1ywpxpfvcvar5nbz"
+      },
+      "start_date": {
+        "year": "1931",
+        "month": "10",
+        "day": "1"
+      },
+      "text": {
+        "headline": "大光明暂停营业",
+        "text": "1931年10月1日，大光明暂停营业启事。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/2ikp7dclk1mx4348.jpg",
+        "caption": "图为1931年10月邬达克设计重建大光明第二轮方案，二层平面图",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/2ikp7dclk1mx4348"
+      },
+      "start_date": {
+        "year": "1931",
+        "month": "10",
+        "day": "1"
+      },
+      "text": {
+        "headline": "邬达克设计重建大光明",
+        "text": "1931年10月邬达克设计重建大光明第二轮方案，二层平面图。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/8hnldand6jqrvfxb.jpg",
+        "caption": "图为1931年3月7日大光明公映影片《五十年后之新世界》说明书",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/8hnldand6jqrvfxb"
+      },
+      "start_date": {
+        "year": "1931",
+        "month": "3",
+        "day": "7"
+      },
+      "text": {
+        "headline": "《五十年后之新世界》",
+        "text": "1931年3月7日大光明公映影片《五十年后之新世界》说明书。这是当时非常超前的一部科幻巨制，描写了五十年后的种种景象。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/razt01hmme21ezdb.jpg",
+        "caption": "图为1931年8月邬达克设计重建大光明第一轮方案，地块平面图",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/razt01hmme21ezdb"
+      },
+      "start_date": {
+        "year": "1931",
+        "month": "8",
+        "day": "1"
+      },
+      "text": {
+        "headline": "大光明重建第一轮方案",
+        "text": "1931年8月邬达克设计重建大光明第一轮方案，地块平面图。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1931",
+        "month": "9",
+        "day": "30"
+      },
+      "text": {
+        "headline": "大光明影戏院被迫停业",
+        "text": "1931年9月30日，大光明影戏院被迫停业，此前因受“不怕死”事件影响而一蹶不振。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/drm11t3si5ec36qt.jpg",
+        "caption": "电影《歌女红牡丹》剧照",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/drm11t3si5ec36qt"
+      },
+      "start_date": {
+        "year": "1931"
+      },
+      "text": {
+        "headline": "《歌女红牡丹》首度公映",
+        "text": "1931年由影星胡蝶主演的中国第一部有声电影《歌女红牡丹》在此首度公映，引起轰动。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1932",
+        "month": "11",
+        "day": "1"
+      },
+      "text": {
+        "headline": "工部局乐队首场演出",
+        "text": "1932年11月1日工部局乐队在南京大戏院举行首场演出。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1932",
+        "month": "12",
+        "day": "13"
+      },
+      "text": {
+        "headline": "第一部国产片《银河双星》",
+        "text": "1932年12月13日南京大戏院放映第一部国产片《银河双星》。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/05nl50tjxuy1v6cl.jpg",
+        "caption": "图为1932年1月邬达克设计重建大光明第三轮方案，首层平面",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/05nl50tjxuy1v6cl"
+      },
+      "start_date": {
+        "year": "1932",
+        "month": "1",
+        "day": "1"
+      },
+      "text": {
+        "headline": "大光明重建第三轮方案",
+        "text": "1932年1月邬达克设计重建大光明第三轮方案，首层平面。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1932"
+      },
+      "text": {
+        "headline": "大戏院转手",
+        "text": "1932年后大戏院归已成为大影院商的卢根所有。抗日战争前夕转手粤商曾焕堂。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1933",
+        "month": "6",
+        "day": "16"
+      },
+      "text": {
+        "headline": "莫色维支钢琴独奏音乐会",
+        "text": "1933年6月16日莫色维支钢琴独奏音乐会，工部局交响乐队协奏。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1933"
+      },
+      "text": {
+        "headline": "大舞台停业拆建",
+        "text": "1933年大舞台停业拆建，黄金荣拆除旧房，在原地翻建，请美国著名建筑设计师，仿照纽约最新式舞台建造，重建后正门改在二马路。观众席位2632个。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1933",
+        "month": "6"
+      },
+      "text": {
+        "headline": "大光明音乐会",
+        "text": "1933年6月起，大光明成为上海工部局乐队常驻演出场所，除每星期日交响音乐会外，一些特别音乐会也经常在此举行，工部局“大光明音乐会”成为闻名沪上的金字招牌。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/4fqvrb4s81560li6.jpg",
+        "caption": "图为1933年6月14日《申报》刊登大光明大戏院重新开业的整版广告",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/4fqvrb4s81560li6"
+      },
+      "start_date": {
+        "year": "1933",
+        "month": "6",
+        "day": "14"
+      },
+      "text": {
+        "headline": "新大光明大戏院开幕",
+        "text": "1933年6月14日，新大光明大戏院开幕，成为专门放映好莱坞影片的头轮影院。首映美国米高梅公司出品影片《热血雄心》（Hell Below）"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1933"
+      },
+      "text": {
+        "headline": "明星公司首映影院",
+        "text": "1933年为明星公司首映影院。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1933"
+      },
+      "text": {
+        "headline": "金城大戏院筹建",
+        "text": "1933年国华影业公司经理柳中浩、柳中亮兄弟筹资建造了金城大戏院，由华盖建筑事务所设计师童寯、赵琛设计，新恒泰营造厂承造，耗资16万元，有观众席1786座。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1934"
+      },
+      "text": {
+        "headline": "张翼鹏《西游记》",
+        "text": "1934年张翼鹏在大舞台连演八年连台本戏《西游记》，共三十四本。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1934",
+        "month": "9",
+        "day": "9"
+      },
+      "text": {
+        "headline": "改建大舞台开幕",
+        "text": "1934年9月9日改建后的大舞台开幕，梅兰芳、马连良两大剧团在此演出。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1934"
+      },
+      "text": {
+        "headline": "兰心首演《孟姜女》",
+        "text": "1934年11月，中国歌舞剧社在兰心首演中国第一部“音乐剧”《孟姜女》（The Great Wall）。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1934"
+      },
+      "text": {
+        "headline": "昆剧保存社第二次公演",
+        "text": "1934年昆剧保存社借新光大戏院举办第二次公演，演出昆剧两天，邀请梅兰芳、俞振飞、顾传玠等昆曲名家参演，众多曲家粉墨登场，亦可称民国上海昆剧界的一次盛会。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/fuy77o04t7bq0wkc.jpg",
+        "caption": "渔光曲金城大戏院上映海报",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/fuy77o04t7bq0wkc"
+      },
+      "start_date": {
+        "year": "1934"
+      },
+      "text": {
+        "headline": "《渔光曲》等上映",
+        "text": "1934年至1935年联华影业公司摄制的《渔光曲》、《大路》及《新女性》相继在上海金城大戏院上映。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1934",
+        "month": "12"
+      },
+      "text": {
+        "headline": "《桃李劫》首映",
+        "text": "1934年12月，电通影片公司的创业作品《桃李劫》在上海金城大戏院首映，这是中国第一部以声音作为艺术手段创作的有声影片。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1934",
+        "month": "2",
+        "day": "1"
+      },
+      "text": {
+        "headline": "《人生》首映",
+        "text": "1934年2月1日，金城大戏院正式落成开业，首轮放映影片就是阮玲玉主演的《人生》"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1935"
+      },
+      "text": {
+        "headline": "“康记大舞台”",
+        "text": "1935年黄金荣把大舞台让给自己的徒弟，并将“荣记大舞台”改为“康记大舞台”。此后多次换老板，但都是黄金荣的徒子徒孙。大舞台成为海派京剧形成和发展的历史见证地。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1935"
+      },
+      "text": {
+        "headline": "《琵琶记》等开演",
+        "text": "1935年3月14日，德语华剧《琵琶记》、《牡丹亭》在兰心大戏院开演。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1935"
+      },
+      "text": {
+        "headline": "星期交响音乐会",
+        "text": "1935年5月19日，工部局管弦乐队在兰心大戏院举行第30次星期交响音乐会，美国歌唱家R.E.赛尔弗莱奇演唱彼得·考尼留斯《新嫁娘之歌》，波兰青年钢琴家维萨·吐马才斯基演奏圣桑的《G大调钢琴协奏曲》等节目"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/k01meui6nj6oo6ou.jpg",
+        "caption": "图为影片《天伦》在大光明放映，张贴巨幅海报之外景照",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/k01meui6nj6oo6ou"
+      },
+      "start_date": {
+        "year": "1935",
+        "month": "12",
+        "day": "1"
+      },
+      "text": {
+        "headline": "《天伦》在大光明上映",
+        "text": "1935年12月，上海联华影业公司出品黑白配乐默片《天伦》在大光明上映，成为第一部正式在大光明排片表中出现的国产影片。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/g44zrx6bi44b8fdu.jpg",
+        "caption": "图为影片《放荡的女皇》（The Scarlet Empress）海报之外景照",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/g44zrx6bi44b8fdu"
+      },
+      "start_date": {
+        "year": "1935",
+        "month": "12",
+        "day": "1"
+      },
+      "text": {
+        "headline": "《放荡的女皇》",
+        "text": "1935年大光明大戏院悬挂玛琳•黛德丽（Marlene Dietrich）主演影片《放荡的女皇》（The Scarlet Empress）"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/5oo7f648l02srtb2.jpg",
+        "caption": "图为《红羊豪侠传》首映广告",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/5oo7f648l02srtb2"
+      },
+      "start_date": {
+        "year": "1935",
+        "month": "2",
+        "day": "3"
+      },
+      "text": {
+        "headline": "《红羊豪侠传》",
+        "text": "1935年2月3日23点30分，上海新华影业公司出品的《红羊豪侠传》以除夕夜贺岁电影的名目在大光明大戏院放映，成为第一部登陆大光明的国产片"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/ptimtb83zcb45k3d.jpg",
+        "caption": "图为西藏班禅额尔德尼•曲吉尼玛访沪期间参观大光明大戏院",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/ptimtb83zcb45k3d"
+      },
+      "start_date": {
+        "year": "1935",
+        "month": "5",
+        "day": "1"
+      },
+      "text": {
+        "headline": "西藏班禅参观大光明大戏院",
+        "text": "1935年5月，西藏班禅额尔德尼•曲吉尼玛访沪期间参观大光明大戏院"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/22pkukdr8plecq1i.jpg",
+        "caption": "图为《十字军英雄记》（The Crusades）放映时在大光明张贴的巨幅海报",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/22pkukdr8plecq1i"
+      },
+      "start_date": {
+        "year": "1935",
+        "month": "9",
+        "day": "25"
+      },
+      "text": {
+        "headline": "《十字军英雄记》",
+        "text": "1935年9月25日，大光明放映《十字军英雄记》。该剧由著名史诗剧导演西席•地密尔执导，场面宏大，气势磅礴，曾被《电声》杂志评为1935年度最佳影片。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1935",
+        "month": "1"
+      },
+      "text": {
+        "headline": "《回春曲》等",
+        "text": "1935年1月田汉邀请金焰、王人美、袁牧之、赵丹、胡萍、王莹、英茵、郑君里、刘琼等著名影星成的上海舞台协会演出田汉的《回春曲》、《水银灯下》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1935",
+        "month": "11",
+        "day": "3"
+      },
+      "text": {
+        "headline": "鲁迅观看《钦差大臣》",
+        "text": "1935年11月3日，鲁迅偕许广平到此观看业余剧人协会演出的《钦差大臣》。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/31ls7llk6c86jepj.jpg",
+        "caption": "风云儿女金城大戏院上映海报",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/31ls7llk6c86jepj"
+      },
+      "start_date": {
+        "year": "1935",
+        "month": "5",
+        "day": "24"
+      },
+      "text": {
+        "headline": "《风云儿女》首映",
+        "text": "1935年5月24日，《风云儿女》在金城大戏院首映，片中主题歌《义勇军进行曲》由此唱响并传播。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1935",
+        "month": "6"
+      },
+      "text": {
+        "headline": "《娜拉》等公演",
+        "text": "1935年6月和10月业余剧人协会公演《娜拉》、《钦差大臣》，轰动上海。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1935",
+        "month": "8",
+        "day": "16"
+      },
+      "text": {
+        "headline": "聂耳逝世追悼会",
+        "text": "1935年8月16日，上海音乐界、电影界和戏剧界进步人士冲破阻力，在此举行聂耳逝世追悼会。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/m6pqeoltldqzbdbb.jpg",
+        "caption": "1936年美国影片《泰山情侣》在南京大戏院上映盛况",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/m6pqeoltldqzbdbb"
+      },
+      "start_date": {
+        "year": "1936"
+      },
+      "text": {
+        "headline": "《泰山情侣》",
+        "text": "1936年美国影片《泰山情侣》在南京大戏院上映"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/aianymz818sg7viu.jpg",
+        "caption": "图为1936上海市银钱业声乐团在兰心戏院举行慈善音乐会。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/aianymz818sg7viu"
+      },
+      "start_date": {
+        "year": "1936"
+      },
+      "text": {
+        "headline": "慈善音乐会",
+        "text": "1936上海市银钱业声乐团在兰心戏院举行慈善音乐会"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/fi8tc64qacfcz42y.jpg",
+        "caption": "图为1936年1月9日上海工部局乐队和中国歌唱会在大光明戏院演出海顿清唱剧《创世纪》",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/fi8tc64qacfcz42y"
+      },
+      "start_date": {
+        "year": "1936",
+        "month": "1",
+        "day": "9"
+      },
+      "text": {
+        "headline": "海顿清唱剧《创世纪》",
+        "text": "1936年1月9日上海工部局乐队和中国歌唱会在大光明戏院演出海顿清唱剧《创世纪》，指挥家为工部局乐队队长梅百器，男高音领唱胡然，女高音领唱黄友葵"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1936",
+        "month": "2",
+        "day": "25"
+      },
+      "text": {
+        "headline": "歌王夏理亚宾造访上海",
+        "text": "1936年2月25、27日，享誉世界的低音歌王夏理亚宾造访上海，在大光明献唱两晚。演唱了《伊戈尔王》（Prince Igor）、《塞维利亚理发师》（Barber of Seville）、《伏尔加船歌》、（Volga Boatman）、《跳蚤之歌》（Song of the Flea）等多首世界名曲。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/8kbqypiubryw43r4.jpg",
+        "caption": "图为1936年4月14日工部局乐队在大光明戏院举行盛大的“纪念音乐会”，演出为贝多芬第九交响曲“合唱”场景",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/8kbqypiubryw43r4"
+      },
+      "start_date": {
+        "year": "1936",
+        "month": "4",
+        "day": "14"
+      },
+      "text": {
+        "headline": "纪念音乐会",
+        "text": "1936年4月14日，工部局乐队在大光明举行盛大的“纪念音乐会”，作为乐队即将改组前的最后一次演出。演出曲目为贝多芬第九交响曲“合唱”，这也是贝多芬这部伟大作品首次在中国演出。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/v4dkn6td56yyvvsv.jpg",
+        "caption": "图为1936年6月上海市长吴铁城等在大光明召开会议欢送我国奥运会代表团",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/v4dkn6td56yyvvsv"
+      },
+      "start_date": {
+        "year": "1936",
+        "month": "6",
+        "day": "1"
+      },
+      "text": {
+        "headline": "中国奥运代表团欢送仪式",
+        "text": "1936年6月，中国奥运代表团赴柏林奥运会临行前，上海市长吴铁城曾在大光明召开欢送仪式，此次为中国首次正式组队参加奥运会"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1936"
+      },
+      "text": {
+        "headline": "大戏院改演京剧及沪剧",
+        "text": "1936年大戏院开始改演京剧及沪剧。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/2n1oubpxzdkg7ta5.jpg",
+        "caption": "卓别林和马连良在新光大戏院的演出后合影",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/2n1oubpxzdkg7ta5"
+      },
+      "start_date": {
+        "year": "1936",
+        "month": "3"
+      },
+      "text": {
+        "headline": "卓别林抵沪",
+        "text": "1936年3月卓别林抵沪时，梅兰芳、胡蝶陪同在此观看马连良的演出。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1936",
+        "month": "4"
+      },
+      "text": {
+        "headline": "中国旅行剧团来沪",
+        "text": "1936年4月，唐槐秋主持的中国旅行剧团来沪，在此演出《茶花女》和《雷雨》，连演10天，大获成功。9月演出《祖国》、《复活》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937",
+        "month": "6",
+        "day": "24"
+      },
+      "text": {
+        "headline": "联合音乐会",
+        "text": "1937年6月24日钢琴家米罗维枢、大提琴家皮亚斯特罗、低音提琴家约瑟苏斯特与工部局弦乐队联合音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937",
+        "month": "5",
+        "day": "5"
+      },
+      "text": {
+        "headline": "美国版《天伦》",
+        "text": "1937年5月5日，大光明放映“美国版《天伦》”（英文片名：SONG OF CHINA），该片为美国派拉蒙影片公司与上海联华公司签订合同代理《天伦》在美国发行放映版权后对《天伦》原底片和配音、字幕等进行适当修剪和技术处理后的版本，此前于1936年11月9日在纽约LITTLE CARNEGIE大戏院正式献映。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937"
+      },
+      "text": {
+        "headline": "戏院停业暂作难民所",
+        "text": "1937年，戏院一度停业暂作难民所，到11月底才恢复演出。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937"
+      },
+      "text": {
+        "headline": "上海戏剧界救亡协会",
+        "text": "1937年“八•一三”战争爆发后，上海戏剧界救亡协会在卡尔登大戏院召开，决定筹建救亡演剧队，会长欧阳予倩、洪深、郑伯奇，秘书长马彦祥，组织部长于伶（尤兢）。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937"
+      },
+      "text": {
+        "headline": "卡尔登大戏转手",
+        "text": "1937年卡尔登大戏已从曾焕堂转到李迪云，后又转到大颜料商兼电影商吴性栽手中，吴让妻弟周翼华任经理。此后成为抗战期间上海重要的话剧演出场所。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937",
+        "month": "10",
+        "day": "7"
+      },
+      "text": {
+        "headline": "上海戏剧界救亡协会歌剧部",
+        "text": "1937年10月7日成立的上海戏剧界救亡协会歌剧部（以京剧为主）设于此。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/mldra6ft8aknoftf.jpg",
+        "caption": "复旦大学戏剧工作社首演话剧《日出》特刊",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/mldra6ft8aknoftf"
+      },
+      "start_date": {
+        "year": "1937",
+        "month": "2"
+      },
+      "text": {
+        "headline": "话剧《日出》首演",
+        "text": "1937年2月话剧《日出》由复旦大学戏剧工作社在卡尔登大戏院首演，导演欧阳予倩，封凤子（原名：封季壬）饰陈白露，丁伯骝饰方达生"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937",
+        "month": "3"
+      },
+      "text": {
+        "headline": "上海话剧团体联合公演",
+        "text": "1937年3月下旬上海话剧团体联合公演《大雷雨》、《春风秋雨》、《生死恋》、《求婚》、《结婚》等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937",
+        "month": "6",
+        "day": "4"
+      },
+      "text": {
+        "headline": "上海业余实验剧团公演",
+        "text": "1937年6月4日起上海业余实验剧团公演《罗密欧与朱丽叶》、《武则天》、《太平天国》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937",
+        "month": "8"
+      },
+      "text": {
+        "headline": "曹禺名作《原野》首演",
+        "text": "1937年8月曹禺名作《原野》由上海业余实验剧团首演于卡尔登大戏院，由应云卫导演，魏鹤龄、赵曙、舒绣文、王萍、章曼萍等主演。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1937"
+      },
+      "text": {
+        "headline": "金城大戏院改演戏曲和话剧",
+        "text": "1937年，八·一三事变发生后，金城大戏院曾一度作为临时难民收容所，抗战时期，因影业萧条，改演戏曲和话剧。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/ua6zslmhh0oj06rp.jpg",
+        "caption": "图为1938年上海联合口琴队与美国海军军乐队在大光明联合演奏",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/ua6zslmhh0oj06rp"
+      },
+      "start_date": {
+        "year": "1938"
+      },
+      "text": {
+        "headline": "大光明联合演奏",
+        "text": "1938年上海联合口琴队与美国海军军乐队在大光明联合演奏"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/3l5llripx3mzks0y.jpg",
+        "caption": "图为1938年5月4日在大光明公映的《貂蝉》一片说明书",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/3l5llripx3mzks0y"
+      },
+      "start_date": {
+        "year": "1938",
+        "month": "5",
+        "day": "4"
+      },
+      "text": {
+        "headline": "《貂蝉》上映",
+        "text": "1938年5月4日，新华影业公司出品《貂蝉》上映。该片后运往海外，于当年11年18日在纽约大都会歌剧院首映"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1938",
+        "month": "4",
+        "day": "15"
+      },
+      "text": {
+        "headline": "《雷雨》首映",
+        "text": "1938年4月15日，曹禺名作《雷雨》由新华影业公司拍成电影，在此首映。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/usfzypgfv4dfcco8.jpg",
+        "caption": "图为1939年11月9日第一部使用译意风的影片《风流奇侠传》正式对外公映广告。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/usfzypgfv4dfcco8"
+      },
+      "start_date": {
+        "year": "1939",
+        "month": "11",
+        "day": "4"
+      },
+      "text": {
+        "headline": "大光明首次应用译意风设备",
+        "text": "1939年11月4日，大光明首次应用译意风设备，试映华纳•裴士德主演的好莱坞影片《风流奇侠传》，招待中外新闻界人士。是国内首家采用同声传译设备的影院"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/gy8f665gha3tg8la.jpg",
+        "caption": "卡尔登大戏院报纸广告",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/gy8f665gha3tg8la"
+      },
+      "start_date": {
+        "year": "1939"
+      },
+      "text": {
+        "headline": "庚春曲社会串昆剧",
+        "text": "1939年上海滩难民救济协会主办庚春曲社会串昆剧。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1941"
+      },
+      "text": {
+        "headline": "兴建影戏院未完工",
+        "text": "1941年法侨白伐特和苏侨赵福克合营的上海影院公司购得辣斐德路近亚尔培路口(今复兴中路近陕西南路口西北转角)地块兴建影戏院，后因资金不足，未能完工。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1941",
+        "month": "9",
+        "day": "18"
+      },
+      "text": {
+        "headline": "南京大戏院停映",
+        "text": "1941年9月18日 南京大戏院为纪念9.18事件而停映一天。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/odw4tl1hbxgeb1od.jpg",
+        "caption": "图为1941年4月14日中国旅行剧院演出《洪宣娇》剧照",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/odw4tl1hbxgeb1od"
+      },
+      "start_date": {
+        "year": "1941"
+      },
+      "text": {
+        "headline": "《洪宣娇》首演",
+        "text": "1941年4月，中国旅行剧院在兰心大戏院首演《洪宣娇》。该剧由阿英编剧，费穆导演，唐槐秋、唐若青父女分饰洪秀全、洪宣娇，邵华饰杨秀清，连演61场，场场客满，同年11月更被拍成同名电影"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/6g3eewx27jfmg3nl.jpg",
+        "caption": "美琪大戏院始建于1941年",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/6g3eewx27jfmg3nl"
+      },
+      "start_date": {
+        "year": "1941",
+        "month": "10",
+        "day": "12"
+      },
+      "text": {
+        "headline": "美琪大戏院建筑落成",
+        "text": "1941年10月12日美琪大戏院建筑落成"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1941",
+        "month": "10",
+        "day": "15"
+      },
+      "text": {
+        "headline": "《美月琪花》首映",
+        "text": "1941年10月15日首映美国福克斯公司影片《美月琪花》，由美国驻沪海军麦令司乐队伴奏，放映收人部分捐助盲童学校。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/ikxv3j3ivnd2jm4z.jpg",
+        "caption": "1941年上海职业剧团的《蜕变》在卡尔登大戏院演出",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/ikxv3j3ivnd2jm4z"
+      },
+      "start_date": {
+        "year": "1941",
+        "month": "10",
+        "day": "10"
+      },
+      "text": {
+        "headline": "《蜕变》",
+        "text": "1941年10月10日上海职业剧团的《蜕变》在此演出。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1942"
+      },
+      "text": {
+        "headline": "银光大戏院",
+        "text": "1942年法商上海影院公司与天平洋行经理苏侨罗古文订约，由罗古文出资修建影院未完成的部分，上海大戏院初名银光大戏院。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/mwrgfhxnckdlllt7.jpg",
+        "caption": "图为1942年11月8日，国乐研究会在兰心大戏院举行第三次国乐演奏大会。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/mwrgfhxnckdlllt7"
+      },
+      "start_date": {
+        "year": "1942"
+      },
+      "text": {
+        "headline": "第三次国乐演奏大会",
+        "text": "1942年11月8日，国乐研究会在兰心大戏院举行第三次国乐演奏大会"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1942"
+      },
+      "text": {
+        "headline": "兰心大戏院封闭",
+        "text": "1942年7月被侵华日军封闭，后归伪中华电影公司管理"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1942",
+        "month": "2",
+        "day": "17"
+      },
+      "text": {
+        "headline": "《古刹惊梦》",
+        "text": "1942年2月17日，俄罗斯音乐家阿甫夏洛穆夫的三幕“中国舞剧”《古刹惊梦》（原名《香篆幻境》（又名《茑萝梦》））在大光明隆重上演。该剧系根据中国民间传说改编，描写青年男女为争取幸福婚姻而和恶势力斗争的故事。演员均由中国京剧艺人担任，充分发挥京剧武打特色，配以管弦乐伴舞，使人耳目一新。公演当日，梅兰芳特地为之题词“中国舞剧古刹惊梦”，以示对阿氏改革创新的支持。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1942",
+        "month": "9"
+      },
+      "text": {
+        "headline": "国产影片《春》",
+        "text": "1942年9月第一次献映国产影片《春》。巴金原著，杨小仲导演，周雯华主演，由中华联合电影厂出品。每天三场，连日全满。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1942",
+        "month": "10"
+      },
+      "text": {
+        "headline": "《浮生六记》",
+        "text": "1942年10月至12月演出新艺剧团的《浮生六记》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1942",
+        "month": "4"
+      },
+      "text": {
+        "headline": "《荒岛英雄》",
+        "text": "1942年4月演出苦干剧团的《荒岛英雄》。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/4h0gyxvoun1vjnq1.jpg",
+        "caption": "1943年10月9日《申报》刊登上海大戏院上演话剧《原野》的广告",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/4h0gyxvoun1vjnq1"
+      },
+      "start_date": {
+        "year": "1943",
+        "month": "10",
+        "day": "9"
+      },
+      "text": {
+        "headline": "“双十”《原野》演出",
+        "text": "1943年10月9日，为庆祝“双十”佳节，献演由戴旭导演的曹禺的话剧《原野》。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/ppivk4cxsobwkeq0.jpg",
+        "caption": "1943年落成的上海大戏院",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/ppivk4cxsobwkeq0"
+      },
+      "start_date": {
+        "year": "1943",
+        "month": "3"
+      },
+      "text": {
+        "headline": "大戏院完工",
+        "text": "1943年3月大戏院完工。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/vbk2jvvxeoahm6k1.jpg",
+        "caption": "1943年正式营业首演剧目《女人》广告",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/vbk2jvvxeoahm6k1"
+      },
+      "start_date": {
+        "year": "1943",
+        "month": "7",
+        "day": "9"
+      },
+      "text": {
+        "headline": "上海大戏院正式营业",
+        "text": "1943年7月9日，影戏院正式营业，并更名为上海大戏院，首演由汪宗耀编剧、洪谟等联合导演、孙景路领衔主演的喜剧《女人》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1943",
+        "month": "8"
+      },
+      "text": {
+        "headline": "“夏威夷歌舞团”公演六天",
+        "text": "1943年8月特邀“夏威夷歌舞团”举行特别公演六天。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1943",
+        "month": "9",
+        "day": "18"
+      },
+      "text": {
+        "headline": "日本宝冢歌舞团",
+        "text": "1943年9月18日日本宝冢歌舞团在南京大戏院演出歌舞。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1943",
+        "month": "10"
+      },
+      "text": {
+        "headline": "崔承喜舞蹈专场",
+        "text": "1943年10月享誉世界的舞者，18岁即成为朝鲜第一位现代舞蹈家的崔承喜在美琪大戏院首演舞蹈专场，共演出二场，剧场全满。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1943"
+      },
+      "text": {
+        "headline": "黄浦剧场改演京剧",
+        "text": "1943年改演京剧。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1944",
+        "month": "2",
+        "day": "24"
+      },
+      "text": {
+        "headline": "上海大戏院改映电影",
+        "text": "1944年2月24日，戏院演完话剧《陈白露》《正在想》后，停演话剧开始改映电影。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1944",
+        "month": "3",
+        "day": "18"
+      },
+      "text": {
+        "headline": "上海大戏院重新营业",
+        "text": "1944年3月18日，上海大戏院经改装后重新营业，首映中华电影联合股份有限公司出品的由韩兰根、殷秀岑等主演的滑稽新片《步步高升》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1944"
+      },
+      "text": {
+        "headline": "《小凤仙》",
+        "text": "1944年演出新艺剧团的《小凤仙》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1944"
+      },
+      "text": {
+        "headline": "《夜半歌声》等",
+        "text": "1944年青协剧团的《夜半歌声》，天祥剧团的《云彩霞》，国风剧社的《秋海棠》、《清宫怨》、《长恨歌》、《蔡松坡》在此演出"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/5y5bnqmeslaxq7hb.jpg",
+        "caption": "图为《万世师表》剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/5y5bnqmeslaxq7hb"
+      },
+      "start_date": {
+        "year": "1945"
+      },
+      "text": {
+        "headline": "《万世师表》",
+        "text": "1945年3月，中电剧团在兰心演出张俊祥编剧的《万世师表》，著名女演员白杨担纲主演"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1945"
+      },
+      "text": {
+        "headline": "兰心大戏院复归A.D.C.剧团",
+        "text": "1945年抗战胜利后，9月复归A.D.C.剧团"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1945"
+      },
+      "text": {
+        "headline": "第10次交响音乐会",
+        "text": "1945年6月3日，上海音乐协会主办，上海交响乐团第10次交响音乐会，在兰心大戏院演出。节目有苏联及旧俄名曲、肖斯塔科维奇的舞蹈组曲《黄金时代》、格里埃尔德《俄国水手舞》（选自《红罂粟》）（均系东亚首演），斯特拉文斯基的《舞蹈组曲》、《傀儡戏》及卡利尼可夫的第一交响曲。指挥司娄茨基。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1945"
+      },
+      "text": {
+        "headline": "梅兰芳复出",
+        "text": "1945年10月，梅兰芳抗战辍演8年，首次复出，在兰心大戏院演出《刺虎》等剧目。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/x6igvupk3cp3j6es.jpg",
+        "caption": "梅兰芳《刺虎》剧照",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/x6igvupk3cp3j6es"
+      },
+      "start_date": {
+        "year": "1945",
+        "month": "11"
+      },
+      "text": {
+        "headline": "梅兰芳先生第一次登台",
+        "text": "1945年11月抗日战争胜利后，京剧表演艺术家梅兰芳先生第一次登台作营业性演出。共演出十天，主要剧目有:《刺虎》、《钟馗嫁妹》、《吕布小宴》、《游园惊梦》、《断桥》、《思几》、《奇双会》等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1945",
+        "month": "9",
+        "day": "1"
+      },
+      "text": {
+        "headline": "《自由万岁》",
+        "text": "1945年9月1日演出上海艺术剧团的《自由万岁》（即《云南起义》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1945"
+      },
+      "text": {
+        "headline": "《春满家园》等",
+        "text": "1945年国风剧社的《春满家园》，海风剧团的《梅花梦》，国联剧社的《梅花梦》和《渔歌》，话剧界为医院募捐义演《家》在此演出"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1945"
+      },
+      "text": {
+        "headline": "恢复放映电影",
+        "text": "1945年，抗战胜利后恢复放映电影，仍以放映国产片为主，兼映美片。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/wli4tzlwo0tn72iw.jpg",
+        "caption": "梅兰芳在南京大戏院演出",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/wli4tzlwo0tn72iw"
+      },
+      "start_date": {
+        "year": "1946",
+        "month": "4",
+        "day": "5"
+      },
+      "text": {
+        "headline": "梅兰芳登台演出",
+        "text": "1946年4月5日 梅兰芳、俞振飞携梅兰芳京剧团在南京大戏院登台演出。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/um83tlqp4zdhj3kr.jpg",
+        "caption": "图为1946年中国旅行剧团在上海兰心大戏院演出《雷雨》，唐若青饰鲁妈、陶金饰鲁大海、章曼苹饰四凤、石挥饰鲁贵，可谓阵容强大。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/um83tlqp4zdhj3kr"
+      },
+      "start_date": {
+        "year": "1946"
+      },
+      "text": {
+        "headline": "中国旅行剧团演出《雷雨》",
+        "text": "1946年中国旅行剧团在上海兰心大戏院演出《雷雨》，唐若青饰鲁妈、陶金饰鲁大海、章曼苹饰四凤、石挥饰鲁贵，可谓阵容强大。由曹禺编剧的《雷雨》是中国话剧演出史上上演时间最长的一个剧目，至今盛演不衰，并被多次改编为电影、电视剧等"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/5twuuw8rldd257x1.jpg",
+        "caption": "图为1947年7月12日《申报》刊登《理发师封锁大光明》一文报道“假凤虚凰事件”。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/5twuuw8rldd257x1"
+      },
+      "start_date": {
+        "year": "1947",
+        "month": "7",
+        "day": "11"
+      },
+      "text": {
+        "headline": "《假凤虚凰》在大光明试映",
+        "text": "1947年7月11日，上海文华影业公司出品的《假凤虚凰》在大光明试映，试映当天，因为不满影片中的某些情节，大光明戏院竟为本市理发业职工会会员及同业公会会员八百余人包围，影响影片正常上映。后出品方一再托人疏通，才化解了这一事件"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/tqi2hf42egdlzl1c.jpg",
+        "caption": "图为1948年苏珂尔斯基（Sokolsky）芭蕾舞校在兰心大戏院演出场面，当中被托起者为胡蓉蓉。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/tqi2hf42egdlzl1c"
+      },
+      "start_date": {
+        "year": "1948"
+      },
+      "text": {
+        "headline": "苏珂尔斯基芭蕾舞校演出",
+        "text": "1948年苏珂尔斯基（Sokolsky）芭蕾舞校在兰心大戏院演出场面，当中被托起者为胡蓉蓉。苏珂尔斯基毕业于圣彼得堡的俄罗斯帝国芭蕾舞校，曾于世界第一芭蕾舞星安娜·巴甫洛娃（Anna Pavlova）旅欧表演，他与他的夫人意芙几妮亚·巴拉诺娃（Ivgenia Balanova）在上海创办芭蕾舞校，培养了众多优秀学员"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1948",
+        "month": "9",
+        "day": "4"
+      },
+      "text": {
+        "headline": "芳华越剧团",
+        "text": "1948年9月4日芳华越剧团迁往新光大戏院。芳华越剧团迁往新光大戏院后，尹桂芳与傅全香搭档，老生为徐天红。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1949",
+        "month": "5",
+        "day": "27"
+      },
+      "text": {
+        "headline": "《女勇士》",
+        "text": "1949年5月27日放映的是邬丽姝、顾也鲁主演的武侠巨片《女勇士》"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1949",
+        "month": "8",
+        "day": "25"
+      },
+      "text": {
+        "headline": "越剧演出",
+        "text": "1949年8月25日 越剧表演艺术家袁雪芬、范瑞娟、徐玉兰、戚雅仙、王文娟、金采凤等演出越剧经典剧目。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1949"
+      },
+      "text": {
+        "headline": "戏院转售",
+        "text": "1949年10月英侨剧社将戏院转售上海市剧影工作者协会，首任经理吕复"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/nczjq0f43v35umb8.jpg",
+        "caption": "图为1949年上海解放后，大光明招待解放军时放映根据毛姆经典小说《刀锋》改编的影片《剃刀边缘》（The Razor’s Edge）场景",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/nczjq0f43v35umb8"
+      },
+      "start_date": {
+        "year": "1949"
+      },
+      "text": {
+        "headline": "《剃刀边缘》",
+        "text": "1949年上海解放后，大光明招待解放军时放映根据毛姆经典小说《刀锋》改编的影片《剃刀边缘》（The Razor’s Edge）"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/e75lldoias54zcri.jpg",
+        "caption": "20世纪50年代改名为北京电影院的南京大戏院",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/e75lldoias54zcri"
+      },
+      "start_date": {
+        "year": "1950",
+        "month": "11",
+        "day": "18"
+      },
+      "text": {
+        "headline": "南京大戏院更名北京电影院",
+        "text": "1950年11月18日公私合营大众影院股份有限公司成立，南京大戏院更名为北京电影院。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1950",
+        "month": "4",
+        "day": "22"
+      },
+      "text": {
+        "headline": "歌剧《白毛女》",
+        "text": "1950年4月22日为救灾演出歌剧《白毛女》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1951",
+        "month": "1"
+      },
+      "text": {
+        "headline": "文化事业管理局接管大舞台",
+        "text": "1951年1月大舞台由上海市文化事业管理局戏曲处购买接管"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1951",
+        "month": "2"
+      },
+      "text": {
+        "headline": "大舞台改为国营人民大舞台",
+        "text": "1951年2月底大舞台改为国营人民大舞台。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1952"
+      },
+      "text": {
+        "headline": "兰心戏院更名上海艺术剧场",
+        "text": "1952年，“兰心戏院”更名为“上海艺术剧场”"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1952"
+      },
+      "text": {
+        "headline": "新光大戏院改名新光剧场",
+        "text": "1952年改名为新光剧场。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/i5a3qoei8eurpw68.jpg",
+        "caption": "乌兰诺娃",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/i5a3qoei8eurpw68"
+      },
+      "start_date": {
+        "year": "1952",
+        "month": "11"
+      },
+      "text": {
+        "headline": "乌兰诺娃演出",
+        "text": "1952年11月由苏联部长会议艺术委员会副主席楚核基领导的艺术团作首演演出。乌兰诺娃和她的芭蕾艺术引起轰动。出席观看有陈望道、徐平羽、夏衍等。剧场为此投资三百万元，舞台加深五米，按装面幕、装修化妆间、开设暖气"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1953"
+      },
+      "text": {
+        "headline": "上海人民艺术剧院",
+        "text": "1953年，上海艺术剧场划归上海人民艺术剧院"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1953"
+      },
+      "text": {
+        "headline": "印度艺术代表团演出",
+        "text": "1953年印度艺术代表团首次演出音乐、舞蹈，出席观看的有中央人民政府副主席宋庆龄，上海市长陈毅等领导。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1953"
+      },
+      "text": {
+        "headline": "卡尔登大戏院修缮",
+        "text": "1953年底由华东戏曲研究院拨款修缮，作为华东实验越剧团演出基地。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/qx2uoilhgv3ihsxx.jpg",
+        "caption": "图为《考验》剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/qx2uoilhgv3ihsxx"
+      },
+      "start_date": {
+        "year": "1954"
+      },
+      "text": {
+        "headline": "《考验》",
+        "text": "1954年9月13日，《考验》，夏衍编剧，由上海人民艺术剧院在上海艺术剧场公演，黄佐临导演，高重实、何适、项堃、胡思庆、章曼苹等主演"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/332jnag42pmipobi.jpg",
+        "caption": "图为1954年庆祝建国5周年时的大光明电影院外景",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/332jnag42pmipobi"
+      },
+      "start_date": {
+        "year": "1954"
+      },
+      "text": {
+        "headline": "大光明电影院庆祝建国5周年",
+        "text": "1954年庆祝建国5周年时的大光明电影院"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1954",
+        "month": "1"
+      },
+      "text": {
+        "headline": "捷克斯洛伐克杂技演出",
+        "text": "1954年1月捷克斯洛伐克杂技艺术团演出杂技，出席首场观看的有中央人民政府副主席宋庆龄，上海市副市长盛丕华、刘季平、秘书长余平羽，文化局长于伶等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1954",
+        "month": "8"
+      },
+      "text": {
+        "headline": "上海第一届人大召开",
+        "text": "1954年8月上海市第一届人民代表大会第一次会议16日上午召开，由副市长金仲华致开幕词，刘季平秘书长介绍会议主要议程，会议隆重选出了上海市出席全国人民代表大会代表:宋庆龄、陈云、陈毅等63名代表"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1954"
+      },
+      "text": {
+        "headline": "市文化局代管金城大戏院",
+        "text": "1954年交市文化局代管。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1955",
+        "month": "2"
+      },
+      "text": {
+        "headline": "全国各省市书记会议",
+        "text": "1955年2月全国各省市书记会议在美琪大戏院召开。会上，周恩来总理作了有关知识分子改造问题的讲话。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1955",
+        "month": "3"
+      },
+      "text": {
+        "headline": "美琪大戏院欢迎会",
+        "text": "1955年3月全市各界人士在美琪大戏院举行盛大欢迎会，欢迎全国政协副主席、全国人大常委会委员班禅额尔德尼却·吉坚赞到上海，副市长潘汉年在会上致欢迎词。会后、本市文艺工作者表演了精彩的文艺节目。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1956"
+      },
+      "text": {
+        "headline": "大戏院更名上海电影院",
+        "text": "1956年大戏院更名为上海电影院。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1956",
+        "month": "8"
+      },
+      "text": {
+        "headline": "易卜生逝世五十周年大会",
+        "text": "1956年8月上海市文联，中国作协上海分会联合主办的纪念世界著名文学家、戏剧家肖伯纳的诞生一百周年，易卜生逝世五十周年大会在美琪大戏院举行，中国作协上海分会主席巴金主持会议，肖伯纳的朋友詹斯纳及本市文艺界著名人十周信芳、蒋燕、黄佐临、郑君里参加了大会，会后由上影演员剧团和上海人民艺术剧院联合演出肖伯纳的名剧《英雄与美人》片断。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1957"
+      },
+      "text": {
+        "headline": "抢修影院危房",
+        "text": "1957年对影院危房进行了抢修。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/k0yhllm37hrw8kyt.jpg",
+        "caption": "图为《上海滩的春天》剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/k0yhllm37hrw8kyt"
+      },
+      "start_date": {
+        "year": "1957"
+      },
+      "text": {
+        "headline": "《上海滩的春天》公演",
+        "text": "1957年1月19日，上海人民艺术剧院在上海艺术剧院公演《上海滩的春天》，熊佛西编剧、虞留德导演，乔奇、丹尼、高重实、袁之远、张立德、王善树、陶稼祥等主演"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1957",
+        "month": "2"
+      },
+      "text": {
+        "headline": "交响音乐会",
+        "text": "1957年2月中旬至8月中旬，苏联专家谢·洛·迪利基斯夫任总指挥的上海交响团演出系列交响音乐会，共十三套次，演出二十六场。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1957"
+      },
+      "text": {
+        "headline": "剧场大修",
+        "text": "1957年剧场大修。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1957"
+      },
+      "text": {
+        "headline": "《骆驼祥子》等",
+        "text": "1957年下半年起，上海电影制片厂演员剧团先后演出了《骆驼祥子》、《海上花园》、《第十二夜》、《水向高处流》、《钢人铁马》等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1957"
+      },
+      "text": {
+        "headline": "上海人民淮剧团演出场地",
+        "text": "1957年剧院成为上海人民淮剧团演出场地。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1957"
+      },
+      "text": {
+        "headline": "金城大戏院改名黄浦剧场",
+        "text": "1957年底，周恩来总理应著名淮剧演员筱文艳邀请，提议剧场更名为“黄浦剧场”并亲笔题字，由此，金城大戏院正式改名为“黄浦剧场”。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1958",
+        "month": "4",
+        "day": "1"
+      },
+      "text": {
+        "headline": "电影院改造",
+        "text": "1958年4月，上海大光明电影院在市电影局、市电影发行放映公司的统一规划和技术人员的协助下，按苏联的制式，改建成磁性4声道立体声宽银幕电影院，称西尼玛斯科普宽银幕立体声，这是上海最早出现的宽银幕电影院。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/2cpfe0ooqf6r64uy.jpg",
+        "caption": "图为1958年4月13日大光明电影院举办宽银幕电影院开幕典礼，首映苏联宽银幕原版片《唐•吉诃德》",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/2cpfe0ooqf6r64uy"
+      },
+      "start_date": {
+        "year": "1958",
+        "month": "4",
+        "day": "13"
+      },
+      "text": {
+        "headline": "《唐•吉诃德》",
+        "text": "1958年4月13日，举办大光明宽银幕电影院开幕典礼，首映苏联宽银幕原版片《唐•吉诃德》"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1958",
+        "month": "6"
+      },
+      "text": {
+        "headline": "阿纳托里·奥尔夫音乐会",
+        "text": "1958年6月苏联国家大剧院男高音歌唱家、斯大林奖金获得者阿纳托里·奥尔夫及其学生举行独唱音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1959",
+        "month": "9",
+        "day": "20"
+      },
+      "text": {
+        "headline": "北京电影院更名上海音乐厅",
+        "text": "1959年9月20日整修后的北京电影院更名为上海音乐厅，上海音乐界为上海音乐厅的开幕式举行了联合公演。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/xzbatwzrkd7gs48b.jpg",
+        "caption": "图为《枯木逢春》剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/xzbatwzrkd7gs48b"
+      },
+      "start_date": {
+        "year": "1959"
+      },
+      "text": {
+        "headline": "《枯木逢春》",
+        "text": "1959年8月，该剧由上海人民艺术剧院用《江南春早》的剧名在上海艺术剧场首演，9月20日起更名为《枯木逢春》演出。演职员阵容强大，导演张骏祥、陈鲤庭、杨村彬、凌琯如、黄佐临。主要演员有张伐、严丽秋、嵇启明、陈奇、岳勋烈、景衡、吴锡纯、胡庆思、乔奇、徐明、刘桐标、高重实等，1961年被改编成电影。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/8fo54d2x5i7emhno.jpg",
+        "caption": "图为1959年5月27日，由陈钢、何占豪作曲小提琴协奏曲《梁祝》在上海兰心大剧院首次公演场面，俞丽拿担任小提琴独奏。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/8fo54d2x5i7emhno"
+      },
+      "start_date": {
+        "year": "1959"
+      },
+      "text": {
+        "headline": "《梁祝》",
+        "text": "1959年5月27日，由陈钢、何占豪作曲小提琴协奏曲《梁祝》在上海兰心大剧院首次公演场面，俞丽拿担任小提琴独奏，演出轰动一时，《梁祝》由此开始广为流传，更成为中国历史上最成功、最富盛名的交响乐曲"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1960",
+        "month": "5",
+        "day": "10"
+      },
+      "text": {
+        "headline": "“上海之春”音乐舞蹈节",
+        "text": "1960年5月10日第一届\"上海之春\"音乐舞蹈节在上海音乐厅举行。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1960"
+      },
+      "text": {
+        "headline": "毛泽东观看《小刀会》",
+        "text": "1960年1月11日毛泽东、刘少奇、周恩来等在此观看上海实验歌剧院民族舞剧《小刀会》"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/pydy0cqv4h6c6qhk.jpg",
+        "caption": "图为1960年1月14日，国家档案局长曾三在大光明电影院给上海市档案干部作报告",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/pydy0cqv4h6c6qhk"
+      },
+      "start_date": {
+        "year": "1960",
+        "month": "1",
+        "day": "14"
+      },
+      "text": {
+        "headline": "曾三报告",
+        "text": "1960年1月14日，国家档案局长曾三在大光明电影院给上海市档案干部作报告"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1960",
+        "month": "9"
+      },
+      "text": {
+        "headline": "《同一条江》等",
+        "text": "1960年9月文化部和中越友协联合主办越南民主共和国电影周，上映《胡志明主席革命活动片断》、《同一条江》等影片。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1960",
+        "month": "2",
+        "day": "10"
+      },
+      "text": {
+        "headline": "《论烟草有害》等",
+        "text": "1960年2月10日起为纪念契诃夫诞辰100周年，演出其《论烟草有害》、《求婚》、《外科医生》、《蠢货》等4部剧作。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1961",
+        "month": "10"
+      },
+      "text": {
+        "headline": "艺术电影周开幕式",
+        "text": "1961年10月举行梅兰芳舞台艺术电影周开幕式。巴金、周信芳、贺绿汀、白杨、赵丹、丁是娥、俞振飞、刘厚生、孟波等文艺界知名人士参加者了开幕式，会后放映了梅兰芳主演的电影昆剧《游园惊梦》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1961"
+      },
+      "text": {
+        "headline": "卡尔登大戏院改名长江剧场",
+        "text": "20世纪50年代年公私合营，改名长江剧场。公方代表张成之任董事长，王春茂任经理，私方代表周翼华任副经理。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1963",
+        "month": "3"
+      },
+      "text": {
+        "headline": "《芦荡火种》首演",
+        "text": "1963年3月上海市人民沪剧团创作的优秀现代剧《芦荡火种》首演，并连演连满。盛况空前。主演:丁是娥、石筱英、解洪元、陆敬业等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1963",
+        "month": "1",
+        "day": "29"
+      },
+      "text": {
+        "headline": "周恩来观看《第二个春天》",
+        "text": "1963年1月29日，周恩来总理偕邓颖超到此观看上海人民艺术剧院《第二个春天》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1963",
+        "month": "4"
+      },
+      "text": {
+        "headline": "《霓虹灯下的哨兵》",
+        "text": "1963年4月至11月“人艺”二团演出200场《霓虹灯下的哨兵》，观众约20万人次。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1964"
+      },
+      "text": {
+        "headline": "《海港的早晨》",
+        "text": "1964年7月22日刘少奇、陈毅等观看上海人民淮剧团现代戏《海港的早晨》（即八个样板戏京剧《海港》即由淮剧《海港的早晨》改编）"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1964"
+      },
+      "text": {
+        "headline": "《芦荡火种》",
+        "text": "1964年下半年(7月至12月)上海市人民沪剧院团继续不断修改演出《芦荡火种》，主演:丁是娥、石筱英、解洪元、邵滨孙等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1966",
+        "month": "9"
+      },
+      "text": {
+        "headline": "上海音乐厅短暂更名",
+        "text": "1966年9月上海音乐厅短暂更名为\"革命音乐厅\""
+      }
+    },
+    {
+      "start_date": {
+        "year": "1966"
+      },
+      "text": {
+        "headline": "国营人民大舞台改名",
+        "text": "1966年曾改名人民大剧场，兼映电影。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/k8mzf681z16ie37s.jpg",
+        "caption": "曾改名为北京影剧院",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/k8mzf681z16ie37s"
+      },
+      "start_date": {
+        "year": "1966",
+        "month": "9"
+      },
+      "text": {
+        "headline": "美琪大戏院改名北京影剧院",
+        "text": "1966年9月美琪大戏院改名为北京影剧院。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1967"
+      },
+      "text": {
+        "headline": "新光剧场更名红卫剧场",
+        "text": "1967年更名红卫剧场。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1973"
+      },
+      "text": {
+        "headline": "影院改装",
+        "text": "1973年影院改装了宽银幕，并新建了冷气机房。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1973"
+      },
+      "text": {
+        "headline": "上海音乐厅大修",
+        "text": "1973年上海音乐厅大修。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1974"
+      },
+      "text": {
+        "headline": "红卫剧场改名新光影剧场",
+        "text": "1974年起划归市电影局，称新光影剧场。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1974"
+      },
+      "text": {
+        "headline": "金城大戏院专映电影",
+        "text": "1974年因舞台狭小，无改建条件，停止戏剧演出，专映电影。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1975",
+        "month": "5"
+      },
+      "text": {
+        "headline": "《杜鹃山》",
+        "text": "1975年5月北京京剧团演出《杜鹃山》，上海电视台作实况转播。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1976"
+      },
+      "text": {
+        "headline": "恢复人民大舞台原名",
+        "text": "1976年翻修后恢复人民大舞台原名。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1976"
+      },
+      "text": {
+        "headline": "剧场大修",
+        "text": "1976年剧场大修。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1977"
+      },
+      "text": {
+        "headline": "《南海长城》等",
+        "text": "1977年后成为上海最主要的话剧演出场所。1977年的《南海长城》，1978年的《最后一幕》、《东进东进》，1979年的《泪血樱花》、《第二次握手》、《神州风雷》，1980年的《清宫外史》、《陈毅市长》、《毋忘我》、《博士的罗曼蒂克》、《灰色王国的黎明》，1981年的《秦王李世民》，1982年的《大幕已经拉开》，1983年的《高山下的花环》，1984年的《安东尼与克利奥佩特拉》，1985年的《WM》（我们）、《红房间•白房间•黑房间》，1986年的《天才与疯子》、《爱的构思》，1987年的《二十岁的夏天》、《初恋时，我们不懂爱情》、《生不带来，死不带去》，1988年的《悲悼》，1990年的《和空气爱人做游戏》、《本世纪最后的梦想》等均产生影响。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/jh8fsjioxp2midhf.jpg",
+        "caption": "图为1978年10月28日日本著名女演员栗原小卷来访大光明电影院。由栗原小卷主演的影片《望乡》、《生死恋》曾在中国引起极大轰动。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/jh8fsjioxp2midhf"
+      },
+      "start_date": {
+        "year": "1978",
+        "month": "10",
+        "day": "28"
+      },
+      "text": {
+        "headline": "栗原小卷来访大光明电影院",
+        "text": "1978年10月28日日本著名女演员栗原小卷来访大光明电影院。由栗原小卷主演的影片《望乡》、《生死恋》曾在中国引起极大轰动。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1979",
+        "month": "5"
+      },
+      "text": {
+        "headline": "《蝴蝶夫人》",
+        "text": "1979年5月上海歌剧院为庆祝上海解放三十周年，上演著名歌剧《蝴蝶夫人》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1980"
+      },
+      "text": {
+        "headline": "大光明第一次大整修",
+        "text": "1980年代初，大光明进行第一次大整修。此次大修，是对大光明变动较大的一次。大部分的历史装修原物在此次大修中被拆除丢弃。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1980",
+        "month": "8"
+      },
+      "text": {
+        "headline": "《孔雀东南飞》",
+        "text": "1980年 8月上海越剧院演出越剧《孔雀东南飞》，主演:范瑞娟、傅全香。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1981",
+        "month": "4"
+      },
+      "text": {
+        "headline": "哈尔滨歌舞团演出",
+        "text": "1981年 4月哈尔滨歌舞团首次来沪演出轻音乐会，这是美琪大戏院第一次上演轻音乐会"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1982",
+        "month": "1",
+        "day": "15"
+      },
+      "text": {
+        "headline": "第一期星期广播音乐会",
+        "text": "1982年1月15日第一期星期广播音乐会在音乐厅举行。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1982",
+        "month": "5",
+        "day": "9"
+      },
+      "text": {
+        "headline": "郎帕尔独奏音乐会",
+        "text": "1982年5月9日世界著名长笛演奏家郎帕尔独奏音乐会"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1982",
+        "month": "1"
+      },
+      "text": {
+        "headline": "贝多芬第九交响曲",
+        "text": "1982年1月上海交响乐团、上海乐团联合演出贝多芬第九交响曲，指挥:法国著名指挥家让·皮里松，领唱:胡晓平、靳小才、王坚、殷承基等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1982",
+        "month": "3"
+      },
+      "text": {
+        "headline": "陈爱莲舞蹈晚会",
+        "text": "1982年3月著名舞蹈家陈爱莲舞蹈晚会举行。节目有:《春江花月夜》、《唐、吉诃德》等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1982",
+        "month": "3"
+      },
+      "text": {
+        "headline": "美琪大戏院大修",
+        "text": "1982年3月美琪大戏院进行大修。重排观众厅座位，乐池改建为本市第一家液压升降乐池。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/h1ve0crio6ry4ppx.jpg",
+        "caption": "图为《马克思“秘史”》剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/h1ve0crio6ry4ppx"
+      },
+      "start_date": {
+        "year": "1983"
+      },
+      "text": {
+        "headline": "《马克思“秘史”》",
+        "text": "1983年4月，《马克思“秘史”》由上海人民艺术剧院一团公演于上海艺术剧场。沙叶新编剧，罗毅之、嵇启明导演，乔奇饰马克思，章非饰恩格斯，罗燕饰燕妮"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1983"
+      },
+      "text": {
+        "headline": "外事专场",
+        "text": "1983年在中共上海市委宣传部和市文化局、旅游局的支持下开辟外事专场业务，接待外宾和港、澳、台同胞，演出具有中国民族特色的音乐舞蹈、戏曲杂技节目。各国中、小艺术团体亦常来此演出。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1985",
+        "month": "10"
+      },
+      "text": {
+        "headline": "“贝多芬系列”交响音乐会",
+        "text": "1985年10~12月 上交\"贝多芬系列\"交响音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1985",
+        "month": "7",
+        "day": "21"
+      },
+      "text": {
+        "headline": "江泽民聆听音乐会",
+        "text": "1985年7月21日江泽民来音乐厅聆听音乐会 贝多芬系列音乐会之四"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1985"
+      },
+      "text": {
+        "headline": "大光明引进电影设备",
+        "text": "1985年，大光明引进使用光学四声道立体声电影设备，成为上海市第一座立体声电影院。\n"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/y1bud1tx76plrvnc.jpg",
+        "caption": "图为1985年9月20日美国著名演员格里高利•派克访问大光明电影院。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/y1bud1tx76plrvnc"
+      },
+      "start_date": {
+        "year": "1985",
+        "month": "9",
+        "day": "20"
+      },
+      "text": {
+        "headline": "格里高利•派克访问",
+        "text": "1985年9月20日美国著名演员格里高利•派克访问大光明电影院。派克曾出演过《罗马假日》、《百万英镑》、《杀死一只知更鸟》等多部经典影片，为广大中国影迷所熟知"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1985",
+        "month": "11"
+      },
+      "text": {
+        "headline": "《卡尔米娜·布拉拿》首演",
+        "text": "1985年11月纪念联邦德国现代作曲家卡尔·奥尔夫诞生九十周年，上海乐团首演清唱剧《卡尔米娜·布拉拿》。领唱:胡晓平、傅海静等，指挥:曹鹏。这是我国第一次上演该作品。 1986年10月中央歌剧院首演著名歌剧《卡门》、指挥:郑小瑛，主演:刘珊、王音等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1985",
+        "month": "5"
+      },
+      "text": {
+        "headline": "美琪大戏院恢复",
+        "text": "1985年5月由“北京影剧院”正式恢复“美琪大戏院”"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1985"
+      },
+      "text": {
+        "headline": "地下室改为音乐茶座",
+        "text": "1985年地下室改为音乐茶座。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/0xricfg1xj1qoina.jpg",
+        "caption": "图为《寻找男子汉》剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/0xricfg1xj1qoina"
+      },
+      "start_date": {
+        "year": "1986"
+      },
+      "text": {
+        "headline": "《寻找男子汉》",
+        "text": "《寻找男子汉》剧照，该剧为沙叶新编剧，1986年2月9日，上海人民艺术剧院首演于上海艺术剧场，雷国华导演，奚美娟、张引棣、王京蒂、朱慧玲、李宗强等主演。该剧演出后引起了很大反响，曾到大学和合肥等地巡回演出，两年间共演出180场。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/bynl71hoov63u2q8.jpg",
+        "caption": "演奏中的马友友",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/bynl71hoov63u2q8"
+      },
+      "start_date": {
+        "year": "1987",
+        "month": "10",
+        "day": "10"
+      },
+      "text": {
+        "headline": "马友友与上交音乐会",
+        "text": "1987年10月10日-11日 著名大提琴家马友友与上交音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1987",
+        "month": "4",
+        "day": "13"
+      },
+      "text": {
+        "headline": "希思指挥上交音乐会",
+        "text": "1987年4月13日英国前首相希思指挥上交音乐会。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/dswlwozxo5wvus1y.jpg",
+        "caption": "图为《中国梦》剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/dswlwozxo5wvus1y"
+      },
+      "start_date": {
+        "year": "1987"
+      },
+      "text": {
+        "headline": "《中国梦》",
+        "text": "《中国梦》，孙惠柱、费春放编剧，1987年7月1日，由上海人民艺术剧院于上海艺术剧场首演，黄佐临、陈体江、胡雪桦导演，舞美设计莫少江，奚美娟、野芒主演，该剧综合运用了西方现代戏剧和中国传统戏剧的表现手法，试图将斯坦尼斯拉夫斯基的内心感应、布莱希特的姿势论和梅兰芳的程式规范这三大表演体系融为一体，颇具创新性和实验性"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/g4itehmp8f6e5ufj.jpg",
+        "caption": "图为1987年4月10日影片《血战台儿庄》首映结束后，剧组在大光明合影留念",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/g4itehmp8f6e5ufj"
+      },
+      "start_date": {
+        "year": "1987",
+        "month": "4",
+        "day": "10"
+      },
+      "text": {
+        "headline": "《血战台儿庄》首映",
+        "text": "1987年4月10日影片《血战台儿庄》在大光明首映"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1988",
+        "month": "1"
+      },
+      "text": {
+        "headline": "江泽民观看《茶馆》",
+        "text": "1988年1月北京人艺演出话剧《茶馆》，江泽民等领导观看演出。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1988",
+        "month": "4"
+      },
+      "text": {
+        "headline": "《托斯卡》",
+        "text": "1988年4月上海歌剧院、旧金山歌剧院联合演出意大利著名歌剧《托斯卡》。作曲:贾科漠·普契尼，指挥:帕特里克·萨默斯，导演:张远文，主演:(美)苏珊·奈维斯、维克多·叶伯特(中)施鸿鄂、黄葆慧、顾欣等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1988",
+        "month": "6"
+      },
+      "text": {
+        "headline": "评弹专场演出",
+        "text": "1988年6月首届上海曲艺艺术节评弹专场演出。剧目有《金陵十二钗》等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1989",
+        "month": "9",
+        "day": "25"
+      },
+      "text": {
+        "headline": "市级文物保护单位",
+        "text": "1989年9月25日 上海音乐厅被列为上海市级文物保护单位。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1989"
+      },
+      "text": {
+        "headline": "周信芳诞生纪念演出",
+        "text": "1989年初在此举行“周信芳诞生九十周年纪念演出”。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1989"
+      },
+      "text": {
+        "headline": "新光影剧场更名新光观摩厅",
+        "text": "1989年大修后，更名新光观摩厅，专映电影。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1989",
+        "month": "9"
+      },
+      "text": {
+        "headline": "《曹操与杨修》",
+        "text": "1989年9月上海京剧院演出历史剧《曹操与杨修》。朱榕基等领导同志上台接见主演尚长荣、言兴朋等。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1990",
+        "month": "6"
+      },
+      "text": {
+        "headline": "影院改装四声道音响系统",
+        "text": "1990年6月影院改装了四声道音响系统，换装了756只航空式高靠背沙发软席座椅。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1990",
+        "month": "5"
+      },
+      "text": {
+        "headline": "《骗婚记》",
+        "text": "1990年5月上海音乐学院周小燕歌剧中心、美国旧金山歌剧院联合演出意大利《骗婚记》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1990"
+      },
+      "text": {
+        "headline": "长江剧场拆除重建",
+        "text": "20世纪90年代，长江剧场被拆除重建。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1991",
+        "month": "12",
+        "day": "26"
+      },
+      "text": {
+        "headline": "上海音乐厅大改造",
+        "text": "1991年12月26日 上海音乐厅进行较大规模技术改造。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1991"
+      },
+      "text": {
+        "headline": "兰心大戏院复名",
+        "text": "1991年，“上海艺术剧场”复名为“兰心大戏院”，并根据“整旧如旧”的原则进行全面修缮，恢复了七十年前的旧貌"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1992"
+      },
+      "text": {
+        "headline": "大光明再改建装修",
+        "text": "1992年，大光明再次改建装修，对大观众厅座位进行了调整压缩，并新开了两个录像厅。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1992",
+        "month": "10"
+      },
+      "text": {
+        "headline": "《李白》",
+        "text": "1992年10月北京人民艺术剧院演出话剧《李白》，主演濮存昕。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1993",
+        "month": "5",
+        "day": "1"
+      },
+      "text": {
+        "headline": "每月节目表",
+        "text": "1993年5月1日预告音乐厅厅演出节目的\"每月节目表\"首期出版。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/qq2dhhuuecwcme66.jpg",
+        "caption": "图为1993年7月26日影片《霸王别姬》在大光明召开首映仪式，导演陈凯歌，主演张国荣、张丰毅均莅临出席",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/qq2dhhuuecwcme66"
+      },
+      "start_date": {
+        "year": "1993",
+        "month": "7",
+        "day": "26"
+      },
+      "text": {
+        "headline": "《霸王别姬》",
+        "text": "1993年7月26日影片《霸王别姬》在大光明召开首映仪式，导演陈凯歌，主演张国荣、张丰毅均莅临出席"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1993",
+        "month": "8"
+      },
+      "text": {
+        "headline": "《金龙与蚌蟒》",
+        "text": "1993年8月上海淮剧团演出大型淮剧《金龙与蚌蟒》。主演:梁伟平、何双林。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1994",
+        "month": "2",
+        "day": "13"
+      },
+      "text": {
+        "headline": "双周免费星期音乐会",
+        "text": "1994年2月13日首期双周免费星期音乐会举行。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/nl0hsxcxli2qmauj.jpg",
+        "caption": "图为1994年影片《狮王争霸》首映时在大光明召开新闻发布会",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/nl0hsxcxli2qmauj"
+      },
+      "start_date": {
+        "year": "1994"
+      },
+      "text": {
+        "headline": "《狮王争霸》首映",
+        "text": "1994年影片《狮王争霸》首映时在大光明召开新闻发布会"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1994"
+      },
+      "text": {
+        "headline": "新光观摩厅改称新光影艺苑",
+        "text": "1994年进行改造，分上下两层，楼上专映电影。改建竣工又改称新光影艺苑。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1994",
+        "month": "7"
+      },
+      "text": {
+        "headline": "美琪大戏院技术改造",
+        "text": "1994年7月一1995年5月上海市文化局拨款1000万元对美琪大戏院进行技术改造，增加和改善舞台设施并对剧场内部重新进行了装修和粉饰，剧场面貌焕然一新。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1994",
+        "month": "8"
+      },
+      "text": {
+        "headline": "金城大戏院底层辟为商场",
+        "text": "1994年8月底层辟为商场，二楼电影厅设726座。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1995",
+        "month": "11",
+        "day": "29"
+      },
+      "text": {
+        "headline": "联合音乐会",
+        "text": "1995年11月29日 世界著名小提琴家、社会活动家艾萨克·思特恩与上海广播交响乐团联合音乐会"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1995"
+      },
+      "text": {
+        "headline": "大舞台停业整顿",
+        "text": "1995年大舞台停业整顿。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/gzqyycbne3cwl3s7.jpg",
+        "caption": "图为1995年第二届上海国际电影节在大光明电影院举办情景。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/gzqyycbne3cwl3s7"
+      },
+      "start_date": {
+        "year": "1995"
+      },
+      "text": {
+        "headline": "上海国际电影节",
+        "text": "1995年第二届上海国际电影节在大光明电影院举办"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/h2pgsuqheu85a61d.jpg",
+        "caption": "图为1995年8月21日影片《阳光灿烂的日子》在大光明举办首映仪式，主演夏雨、宁静、陶虹等在台上留影",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/h2pgsuqheu85a61d"
+      },
+      "start_date": {
+        "year": "1995",
+        "month": "8",
+        "day": "21"
+      },
+      "text": {
+        "headline": "《阳光灿烂的日子》",
+        "text": "1995年8月21日影片《阳光灿烂的日子》在大光明举办首映仪式，主演夏雨、宁静、陶虹等在台上留影"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1995",
+        "month": "6"
+      },
+      "text": {
+        "headline": "《芭蕾舞专场》",
+        "text": "1995年6月俄罗斯普希金芭蕾舞团演出《芭蕾舞专场》"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1996",
+        "month": "11",
+        "day": "5"
+      },
+      "text": {
+        "headline": "阿卡多独奏音乐会",
+        "text": "1996年11月5日意大利小提琴家阿卡多独奏音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1996",
+        "month": "2",
+        "day": "12"
+      },
+      "text": {
+        "headline": "交响乐讲解音乐会",
+        "text": "1996年2月12日交响乐讲解音乐会。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/142jie8hcrw3i0gm.jpg",
+        "caption": "图为1996年首届“大光明杯”优秀国产影片展映活动",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/142jie8hcrw3i0gm"
+      },
+      "start_date": {
+        "year": "1996"
+      },
+      "text": {
+        "headline": "优秀国产影片展映活动",
+        "text": "1996年首届“大光明杯”优秀国产影片展映活动"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1996",
+        "month": "11"
+      },
+      "text": {
+        "headline": "《白毛女》等",
+        "text": "1996年11月上海芭蕾舞团演出芭蕾舞剧《白毛女》和《芭蕾精品》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1997",
+        "month": "11",
+        "day": "21"
+      },
+      "text": {
+        "headline": "爵士音乐节",
+        "text": "1997年11月21日-23日 爵士音乐节，著名爵士歌手贝蒂卡特登台演出。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1997",
+        "month": "4",
+        "day": "2"
+      },
+      "text": {
+        "headline": "朱克曼独奏音乐会",
+        "text": "1997年4月2日小提琴家朱克曼独奏音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1997",
+        "month": "4"
+      },
+      "text": {
+        "headline": "上海国际魔术节",
+        "text": "1997年4月上海国际魔术节开幕式在美琪大戏院举行。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1997",
+        "month": "5"
+      },
+      "text": {
+        "headline": "希拉克夫人观看《卡门》",
+        "text": "1997年5月法国总统希拉克夫人观看歌剧《卡门》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1997",
+        "month": "9"
+      },
+      "text": {
+        "headline": "《江姐》",
+        "text": "1997年9月上海歌剧院演出歌剧《江姐》。中央及市领导李鹏、吴邦国、黄菊、徐匡迪等观看演出。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1998",
+        "month": "3"
+      },
+      "text": {
+        "headline": "《舞蹈、杂技、魔术》",
+        "text": "1998年3月朝鲜平壤艺术团演出《舞蹈、杂技、魔术》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1999",
+        "month": "1",
+        "day": "23"
+      },
+      "text": {
+        "headline": "朱利亚弦乐四重奏音乐会",
+        "text": "1999年1月23日朱利亚弦乐四重奏音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1999",
+        "month": "4",
+        "day": "30"
+      },
+      "text": {
+        "headline": "独奏音乐会",
+        "text": "1999年4月30日著名小提琴家伊戈尔·奥伊斯特拉赫独奏音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1999",
+        "month": "11"
+      },
+      "text": {
+        "headline": "《生死场》",
+        "text": "1999年11月中央实验话剧院演出话剧《生死场》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1999",
+        "month": "3"
+      },
+      "text": {
+        "headline": "美琪大戏院扩建",
+        "text": "1999年3月美琪大戏院在保护近代建筑文物的前提下，进行历史上最大规模的舞台改扩建工程，至10月竣工。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2000",
+        "month": "8"
+      },
+      "text": {
+        "headline": "星期六学生乐团展演活动",
+        "text": "2000年8月-12月星期六学生乐团展演活动，22所学校参与，举办21场音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2000",
+        "month": "5"
+      },
+      "text": {
+        "headline": "《舞蹈专场》演出",
+        "text": "2000年5月美国杨百翰舞蹈团举行《舞蹈专场》演出;  日本鼓童表演团演出《鼓》;土耳其国家民间舞蹈团举行具有浓郁民族特色的《舞蹈专场》。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/ytsn0ae2hymggx6s.jpg",
+        "caption": "傅聪在上海音乐厅演奏",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/ytsn0ae2hymggx6s"
+      },
+      "start_date": {
+        "year": "2001",
+        "month": "3"
+      },
+      "text": {
+        "headline": "傅聪演奏",
+        "text": "2001年3月-2002年1月 主办肖邦钢琴作品全集（12套）音乐会，傅聪在音乐会期间演奏钢琴经典曲目。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2001",
+        "month": "1"
+      },
+      "text": {
+        "headline": "《茶花女》",
+        "text": "2001年1月莫斯科国立芭蕾舞剧院演出芭蕾舞剧《茶花女》;奥地利萨尔茨堡乐团演出《莫扎特斯特劳斯作品音乐会》。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2002",
+        "month": "8",
+        "day": "18"
+      },
+      "text": {
+        "headline": "再见我的珍爱",
+        "text": "2002年月8月18日-31日\"再见我的珍爱\"-暂别上海音乐厅系列音乐会。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/nioirzxfb1ueyo7v.jpg",
+        "caption": "上海音乐厅平移",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/nioirzxfb1ueyo7v"
+      },
+      "start_date": {
+        "year": "2002",
+        "month": "9",
+        "day": "1"
+      },
+      "text": {
+        "headline": "上海音乐厅平移",
+        "text": "2002年9月1日暂时歇业，开始实施\"平移和完善功能性修缮\"工程。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2004",
+        "month": "10",
+        "day": "1"
+      },
+      "text": {
+        "headline": "上海音乐厅新落成",
+        "text": "2004年10月1日，英国皇家爱乐乐团在新落成的上海音乐厅举行首场音乐会。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2005",
+        "month": "10",
+        "day": "31"
+      },
+      "text": {
+        "headline": "优秀历史建筑",
+        "text": "2005年10月31日被上海人民政府公布为优秀历史建筑。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2005",
+        "month": "3"
+      },
+      "text": {
+        "headline": "黄浦剧场转制企业",
+        "text": "2005年3月黄浦剧场由事业单位转制为企业，成为上海大光明文化（集团）有限公司的下属企业。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/jf3f3nr5dcww1vb3.jpg",
+        "caption": "图为6月13日第二本演出时剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/jf3f3nr5dcww1vb3"
+      },
+      "start_date": {
+        "year": "2007"
+      },
+      "text": {
+        "headline": "《长生殿》",
+        "text": "2007年5月29日，全本昆剧《长生殿》在兰心大戏院隆重上演，这是《长生殿》问世300年第一次在现代舞台上的全貌呈现，该剧历时三年完成排演，演员阵容强大，全剧分为《钗盒情定》、《霓裳羽衣》、《马嵬惊变》、《月宫重圆》四本。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/yhdok5dqmmyfnroq.jpg",
+        "caption": "图为演出海报。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/yhdok5dqmmyfnroq"
+      },
+      "start_date": {
+        "year": "2008"
+      },
+      "text": {
+        "headline": "周立波“海派清口”",
+        "text": "2008年12月5日，上海笑星周立波以其所创“海派清口”的形式在兰心大戏院首演《笑侃三十年》，轰动上海滩，到2009年3月8日，一口气演出20场，后又转战美琪演出11场，场场爆满，一票难求。周立波一个人、一张嘴、一台戏、一瓶水、一条毛巾、两个小时，一半上海方言一半普通话，单口说全场，调侃民生话题、时事热点、名人明星。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2008",
+        "month": "5",
+        "day": "10"
+      },
+      "text": {
+        "headline": "黄浦剧场被评保护建筑",
+        "text": "2008年5月10日，黄浦剧场列入上海市第四批保护建筑名单。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/o43csp6rhkaw5xlq.jpg",
+        "caption": "图为《牡丹亭》剧照。",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/o43csp6rhkaw5xlq"
+      },
+      "start_date": {
+        "year": "2009"
+      },
+      "text": {
+        "headline": "《牡丹亭》",
+        "text": "由日本歌舞伎名角坂东玉三郎和苏州昆剧院合作演出的昆剧《牡丹亭》于2009年11月17日至22日在兰心大剧院公演，该剧曾在日本京都南座剧场连演20场，场场爆满，还曾在北京和苏州上演，颇受好评。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2009"
+      },
+      "text": {
+        "headline": "爱国主义教育基地",
+        "text": "2009年黄浦剧场被市委宣传部确定为 \" 上海市爱国主义教育基地 \"。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2010",
+        "month": "9",
+        "day": "16"
+      },
+      "text": {
+        "headline": "人民大舞台试运行",
+        "text": "2010年9月16日重建后的人民大舞台开始试运行。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2011"
+      },
+      "text": {
+        "headline": "上海电影院关闭",
+        "text": "2011年上海电影院因年久失修关闭。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2011",
+        "month": "5",
+        "day": "2"
+      },
+      "text": {
+        "headline": "人民大舞台重开业",
+        "text": "2011年5月2日重建后的人民大舞台正式开业。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/ig00rawdf7bzasq8.jpg",
+        "caption": "焦晃出演《安东尼与克莉奥佩特拉》剧照",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/ig00rawdf7bzasq8"
+      },
+      "start_date": {
+        "year": "2012",
+        "month": "2",
+        "day": "11"
+      },
+      "text": {
+        "headline": "《安东尼与克莉奥佩特拉》",
+        "text": "2012年2月11日至3月3日莎士比亚经典戏剧《安东尼与克莉奥佩特拉》在人民大舞台连演13场，由焦晃、顾永菲担当男女主演。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2013",
+        "month": "12",
+        "day": "17"
+      },
+      "text": {
+        "headline": "《最后的贵族》",
+        "text": "2013年12月17日 话剧《最后的贵族》在上海人民大舞台首演。该剧是“海上话剧工场”为纪念著名导演谢晋诞辰90周年而精心打造。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2013",
+        "month": "4",
+        "day": "21"
+      },
+      "text": {
+        "headline": "武大校友视频直播通话",
+        "text": "2013年4月21日，武汉大学上海校友会在人民大舞台通过观众厅的光纤，与远在南极的武大校友进行了视频直播通话。 "
+      }
+    },
+    {
+      "start_date": {
+        "year": "2013",
+        "month": "5",
+        "day": "14"
+      },
+      "text": {
+        "headline": "《琼加姑娘》",
+        "text": "2013年5月14日至18日由诺贝尔文学奖得主略萨亲笔授权的话剧《琼加姑娘》在人民大舞台隆重上演。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2016",
+        "month": "4"
+      },
+      "text": {
+        "headline": "黄浦剧场大修",
+        "text": "2016年4月起开始大修，清退一楼的五金商场，恢复演出功能。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2017",
+        "month": "11"
+      },
+      "text": {
+        "headline": "上海大戏院入围WAF",
+        "text": "2017年11月改建后的上海大戏院建筑入围2017 WAF世界建筑节大奖。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/a844bpcrhz68lcvd.jpg",
+        "caption": "2017年3月RE源•跨界当代艺术展海报",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/a844bpcrhz68lcvd"
+      },
+      "start_date": {
+        "year": "2017",
+        "month": "3",
+        "day": "10"
+      },
+      "text": {
+        "headline": "跨界当代艺术展",
+        "text": "2017年3月10至3月31日RE源·跨界当代艺术展。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/ltekle3kynjk41xc.jpg",
+        "caption": "2017年开幕大戏《原野》海报",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/ltekle3kynjk41xc"
+      },
+      "start_date": {
+        "year": "2017",
+        "month": "3",
+        "day": "31"
+      },
+      "text": {
+        "headline": "上海大戏院重开张",
+        "text": "2017年3月31日至4月5日上海大戏院历时三年装修改造重新开张，开幕大戏为《原野》 。"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/8xwuer2k88haopwb.jpg",
+        "caption": "2017年4月张军在当代昆曲艺术周中演出《我，哈姆雷特》",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/8xwuer2k88haopwb"
+      },
+      "start_date": {
+        "year": "2017",
+        "month": "4"
+      },
+      "text": {
+        "headline": "《我，哈姆雷特》",
+        "text": "张军在当代昆曲艺术周中演出《我，哈姆雷特》"
+      }
+    },
+    {
+      "media": {
+        "url": "https://img.library.sh.cn/whzk/img/6kyblitrnppjl22n.jpg",
+        "caption": "2017年4月当代昆曲艺术周曲目",
+        "credit": "http://data.library.sh.cn/shmemory/resource/img/6kyblitrnppjl22n"
+      },
+      "start_date": {
+        "year": "2017",
+        "month": "4",
+        "day": "7"
+      },
+      "text": {
+        "headline": "当代昆曲艺术周",
+        "text": "2017年4月7日至4月16日当代昆曲艺术周。"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2018",
+        "month": "10",
+        "day": "15"
+      },
+      "text": {
+        "headline": "长江剧场再度开业",
+        "text": "2018年10月15日长江剧场再度隆重开业。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: movie
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+      enabled: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+#file:
+#  upload-dir: /Users/duhy/Documents/project/TraditioNowproject/NMuseum/sharepost
+
+# debug: true

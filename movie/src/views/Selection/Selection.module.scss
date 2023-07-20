@@ -1,0 +1,284 @@
+.masterWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    // 和第一张幻灯片的背景色一致
+    background: #30401f;
+    .panelWrap {
+      width: 100%;
+      height: 100%;
+      section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-weight: 700;
+        position: relative;
+        .caption {
+          // 最底部
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          color: white;
+          line-height: 1.2em;
+          font-family: Helvetica, Arial, sans-serif;
+          .title {
+            font-size: 1.5em;
+            text-shadow: #000 2px 0 0, #000 0 2px 0, #000 -2px 0 0, #000 0 -2px 0;
+          }
+          .subtitle {
+            font-size: 1em;
+            -webkit-text-stroke: 0.05em black;
+          }
+        }
+      }
+    }
+}
+
+.Selection {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, Arial, sans-serif;
+  .map {
+    width: 100%;
+    height: 350px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ticket {
+    // 放在底部
+    position: fixed;
+    // 居中
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 20px auto;
+    .stub, .check {
+      box-sizing: border-box;
+    }
+}
+}
+
+.stub {
+  background: #901316;
+  height: 250px;
+  width: 250px;
+  color: #d6c29b;
+  padding: 20px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    border-top: 20px solid #ACA6A8;
+    border-left: 20px solid #9F4512;
+    width: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    border-bottom: 20px solid #ACA6A8;
+    border-left: 20px solid #9F4512;
+    width: 0;
+  }
+  .top {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    .admit {
+      white-space: nowrap;
+      font-size: 24px;
+    }
+    .line {
+      display: block;
+      background: #fff;
+      height: 40px;
+      width: 3px;
+      margin: 0 20px;
+    }
+    .num {
+      white-space: nowrap;
+    }
+  }
+  .number {
+    position: absolute;
+    left: 30px;
+    bottom: 5px;
+    font-size: 150px;
+  }
+}
+
+.check {
+  background: #fff;
+  height: 250px;
+  width: 450px;
+  padding: 40px;
+  position: relative;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    border-top: 20px solid #ACA6A8;
+    border-right: 20px solid #fff;
+    width: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    border-bottom: 20px solid #ACA6A8;
+    border-right: 20px solid #fff;
+    width: 0;
+  }
+  
+  .big {
+    font-weight: 900;
+    line-height: 2.5em;
+    .textEn {
+      font-size: 36px;
+      color: #ACA6A8;
+      white-space: nowrap;
+    }
+    .textCn {
+      font-size: 60px;
+    }
+  }
+  .number {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: #524243;
+    font-size: 40px;
+  }
+  .info {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+    margin-top: 50px;
+    width: 100%;
+    
+    section {
+      margin-right: 50px;
+      &:before {
+        content: '';
+        background: #9F4512;
+        display: block;
+        width: 100px;
+        height: 3px;
+        margin-bottom: 5px;
+      }
+      .title {
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+/* 媒体查询 */
+@media screen and (max-width: 768px) {
+.ticket {
+  width: 60%;
+  margin: 3px auto;
+}
+  
+.stub {
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  
+  .top {
+    height: 24px;
+    font-size: 4px;
+    .line {
+      height: 24px;
+      width: 3px;
+      margin: 0 5px;
+    }
+  }
+  .number {
+    position: absolute;
+    left: 24px;
+    font-size: 90px;
+  }
+}
+
+.check {
+  height: 150px;
+  width: 250px;
+  padding: 20px;
+  .big {
+    line-height: 1.8em;
+    .textEn {
+      font-size: 24px;
+    }
+    .textCn {
+      font-size: 38px;
+    }
+  }
+  .number {
+    font-size: 26px;
+    top: 30px;
+    right: 20px;
+  }
+  .info {
+    font-size: 6px;
+    margin-top: 20px;
+    section {
+      margin-right: 20px;
+      &:before {
+        content: '';
+        background: #9F4512;
+        display: block;
+        width: 100px;
+        height: 3px;
+        margin-bottom: 5px;
+      }
+      .title {
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+}
+
+  
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    position: relative;
+    background-color: #fff;
+    margin: 12px;
+    cursor: pointer;
+}
+  
+.dots {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    right: 16px;
+}
