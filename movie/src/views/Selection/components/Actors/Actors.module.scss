@@ -1,18 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
-  .map {
+  .emotion {
     width: 300px;
     height: 300px;
-    // 圆形
-    border-radius: 50%;
-    background-image: url("../../../../assets/png/shanghai.png");
+    background-image: url("../../../../assets/png/actors.png");
     // 背景图缩放并居中
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    border: 1px solid #ccc;
     cursor: pointer;
   }
 }
-

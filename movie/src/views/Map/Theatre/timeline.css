@@ -6,3 +6,7 @@
   width: 100% !important;
   text-align: center !important;
 }
+
+.tl-slidenav-previous .tl-slidenav-title, .tl-slidenav-next .tl-slidenav-title, .tl-slidenav-previous .tl-slidenav-description, .tl-slidenav-next .tl-slidenav-description {
+    width: 150px;
+}

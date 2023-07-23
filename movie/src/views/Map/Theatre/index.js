@@ -1,12 +1,13 @@
+import { inject, observer } from 'mobx-react';
 import Styles from "./Theatre.module.scss";
 import MapChart from "./map";
 import TimeLine from "./timeline";
 import { Modal } from "antd";
-import { useState } from "react";
 import { TheatreInfo } from "./components";
 
-function Theatre() {
-  const [open, setOpen] = useState(true);
+function Theatre({ theatreStore }) {
+  const { isShowModal, toggleModal } = theatreStore;
+
   return (
     <>
       <div className={Styles.map}>
@@ -18,9 +19,13 @@ function Theatre() {
       <Modal
         title="Modal 1000px width"
         centered
-        open={open}
-        onOk={() => setOpen(false)}
-        onCancel={() => setOpen(false)}
+        open={isShowModal}
+        onOk={() => {
+          toggleModal(false);
+        } }
+        onCancel={() => {
+          toggleModal(false);
+        }}
         width={1000}
       >
         <TheatreInfo />
@@ -29,4 +34,4 @@ function Theatre() {
   );
 }
 
-export default Theatre;
+export default inject('theatreStore')(observer(Theatre));

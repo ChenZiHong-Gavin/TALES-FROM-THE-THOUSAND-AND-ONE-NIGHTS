@@ -77,10 +77,8 @@
 }
 
 .stub {
-  background: #901316;
   height: 250px;
   width: 250px;
-  color: #d6c29b;
   padding: 20px;
   position: relative;
 
@@ -89,7 +87,7 @@
     position: absolute;
     top: 0; right: 0;
     border-top: 20px solid #ACA6A8;
-    border-left: 20px solid #9F4512;
+    border-left: 20px solid #524243;
     width: 0;
   }
   &:after {
@@ -97,7 +95,7 @@
     position: absolute;
     bottom: 0; right: 0;
     border-bottom: 20px solid #ACA6A8;
-    border-left: 20px solid #9F4512;
+    border-left: 20px solid #524243;
     width: 0;
   }
   .top {
@@ -180,8 +178,8 @@
     section {
       margin-right: 50px;
       &:before {
+        background: #000;
         content: '';
-        background: #9F4512;
         display: block;
         width: 100px;
         height: 3px;
@@ -248,8 +246,8 @@
     section {
       margin-right: 20px;
       &:before {
+        background: #000;
         content: '';
-        background: #9F4512;
         display: block;
         width: 100px;
         height: 3px;

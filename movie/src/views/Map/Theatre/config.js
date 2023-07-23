@@ -2,10 +2,12 @@ const geojson = {
   type: "Theatres",
   theatres: [
     {
+      id: 1,
       type: "Theatre",
       properties: {
-        message: "上海大戏院",
-        iconSize: [60, 60],
+        title: "上海大戏院",
+        iconSize: [895, 406],
+        url: "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png",
       },
       geometry: {
         type: "Point",
@@ -13,10 +15,12 @@ const geojson = {
       },
     },
     {
+      id: 2,
       type: "Theatre",
       properties: {
-        message: "上海音乐厅",
-        iconSize: [60, 60],
+        title: "上海音乐厅",
+        iconSize: [895, 406],
+        url: "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png",
       },
       geometry: {
         type: "Point",
@@ -24,10 +28,12 @@ const geojson = {
       },
     },
     {
+      id: 3,
       type: "Theatre",
       properties: {
-        message: "人民大舞台",
-        iconSize: [60, 60],
+        title: "人民大舞台",
+        iconSize: [895, 406],
+        url: "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png",
       },
       geometry: {
         type: "Point",
@@ -35,10 +41,12 @@ const geojson = {
       },
     },
     {
+      id: 4,
       type: "Theatre",
       properties: {
-        message: "兰心大戏院",
-        iconSize: [60, 60],
+        title: "兰心大戏院",
+        iconSize: [895, 406],
+        url: "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png",
       },
       geometry: {
         type: "Point",
@@ -46,10 +54,12 @@ const geojson = {
       },
     },
     {
+      id: 5,
       type: "Theatre",
       properties: {
-        message: "大光明电影院",
-        iconSize: [60, 60],
+        title: "大光明电影院",
+        iconSize: [895, 406],
+        url: "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png",
       },
       geometry: {
         type: "Point",
@@ -57,10 +67,12 @@ const geojson = {
       },
     },
     {
+      id: 6,
       type: "Theatre",
       properties: {
-        message: "新光影艺苑",
-        iconSize: [60, 60],
+        title: "新光影艺苑",
+        iconSize: [895, 406],
+        url: "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png",
       },
       geometry: {
         type: "Point",
@@ -68,10 +80,12 @@ const geojson = {
       },
     },
     {
+      id: 7,
       type: "Theatre",
       properties: {
-        message: "美琪大戏院",
-        iconSize: [60, 60],
+        title: "美琪大戏院",
+        iconSize: [895, 406],
+        url: "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png",
       },
       geometry: {
         type: "Point",
@@ -79,10 +93,12 @@ const geojson = {
       },
     },
     {
+      id: 8,
       type: "Theatre",
       properties: {
-        message: "长江剧场",
-        iconSize: [60, 60],
+        title: "长江剧场",
+        iconSize: [895, 406],
+        url: "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png",
       },
       geometry: {
         type: "Point",
@@ -90,10 +106,12 @@ const geojson = {
       },
     },
     {
+      id: 9,
       type: "Theatre",
       properties: {
-        message: "黄浦剧场",
-        iconSize: [60, 60],
+        title: "黄浦剧场",
+        iconSize: [895, 406],
+        url: "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png",
       },
       geometry: {
         type: "Point",

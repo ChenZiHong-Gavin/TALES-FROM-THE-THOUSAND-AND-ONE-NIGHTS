@@ -1,29 +1,31 @@
-import Styles from './Selection.module.scss';
-import Script from 'react-load-script';
-import { useEffect, useRef, useState } from 'react';
-import { colorArray, mode, captionArray, invitationInfo } from './config';
-import Jump from 'react-reveal/Jump';
-import { Fade } from 'react-reveal';
-import { FloatingMap } from './components';
+import Styles from "./Selection.module.scss";
+import Script from "react-load-script";
+import { useEffect, useRef, useState } from "react";
+import { colorArray, captionArray, invitationInfo } from "./config";
+import Jump from "react-reveal/Jump";
+import { Fade } from "react-reveal";
+import { FloatingMap, Emotion, Actors, Photo, Search } from "./components";
 
 const Selction = () => {
   const containerRef = useRef(null);
   const sectionRefs = useRef([]);
   const dotsRef = useRef(null);
-  const [modeInfo, setModeInfo] = useState(mode[0]);
   const [loading, setLoading] = useState(true);
   const date = new Date();
-  const dateStr = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
+  const dateStr = `${date.getFullYear()}年${
+    date.getMonth() + 1
+  }月${date.getDate()}日`;
   const [invitation, setInvitation] = useState(invitationInfo[0]);
+  const [activeSlide, setActiveSlide] = useState(0);
 
   const changeMode = (activeSlide) => {
-    setModeInfo(mode[activeSlide]);
+    setActiveSlide(activeSlide);
     setInvitation(invitationInfo[activeSlide]);
-  }
+  };
 
   useEffect(() => {
-    if (loading  | (!containerRef.current)) {
-      return
+    if (loading | !containerRef.current) {
+      return;
     }
     const gsap = window.gsap;
     const slides = sectionRefs.current;
@@ -39,11 +41,10 @@ const Selction = () => {
       dots.innerHTML = "";
     }
 
-
     for (let i = 0; i < slides.length; i++) {
       gsap.set(slides[i], { backgroundColor: colorArray[i] });
       let newDot = document.createElement("div");
-      newDot.className = `${Styles.dot} dot`
+      newDot.className = `${Styles.dot} dot`;
       newDot.index = i;
       newDot.addEventListener("click", slideAnim);
       dots.appendChild(newDot);
@@ -68,10 +69,10 @@ const Selction = () => {
     function slideAnim(e) {
       oldSlide = activeSlide;
       if (this.className === `${Styles.dot} dot`) {
-          activeSlide = this.index;
+        activeSlide = this.index;
       } else {
-          activeSlide = e.deltaY > 0 ? (activeSlide += 1) : (activeSlide -= 1);
-        }
+        activeSlide = e.deltaY > 0 ? (activeSlide += 1) : (activeSlide -= 1);
+      }
       // make sure we're not past the end or beginning slide
       activeSlide = activeSlide < 0 ? 0 : activeSlide;
       activeSlide =
@@ -79,12 +80,12 @@ const Selction = () => {
       if (oldSlide === activeSlide) {
         return;
       }
+      changeMode(activeSlide);
       gsap.to(container, dur, {
         y: offsets[activeSlide],
         ease: "power2.inOut",
         onUpdate: tweenDot,
       });
-      changeMode(activeSlide);
     }
 
     window.addEventListener("wheel", slideAnim);
@@ -114,84 +115,87 @@ const Selction = () => {
     return () => {
       window.removeEventListener("wheel", slideAnim);
       window.removeEventListener("resize", newSize);
-    }
-
-  }, [loading]);  
+    };
+  }, [loading]);
 
   return (
-  <>
-    <div className={Styles.masterWrap}>
-      <div className={Styles.panelWrap} ref={containerRef}>
-        {
-          captionArray.map((item, index) => {
+    <>
+      <div className={Styles.masterWrap}>
+        <div className={Styles.panelWrap} ref={containerRef}>
+          {captionArray.map((item, index) => {
             return (
-              <section key={index} ref={el => (sectionRefs.current[index] = el)}>
+              <section
+                key={index}
+                ref={(el) => (sectionRefs.current[index] = el)}
+              >
                 <div className={Styles.caption}>
                   <div className={Styles.title}>{item.title}</div>
                   <div className={Styles.subtitle}>{item.subtitle}</div>
                 </div>
               </section>
-            )
-          })
-        }
-
-    </div>
-    </div>
-    <div className={`${Styles.dots} dots`} ref={dotsRef}></div>
-    <div className={Styles.Selection}>
-      <div className={Styles.map}>
-        <FloatingMap />
-      </div>
-      <div className={Styles.ticket}>
-        <div className={Styles.stub}>
-          <div className={Styles.top}>
-            <span className={Styles.admit}>邀请函</span>
-            <span className={Styles.line}></span> 
-            <span className={Styles.num}>
-              敬启者
-            </span>
-          </div>
-          <div className={Styles.number}>
-            <Fade spy={invitation.number_cn}>
-              {invitation.number_cn}
-            </Fade>
-          </div>
-        </div>
-        <div className={Styles.check}>
-          <div className={Styles.big}>
-            <span className={Styles.textEn}>
-              {invitation.name_en}
-            </span> 
-            <br />
-            <span className={Styles.textCn}>
-              <Jump spy={invitation.name_cn}>
-                  {invitation.name_cn}
-              </Jump>
-            </span>
-          </div>
-          <div className={Styles.number}>{invitation.number}</div>
-          <div className={Styles.info}>
-            <section>
-              <div className={Styles.title}><strong>日期</strong></div>
-              <div>{dateStr}</div>
-            </section>
-            <section>
-              <div className={Styles.title}><strong>主办方</strong></div>
-              <div>一千零一夜电影社</div>
-            </section>
-          </div>
+            );
+          })}
         </div>
       </div>
-    </div>
-    <Script
-      url={
-        process.env.PUBLIC_URL + "/gsap.min.js"
-      }
-      onLoad={
-        () => setLoading(false)
-      }
-    />
-  </>
+      <div className={`${Styles.dots} dots`} ref={dotsRef}></div>
+      <div className={Styles.Selection}>
+        <div className={Styles.map}>
+          {
+            activeSlide === 0 ? <FloatingMap /> :
+            activeSlide === 1 ? <Emotion /> :
+            activeSlide === 2 ? <Actors /> : 
+            activeSlide === 3 ? <Photo /> :
+            activeSlide === 4 ? <Search /> : null
+          }
+        </div>
+        <div className={Styles.ticket}>
+          <div
+            className={Styles.stub}
+            style={{
+              background: invitation.color.stub.background,
+              color: invitation.color.stub.color,
+            }}
+          >
+            <div className={Styles.top}>
+              <span className={Styles.admit}>邀请函</span>
+              <span className={Styles.line}></span>
+              <span className={Styles.num}>敬启者</span>
+            </div>
+            <div className={Styles.number}>
+              <Fade spy={invitation.number_cn}>{invitation.number_cn}</Fade>
+            </div>
+          </div>
+          <div className={Styles.check}>
+            <div className={Styles.big}>
+              <span className={Styles.textEn}>{invitation.name_en}</span>
+              <br />
+              <span className={Styles.textCn}>
+                <Jump spy={invitation.name_cn}>{invitation.name_cn}</Jump>
+              </span>
+            </div>
+            <div className={Styles.number}>{invitation.number}</div>
+            <div className={Styles.info}>
+              <section>
+                <div className={Styles.title}>
+                  <strong>日期</strong>
+                </div>
+                <div>{dateStr}</div>
+              </section>
+              <section>
+                <div className={Styles.title}>
+                  <strong>主办方</strong>
+                </div>
+                <div>一千零一夜电影社</div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Script
+        url={process.env.PUBLIC_URL + "/gsap.min.js"}
+        onLoad={() => setLoading(false)}
+      />
+    </>
   );
 };
 
