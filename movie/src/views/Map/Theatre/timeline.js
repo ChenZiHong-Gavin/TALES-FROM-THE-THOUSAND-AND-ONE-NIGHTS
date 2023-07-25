@@ -17,13 +17,15 @@ function TimeLine() {
       var options = {
         initial_zoom: 8,
         lang: 'zh-cn',
+        hash_bookmark: true,
       }
       const json = timeLineData;
       new Timeline('timeline', json, options);
     }
     // 要先加载完json
     fetchData();
-  }, [])
+  }, []);
+
 
   return (
     <div id="timeline" ref={timelineRef}></div>

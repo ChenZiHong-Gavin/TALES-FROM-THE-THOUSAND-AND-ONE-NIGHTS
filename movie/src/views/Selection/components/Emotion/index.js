@@ -5,7 +5,7 @@ function Emotion() {
   const navigate = useNavigate();
 
   function gotoEmotion() {
-    navigate("/map/theatre");
+    navigate("/map/emotion");
   }
   return (
     <div className={Styles.container}>

@@ -1,6 +1,7 @@
 import Styles from './Home.module.scss';
 import logoGif from '../../assets/gif/logo.gif'
 import titleGif from '../../assets/gif/title.gif'
+import originSvg from '../../assets/svg/origin.svg'
 import { Button } from 'antd';
 import { useState } from 'react';
 import { getPictureListSelected } from '../../api/home';
@@ -83,6 +84,14 @@ function Home() {
         }>
           开始
         </Button>
+      </div>
+
+      <div className={Styles.origin}>
+        <img src={originSvg} alt="origin" onClick={
+          () => {
+            window.open('https://www.library.sh.cn/');
+          }
+        }/>
       </div>
 
       <div className={Styles.mask}></div> 

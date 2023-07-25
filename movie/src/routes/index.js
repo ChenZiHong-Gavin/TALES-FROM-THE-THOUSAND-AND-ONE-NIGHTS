@@ -1,6 +1,6 @@
 import Home from '../views/Home';
 import Selection from '../views/Selection';
-import { Theatre, Actor } from '../views/Map';
+import { Theatre, Actor, Emotion } from '../views/Map';
 import Movie from '../views/Movie';
 
 const routes = [
@@ -18,6 +18,10 @@ const routes = [
       {
         path: '/map/theatre',
         element: <Theatre />,
+      },
+      {
+        path: '/map/emotion',
+        element: <Emotion />,
       },
       {
         path: '/map/actor',

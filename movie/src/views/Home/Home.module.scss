@@ -246,3 +246,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.origin {
+  // 放在左下角
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  img {
+    width: 20%;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    img {
+      width: 30%;
+    }
+  }
+}
