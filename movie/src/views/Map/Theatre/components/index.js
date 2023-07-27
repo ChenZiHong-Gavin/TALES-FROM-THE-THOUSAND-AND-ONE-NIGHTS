@@ -1,3 +1,4 @@
 import TheatreInfo from "./TheatreInfo";
+import NameNode from "./NameNode";
 
-export { TheatreInfo }
+export { TheatreInfo, NameNode }

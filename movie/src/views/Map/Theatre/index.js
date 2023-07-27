@@ -3,14 +3,17 @@ import Styles from "./Theatre.module.scss";
 import MapChart from "./map";
 import TimeLine from "./timeline";
 import { Modal } from "antd";
-import { TheatreInfo } from "./components";
-import { useEffect } from "react";
+import { TheatreInfo, NameNode } from "./components";
 
 function Theatre({ theatreStore }) {
-  const { isShowModal, toggleModal } = theatreStore;
-
+  const { isShowModal, toggleModal, suits } = theatreStore;
   return (
     <>
+      {suits.length === 0 ? null : (
+        <div className={Styles.nameNode}>
+          <NameNode />
+        </div>
+      )}
       <div className={Styles.map}>
         <MapChart />
       </div>

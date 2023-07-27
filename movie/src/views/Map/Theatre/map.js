@@ -11,7 +11,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiY2hlbnppaG9uZyIsImEiOiJjbGp2b2h2aGUxOTZpM2Vvam1pa3FsNXk4In0.JK1OvIWLOXaxw-9hI_6rCw";
 
 function Map({ theatreStore }) {
-  const { toggleModal, setTheatreId } = theatreStore;
+  const { toggleModal, setTheatreId, setSuits } = theatreStore;
 
   const mapContainer = useRef(null);
   const map = useRef(null);
@@ -57,15 +57,7 @@ function Map({ theatreStore }) {
           ],
           // Use step expressions to implement different circle radii based on point_count
           // radius弄大一点，不然点太小了
-          "circle-radius": [
-            "step",
-            ["get", "point_count"],
-            20,
-            9,
-            25,
-            15,
-            30,
-          ],
+          "circle-radius": ["step", ["get", "point_count"], 20, 9, 25, 15, 30],
         },
       });
       // Add the 'cluster-count' layer
@@ -198,15 +190,16 @@ function Map({ theatreStore }) {
       map.current.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
 
       map.current.on("zoom", () => {
-        if (map.current.getZoom() < 11) {
-          map.current.setLayoutProperty("point", "visibility", "none");
-        }
-        if (map.current.getZoom() >= 11) {
-          map.current.setLayoutProperty("point", "visibility", "visible");
+        // 如果有point
+        if (map.current.getLayer("point")) {
+          if (map.current.getZoom() < 11) {
+            map.current.setLayoutProperty("point", "visibility", "none");
+          }
+          if (map.current.getZoom() >= 11) {
+            map.current.setLayoutProperty("point", "visibility", "visible");
+          }
         }
       });
-
-
     });
 
     return () => {
@@ -254,7 +247,8 @@ function Map({ theatreStore }) {
       zoom: 15,
     });
 
-    // map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
+    setSuits(group);
+
     // 在这个coordinates上添加一个pulsing-dot
     map.current.addSource("point", {
       type: "geojson",

@@ -6,8 +6,26 @@
       "type": "Feature",
       "properties": {
         "title": "上海大戏院",
-        "iconSize": [895, 406],
-        "url": "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png"
+        "suits": [
+          {
+            "source": "银光大戏院",
+            "target": "上海大戏院",
+            "type": "stage1",
+            "time": "1943年"
+          },
+          {
+            "source": "上海大戏院",
+            "target": "上海电影院",
+            "type": "stage2",
+            "time": "1956年"
+          },
+          {
+            "source": "上海电影院",
+            "target": "上海大戏院",
+            "type": "stage3",
+            "time": "2017年"
+          }
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -19,8 +37,32 @@
       "type": "Feature",
       "properties": {
         "title": "上海音乐厅",
-        "iconSize": [895, 406],
-        "url": "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png"
+        "suits": [
+          {
+            "source": "南京大戏院",
+            "target": "北京电影院",
+            "type": "stage1",
+            "time": "1950年"
+          },
+          {
+            "source": "北京电影院",
+            "target": "上海音乐厅",
+            "type": "stage2",
+            "time": "1959年"
+          },
+          {
+            "source": "上海音乐厅",
+            "target": "革命音乐厅",
+            "type": "stage3",
+            "time": "1966年"
+          },
+          {
+            "source": "革命音乐厅",
+            "target": "上海音乐厅",
+            "type": "stage4",
+            "time": "1967年"
+          }
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -32,8 +74,38 @@
       "type": "Feature",
       "properties": {
         "title": "人民大舞台",
-        "iconSize": [895, 406],
-        "url": "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png"
+        "suits": [
+          {
+            "source": "文明大舞台",
+            "target": "荣记大舞台",
+            "type": "stage1",
+            "time": "1919年"
+          },
+          {
+            "source": "荣记大舞台",
+            "target": "康记大舞台",
+            "type": "stage2",
+            "time": "1935年"
+          },
+          {
+            "source": "康记大舞台",
+            "target": "国营人民大舞台",
+            "type": "stage3",
+            "time": "1951年"
+          },
+          {
+            "source": "国营人民大舞台",
+            "target": "人民大剧场",
+            "type": "stage4",
+            "time": "1966年"
+          },
+          {
+            "source": "人民大剧场",
+            "target": "人民大舞台",
+            "type": "stage5",
+            "time": "1976年"
+          }
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -45,8 +117,20 @@
       "type": "Feature",
       "properties": {
         "title": "兰心大戏院",
-        "iconSize": [895, 406],
-        "url": "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png"
+        "suits": [
+          {
+            "source": "兰心大戏院",
+            "target": "上海艺术剧场",
+            "type": "stage1",
+            "time": "1952年"
+          },
+          {
+            "source": "上海艺术剧场",
+            "target": "兰心大戏院",
+            "type": "stage2",
+            "time": "1991年"
+          }
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -58,8 +142,14 @@
       "type": "Feature",
       "properties": {
         "title": "大光明电影院",
-        "iconSize": [895, 406],
-        "url": "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png"
+        "suits": [
+          {
+            "source": "大光明影戏院",
+            "target": "新大光明大戏院/电影院",
+            "type": "stage1",
+            "time": "1933年"
+          }
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -71,8 +161,38 @@
       "type": "Feature",
       "properties": {
         "title": "新光影艺苑",
-        "iconSize": [895, 406],
-        "url": "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png"
+        "suits": [
+          {
+            "source": "新光大戏院",
+            "target": "新光剧场",
+            "type": "stage1",
+            "time": "1952年"
+          },
+          {
+            "source": "新光剧场",
+            "target": "红卫剧场",
+            "type": "stage2",
+            "time": "1967年"
+          },
+          {
+            "source": "红卫剧场",
+            "target": "新光影剧场",
+            "type": "stage3",
+            "time": "1974年"
+          },
+          {
+            "source": "新光影剧场",
+            "target": "新光观摩厅",
+            "type": "stage4",
+            "time": "1989年"
+          },
+          {
+            "source": "新光观摩厅",
+            "target": "新光影艺苑",
+            "type": "stage5",
+            "time": "1994年"
+          }
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -84,8 +204,20 @@
       "type": "Feature",
       "properties": {
         "title": "美琪大戏院",
-        "iconSize": [895, 406],
-        "url": "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png"
+        "suits": [
+          {
+            "source": "美琪大戏院",
+            "target": "北京影剧院",
+            "type": "stage1",
+            "time": "1966年"
+          },
+          {
+            "source": "北京影剧院",
+            "target": "美琪大戏院",
+            "type": "stage2",
+            "time": "1985年"
+          }
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -97,8 +229,14 @@
       "type": "Feature",
       "properties": {
         "title": "长江剧场",
-        "iconSize": [895, 406],
-        "url": "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png"
+        "suits": [
+          {
+            "source": "卡尔登大戏院",
+            "target": "长江剧场",
+            "type": "stage1",
+            "time": "1961年"
+          }
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -110,8 +248,14 @@
       "type": "Feature",
       "properties": {
         "title": "黄浦剧场",
-        "iconSize": [895, 406],
-        "url": "https://old-movie.oss-cn-shanghai.aliyuncs.com/theatre/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E6%88%8F%E9%99%A2.png"
+        "suits": [
+          {
+            "source": "金城大戏院",
+            "target": "黄浦剧场",
+            "type": "stage1",
+            "time": "1957年"
+          }
+        ]
       },
       "geometry": {
         "type": "Point",
