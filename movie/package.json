@@ -24,8 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npm run change-modules && react-app-rewired start",
-    "build": "npm run change-modules && react-app-rewired build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "change-modules": "node ./scripts/change-module.js"

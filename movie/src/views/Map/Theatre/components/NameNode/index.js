@@ -148,7 +148,6 @@ const NameNode = ({ theatreStore }) => {
 
     return () => {
       simulation.stop();
-      // 删掉svg
       svg.remove();
     };
   }, [suits]);
