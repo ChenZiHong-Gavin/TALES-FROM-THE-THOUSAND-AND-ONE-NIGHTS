@@ -4,11 +4,11 @@
 }
 
 .map-overlay {
-  font: bold 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font: bold 12px/20px sans-serif, Helvetica, Arial;
   position: absolute;
   width: 200px;
   top: 0;
-  left: 0;
+  right: 0;
   padding: 10px;
 }
 

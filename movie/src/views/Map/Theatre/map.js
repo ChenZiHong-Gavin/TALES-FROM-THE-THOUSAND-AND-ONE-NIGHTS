@@ -1,7 +1,7 @@
 import { inject, observer } from "mobx-react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import Styles from "./Theatre.module.scss";
 import geojson from "../../../assets/json/geojson.json";
 import timeLineData from "../../../assets/json/timeline.json";
@@ -16,7 +16,6 @@ function Map({ theatreStore }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const sliderRef = useRef(null);
-  const [sliderValue, setSliderValue] = useState(0);
 
   useEffect(() => {
     if (map.current) return;
@@ -33,7 +32,10 @@ function Map({ theatreStore }) {
     });
     map.current.fitBounds(shanghaiBounds, {
       padding: 20,
-    });
+    }); 
+
+    map.current.setPitch(45);
+
     map.current.on("load", () => {
       map.current.addSource("oldmap", {
         type: "raster",
@@ -56,7 +58,6 @@ function Map({ theatreStore }) {
             "raster-opacity",
             parseInt(e.target.value, 10) / 100
           );
-          setSliderValue(e.target.value);
         });
       }
 
@@ -306,8 +307,8 @@ function Map({ theatreStore }) {
   return (
     <>
       <div ref={mapContainer} className={Styles.mapContainer} />
-      <div class="map-overlay top">
-        <div class="map-overlay-inner">
+      <div className="map-overlay top">
+        <div className="map-overlay-inner">
           <label>旧图显影</label>
           <input
             ref={sliderRef}
@@ -316,7 +317,7 @@ function Map({ theatreStore }) {
             min="0"
             max="100"
             step="0"
-            value={sliderValue}
+            defaultValue="0"
           ></input>
         </div>
       </div>
