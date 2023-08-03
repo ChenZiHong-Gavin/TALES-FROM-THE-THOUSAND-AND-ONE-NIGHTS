@@ -117,6 +117,7 @@ const EmotionMap = ({ emotionStore }) => {
   };
 
   useEffect(() => {
+    if (!svgRef.current) return;
     const segmentsGroup = JSON.parse(JSON.stringify(segmentsGroupByEmotion));
     // segmentsGroup是一个7维数组，numbers是一个7维数组，从segmentsGroup中随机抽取numbers中的元素
     // 生成一个新的数组，这个数组的每个元素是一个对象，包含了情感和对应的段落
@@ -135,6 +136,9 @@ const EmotionMap = ({ emotionStore }) => {
       });
     }
     const svg = d3.select(svgRef.current);
+
+    svg.attr("class", "emotion-map");
+
     const { width, height } = svg.node().getBoundingClientRect();
     const nodes = generateNodes(width, height, segments);
     const clusters = generateClusters(nodes);
@@ -202,7 +206,7 @@ const EmotionMap = ({ emotionStore }) => {
 
     const hullG = svg.append("g").attr("class", "hulls");
 
-    const defs = svg.append("defs");
+    const defs = svg.append("defs").attr("class", "emotion-defs");
 
     const clusteredNodes = nodes.filter((d) => d.cluster != 0);
     clusteredNodes.forEach((d) => {
@@ -245,11 +249,15 @@ const EmotionMap = ({ emotionStore }) => {
       .attr("fill", (d) => `url(#image${d.id})`);
 
     // 选择svg中class为nodes的g元素
-    const titleNodes = d3
+    const titles = d3
       .select("svg")
       .select("g.nodes")
       .selectAll("text")
-      .data(nodes.filter((d) => d.title))
+      .data(
+        nodes.filter((d) => {
+          return d.title;
+        })
+      )
       .enter()
       .append("text")
       .attr("x", (d) => d.x)
@@ -263,7 +271,8 @@ const EmotionMap = ({ emotionStore }) => {
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "middle")
       .attr("pointer-events", "none")
-      .text((d) => d.title);
+      .text((d) => d.title)
+      .attr("id", (d) => "title-" + d.id);
 
     function handleMouseOver(d, i) {
       // Add interactivity
@@ -337,7 +346,7 @@ const EmotionMap = ({ emotionStore }) => {
         simulation.alphaTarget(0.1).restart();
       }
 
-      titleNodes.attr("x", (d) => d.x).attr("y", (d) => d.y);
+      titles.attr("x", (d) => d.x).attr("y", (d) => d.y);
     }
 
     const simulation = d3
@@ -377,8 +386,9 @@ const EmotionMap = ({ emotionStore }) => {
 
     function resize() {
       simulation.stop();
-      svg.selectAll("g").remove();
-      svg.selectAll("defs").remove();
+      svg.selectAll(".hulls").remove();
+      svg.selectAll(".nodes").remove();
+      svg.selectAll(".emotion-defs").remove();
       setStart(!start);
     }
 
@@ -386,11 +396,12 @@ const EmotionMap = ({ emotionStore }) => {
 
     return () => {
       simulation.stop();
-      svg.selectAll("g").remove();
-      svg.selectAll("defs").remove();
+      svg.selectAll(".hulls").remove();
+      svg.selectAll(".nodes").remove();
+      svg.selectAll(".emotion-defs").remove();
       window.removeEventListener("resize", resize);
     };
-  }, [start, segmentsGroupByEmotion]);
+  }, [start]);
 
   return (
     <div className={Styles.cells}>

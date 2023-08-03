@@ -39,6 +39,7 @@ const NameNode = ({ theatreStore }) => {
     const svg = d3
       .select(svgRef.current)
       .append("svg")
+      .attr("class", "name-node")
       .attr("viewBox", [-width / 2, -height / 2, width, height])
       .attr("width", width)
       .attr("height", height)
@@ -148,7 +149,7 @@ const NameNode = ({ theatreStore }) => {
 
     return () => {
       simulation.stop();
-      svg.remove();
+      d3.selectAll("svg.name-node").remove();
     };
   }, [suits]);
 
