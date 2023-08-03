@@ -146,7 +146,7 @@ function Map({ theatreStore }) {
         popup.remove();
       });
       map.current.on("click", "unclustered-point", (e) => {
-        const id = e.features[0].properties.id;
+        const id = e.features[0].id;
         setTheatreId(id);
         toggleModal(true);
       });

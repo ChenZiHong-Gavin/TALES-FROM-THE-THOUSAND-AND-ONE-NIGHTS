@@ -18,17 +18,17 @@ public class TheatreServiceImpl implements TheatreService {
         Optional<Theatre> theatre = theatreRepository.findById(theatreId);
         TheatreInfoVO theatreInfoVO = TheatreInfoVO.builder()
                 .theatreId(theatre.get().getTheatreId())
-                .nameE(theatre.get().getBuilding().getNameE())
-                .nameT(theatre.get().getBuilding().getNameT())
-                .nameS(theatre.get().getBuilding().getNameS())
-                .description(theatre.get().getBuilding().getDes())
-                .uri(theatre.get().getBuilding().getUri())
-                .address(theatre.get().getBuilding().getAddress())
-                .house(theatre.get().getBuilding().getHouse())
-                .lat(theatre.get().getBuilding().getLat())
-                .lon(theatre.get().getBuilding().getLon())
+                .nameE(theatre.get().getNameE())
+                .nameT(theatre.get().getNameT())
+                .nameS(theatre.get().getNameS())
+                .description(theatre.get().getDes())
+                .uri(theatre.get().getUri())
+                .address(theatre.get().getAddress())
+                .house(theatre.get().getHouse())
+                .lat(theatre.get().getLat())
+                .lon(theatre.get().getLon())
                 .personList(theatre.get().getPersonList())
-                .imageList(theatre.get().getImageList())
+                .imageList(theatre.get().getImagesList())
                 .build();
 
         return theatreInfoVO;

@@ -3,7 +3,8 @@ import Styles from "./Theatre.module.scss";
 import MapChart from "./map";
 import TimeLine from "./timeline";
 import { Modal } from "antd";
-import { TheatreInfo, NameNode, ReturnButton } from "./components";
+import { TheatreInfo, NameNode } from "./components";
+import ReturnButton from "../../../components/ReturnButton";
 
 function Theatre({ theatreStore }) {
   const { isShowModal, toggleModal, suits } = theatreStore;
@@ -22,13 +23,10 @@ function Theatre({ theatreStore }) {
         <TimeLine />
       </div>
       <Modal
-        title="Modal 1000px width"
         centered
         open={isShowModal}
-        onOk={() => {
-          toggleModal(false);
-        }}
-        onCancel={() => {
+        footer={null}
+        onCancel={()=> {
           toggleModal(false);
         }}
         width={1000}

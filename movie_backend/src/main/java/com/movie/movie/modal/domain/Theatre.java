@@ -18,22 +18,18 @@ import java.util.List;
 public class Theatre implements Serializable {
     private static final long serialVersionUID = -5835609140424636626L;
 
-    @Data
-    public class Building {
-        private String nameE;
-        private String nameT;
-        private String nameS;
-        private String des;
-        private String address;
-        private String lon;
-        private String lat;
-        private String uri;
-        private String house;
-    }
-
     @Id
     private Integer theatreId;
-    private Building building;
+    private String des;
+    private String nameE;
+    private String nameS;
+    private String nameT;
+    private String address;
+    private String house;
+    private String lat;
+    private String lon;
+    private String orgName;
+    private String uri;
+    private List<Object> imagesList;
     private List<Object> personList;
-    private List<Object> imageList;
 }

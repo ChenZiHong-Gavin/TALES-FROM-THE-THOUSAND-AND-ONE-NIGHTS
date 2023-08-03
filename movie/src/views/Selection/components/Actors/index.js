@@ -5,7 +5,7 @@ function Actors() {
   const navigate = useNavigate();
 
   function gotoEmotion() {
-    navigate("/map/theatre");
+    navigate("/map/actor");
   }
   return (
     <div className={Styles.container}>
