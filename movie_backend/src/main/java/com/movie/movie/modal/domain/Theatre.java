@@ -32,4 +32,5 @@ public class Theatre implements Serializable {
     private String uri;
     private List<Object> imagesList;
     private List<Object> personList;
+    private List<Object> eventList;
 }

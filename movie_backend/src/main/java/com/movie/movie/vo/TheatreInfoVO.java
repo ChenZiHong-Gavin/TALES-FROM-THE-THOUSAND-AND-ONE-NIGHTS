@@ -27,4 +27,5 @@ public class TheatreInfoVO implements Serializable {
     private String lon;
     private List<Object> personList;
     private List<Object> imageList;
+    private List<Object> eventList;
 }

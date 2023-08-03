@@ -29,6 +29,7 @@ public class TheatreServiceImpl implements TheatreService {
                 .lon(theatre.get().getLon())
                 .personList(theatre.get().getPersonList())
                 .imageList(theatre.get().getImagesList())
+                .eventList(theatre.get().getEventList())
                 .build();
 
         return theatreInfoVO;
