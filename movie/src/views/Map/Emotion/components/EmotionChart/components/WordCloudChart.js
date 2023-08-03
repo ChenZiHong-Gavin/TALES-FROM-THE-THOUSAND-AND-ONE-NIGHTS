@@ -1,25 +1,16 @@
 import { WordCloud } from "@ant-design/plots";
 import { useEffect, useState } from "react";
+import { inject, observer } from "mobx-react";
 
-const WordCloudChart = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    asyncFetch();
-  }, []);
-
-  const asyncFetch = () => {
-    fetch("https://gw.alipayobjects.com/os/antfincdn/jPKbal7r9r/mock.json")
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((error) => {
-        console.log("fetch data failed", error);
-      });
-  };
+const WordCloudChart = ({emotionStore}) => {
+    if (!emotionStore || !emotionStore.wordCloudData) {
+    return null;
+  }
+  const { wordCloudData: data } = emotionStore;
   
   const config = {
     data,
-    wordField: "x",
+    wordField: "text",
     weightField: "value",
     color: "#122c6a",
     wordStyle: {
@@ -40,6 +31,16 @@ const WordCloudChart = () => {
         },
       },
     },
+    tooltip: {
+      visible: true,
+      showTitle: true,
+      title: "text",
+      fields: ["value"],
+      formatter: (datum) => {
+        return { name: datum.text, 
+        value: `时长${datum.value/1000}秒` };
+      },
+    },
   };
 
   return <WordCloud {...config} style={
@@ -49,4 +50,4 @@ const WordCloudChart = () => {
   }/>;
 };
 
-export default WordCloudChart;
+export default inject("emotionStore")(observer(WordCloudChart));

@@ -1,11 +1,12 @@
 import * as d3 from "d3";
 import { useEffect } from "react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Styles from "./EmotionMap.module.scss";
 import { inject, observer } from "mobx-react";
+import { parseTimeString } from "../../../../../utils/time";
 
 const EmotionMap = ({ emotionStore }) => {
-  const { fetchSegmentsGroupByEmotion, segmentsGroupByEmotion } = emotionStore;
+  const { fetchSegmentsGroupByEmotion, segmentsGroupByEmotion, rerender, setRerender, setRoseData, setWordCloudData } = emotionStore;
   const svgRef = useRef();
   const padding = 5;
   const clusterPadding = 20;
@@ -16,7 +17,6 @@ const EmotionMap = ({ emotionStore }) => {
     .scaleOrdinal(d3.schemeCategory10)
     .domain(d3.range(numClusters));
   const line = d3.line().curve(d3.curveBasisClosed);
-  const [start, setStart] = useState(false);
   const emotions = ["难过", "愉快", "喜欢", "愤怒", "害怕", "惊讶", "厌恶"];
   const numberRange = [
     [30, 50],
@@ -27,11 +27,18 @@ const EmotionMap = ({ emotionStore }) => {
     [2, 10],
     [2, 10],
   ];
-
   const numbers = d3.range(7).map((idx) => {
     const range = numberRange[idx];
     return Math.floor(Math.random() * (range[1] - range[0]) + range[0]);
   });
+
+
+  // type: emotion, value: number
+  const roseData = 
+    emotions.map((e, idx) => ({
+      type: e,
+      value: numbers[idx],
+    })); 
 
   useEffect(() => {
     fetchSegmentsGroupByEmotion();
@@ -47,7 +54,6 @@ const EmotionMap = ({ emotionStore }) => {
       x: Math.random() * width,
       y: Math.random() * height,
     }));
-
     const totalNumber = numbers.reduce((a, b) => a + b, 0);
     const clusterNodes = d3.range(totalNumber).map((idx) => {
       let i = 0,
@@ -64,7 +70,6 @@ const EmotionMap = ({ emotionStore }) => {
         y: Math.random() * height,
       };
     });
-
     if (segments.length > 0) {
       // 按照segments修改clusterNodes的属性
       let index = 0;
@@ -77,7 +82,6 @@ const EmotionMap = ({ emotionStore }) => {
         index += segment.segmentList.length;
       });
     }
-
     const titleNodes = d3.range(7).map((idx) => ({
       id: idx + 200,
       cluster: idx + 1,
@@ -117,10 +121,10 @@ const EmotionMap = ({ emotionStore }) => {
   };
 
   useEffect(() => {
-    if (!svgRef.current) return;
+    // 只调用一遍fetchSegmentsGroupByEmotion
+    // fetchSegmentsGroupByEmotion();
+    if(segmentsGroupByEmotion.length === 0) return;
     const segmentsGroup = JSON.parse(JSON.stringify(segmentsGroupByEmotion));
-    // segmentsGroup是一个7维数组，numbers是一个7维数组，从segmentsGroup中随机抽取numbers中的元素
-    // 生成一个新的数组，这个数组的每个元素是一个对象，包含了情感和对应的段落
     const segments = [];
     if (segmentsGroup.length > 0) {
       segmentsGroup.sort((a, b) => {
@@ -134,14 +138,36 @@ const EmotionMap = ({ emotionStore }) => {
           segmentList: segmentsGroup[idx].segmentList.slice(0, num),
         });
       });
+      const wordCloudData = []
+      segments.forEach((s) => {
+        s.segmentList.forEach((seg) => {
+          let timeList = seg.time.split(" --> ");
+          let startTime = timeList[0];
+          let endTime = timeList[1];
+          let timestamp1 = parseTimeString(startTime);
+          let timestamp2 = parseTimeString(endTime);
+          let timeDiffInMs = Math.abs(timestamp2 - timestamp1);
+
+          wordCloudData.push({
+            segmentId: seg.segmentId,
+            text: seg.content,
+            // '00:02:41,333 --> 00:02:43,666'
+            // 算一下时间
+            value: timeDiffInMs,
+            emotionType: s.emotionType,
+          });
+        }
+        );
+      });
+      setWordCloudData(wordCloudData);
     }
     const svg = d3.select(svgRef.current);
-
     svg.attr("class", "emotion-map");
-
     const { width, height } = svg.node().getBoundingClientRect();
     const nodes = generateNodes(width, height, segments);
     const clusters = generateClusters(nodes);
+
+    setRoseData(roseData)
 
     function collide(alpha) {
       const quadtree = d3
@@ -185,7 +211,6 @@ const EmotionMap = ({ emotionStore }) => {
         });
       };
     }
-
     function cluster(alpha) {
       return function (d) {
         const cluster = clusters[d.cluster];
@@ -203,11 +228,8 @@ const EmotionMap = ({ emotionStore }) => {
         }
       };
     }
-
     const hullG = svg.append("g").attr("class", "hulls");
-
     const defs = svg.append("defs").attr("class", "emotion-defs");
-
     const clusteredNodes = nodes.filter((d) => d.cluster != 0);
     clusteredNodes.forEach((d) => {
       defs
@@ -247,32 +269,6 @@ const EmotionMap = ({ emotionStore }) => {
     node
       .filter((d) => d.cluster != 0 && !d.title)
       .attr("fill", (d) => `url(#image${d.id})`);
-
-    // 选择svg中class为nodes的g元素
-    const titles = d3
-      .select("svg")
-      .select("g.nodes")
-      .selectAll("text")
-      .data(
-        nodes.filter((d) => {
-          return d.title;
-        })
-      )
-      .enter()
-      .append("text")
-      .attr("x", (d) => d.x)
-      .attr("y", (d) => d.y)
-      .attr("fill", "black")
-      .attr("stroke", "white")
-      .attr("stroke-width", "1px")
-      .attr("font-size", "20px")
-      .attr("font-weight", "bold")
-      .attr("font-family", "sans-serif")
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle")
-      .attr("pointer-events", "none")
-      .text((d) => d.title)
-      .attr("id", (d) => "title-" + d.id);
 
     function handleMouseOver(d, i) {
       // Add interactivity
@@ -315,6 +311,29 @@ const EmotionMap = ({ emotionStore }) => {
         .duration(1000)
         .attr("transform", event.transform);
     };
+
+    const titles = d3
+      .select("svg.emotion-map")
+      .select("g.nodes")
+      .selectAll("text")
+      .data(
+        nodes.filter((d) => d.title)
+      )
+      .enter()
+      .append("text")
+      .attr("x", (d) => d.x)
+      .attr("y", (d) => d.y)
+      .attr("fill", "black")
+      .attr("stroke", "white")
+      .attr("stroke-width", "1px")
+      .attr("font-size", "20px")
+      .attr("font-weight", "bold")
+      .attr("font-family", "sans-serif")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+      .attr("pointer-events", "none")
+      .text((d) => d.title)
+      .attr("id", (d) => "title-" + d.id);
 
     const zoomBehavior = d3
       .zoom()
@@ -389,7 +408,7 @@ const EmotionMap = ({ emotionStore }) => {
       svg.selectAll(".hulls").remove();
       svg.selectAll(".nodes").remove();
       svg.selectAll(".emotion-defs").remove();
-      setStart(!start);
+      setRerender(!rerender);
     }
 
     window.addEventListener("resize", resize);
@@ -400,8 +419,11 @@ const EmotionMap = ({ emotionStore }) => {
       svg.selectAll(".nodes").remove();
       svg.selectAll(".emotion-defs").remove();
       window.removeEventListener("resize", resize);
+      // remove zoom event
+      svg.on(".zoom", null);
+      setRoseData([]);
     };
-  }, [start]);
+  }, [segmentsGroupByEmotion, rerender]);
 
   return (
     <div className={Styles.cells}>

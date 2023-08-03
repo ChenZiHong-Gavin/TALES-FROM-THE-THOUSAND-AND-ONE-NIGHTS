@@ -1,0 +1,27 @@
+.page {
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+background: linear-gradient(90deg, #f2e2f1 0%,#f6ffb7 30%,#cff3f9 67%, #cdf0cb 100%);
+  background-size: 1000%;
+  -webkit-animation: background 40s linear alternate infinite;
+          animation: background 40s linear alternate infinite;
+}
+
+@-webkit-keyframes background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}

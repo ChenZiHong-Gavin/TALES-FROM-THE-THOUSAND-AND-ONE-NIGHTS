@@ -9,7 +9,7 @@ import Selection from "./components/Selection";
 function Emotion({ emotionStore }) {
   const { mode } = emotionStore;
   return (
-    <>
+    <div className={Styles.page}>
       <ReturnButton />
       <Introduction />
       {mode === "emotion" ? (
@@ -20,7 +20,7 @@ function Emotion({ emotionStore }) {
       ) : (
         <Selection />
       )}
-    </>
+    </div>
   );
 }
 

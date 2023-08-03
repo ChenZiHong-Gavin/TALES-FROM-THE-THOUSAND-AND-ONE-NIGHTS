@@ -1,37 +1,21 @@
 import { Rose } from '@ant-design/plots';
+import { inject, observer } from 'mobx-react';
 
-const RoseChart = () => {
-  const data = [
-    {
-      type: '分类一',
-      value: 27,
-    },
-    {
-      type: '分类二',
-      value: 25,
-    },
-    {
-      type: '分类三',
-      value: 18,
-    },
-    {
-      type: '分类四',
-      value: 15,
-    },
-    {
-      type: '分类五',
-      value: 10,
-    },
-    {
-      type: '其他',
-      value: 5,
-    },
-  ];
+const RoseChart = ({emotionStore}) => {
+    if (!emotionStore || !emotionStore.roseData) {
+    return null;
+  }
+
+  const { roseData: data } = emotionStore;
+
+  const colors = ['#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf'];
+
   const config = {
     data,
     xField: 'type',
     yField: 'value',
     seriesField: 'type',
+    color: colors,
     radius: 0.9,
     legend: {
       position: 'right',
@@ -50,4 +34,4 @@ const RoseChart = () => {
   />
 }
 
-export default RoseChart;
+export default inject('emotionStore')(observer(RoseChart));

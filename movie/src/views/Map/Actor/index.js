@@ -9,7 +9,8 @@ import {
 import Peep from "./utils";
 import Script from "react-load-script";
 import { useEffect, useState } from "react";
-import avatarUrl from "../../../assets/png/avatar.png"
+import avatarUrl from "../../../assets/png/avatar.png";
+import ReturnButton from "../../../components/ReturnButton";
 
 const config = {
   src: avatarUrl,
@@ -135,13 +136,16 @@ function Actor() {
   }, [loading]);
 
   return (
-    <div className={Styles.Actor}>
-      <canvas className={Styles.canvas} id="canvas"></canvas>
-      <Script
-        url={process.env.PUBLIC_URL + "/gsap.min.js"}
-        onLoad={() => setLoading(false)}
-      />
-    </div>
+    <>
+      <ReturnButton />
+      <div className={Styles.Actor}>
+        <canvas className={Styles.canvas} id="canvas"></canvas>
+        <Script
+          url={process.env.PUBLIC_URL + "/gsap.min.js"}
+          onLoad={() => setLoading(false)}
+        />
+      </div>
+    </>
   );
 }
 
