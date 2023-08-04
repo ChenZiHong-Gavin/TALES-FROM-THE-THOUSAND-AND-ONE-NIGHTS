@@ -6,7 +6,7 @@ import { inject, observer } from "mobx-react";
 import { parseTimeString } from "../../../../../utils/time";
 
 const EmotionMap = ({ emotionStore }) => {
-  const { fetchSegmentsGroupByEmotion, segmentsGroupByEmotion, rerender, setRerender, setRoseData, setWordCloudData } = emotionStore;
+  const { fetchSegmentsGroupByEmotion, segmentsGroupByEmotion, rerender, setRerender, setRoseData, setWordCloudData, toggleModal, setSegmentInfo } = emotionStore;
   const svgRef = useRef();
   const padding = 5;
   const clusterPadding = 20;
@@ -70,7 +70,7 @@ const EmotionMap = ({ emotionStore }) => {
         y: Math.random() * height,
       };
     });
-    if (segments.length > 0) {
+    if (segments && segments.length > 0) {
       // 按照segments修改clusterNodes的属性
       let index = 0;
       segments.forEach((segment) => {
@@ -121,12 +121,10 @@ const EmotionMap = ({ emotionStore }) => {
   };
 
   useEffect(() => {
-    // 只调用一遍fetchSegmentsGroupByEmotion
-    // fetchSegmentsGroupByEmotion();
-    if(segmentsGroupByEmotion.length === 0) return;
+    if((!segmentsGroupByEmotion) || segmentsGroupByEmotion.length === 0) return;
     const segmentsGroup = JSON.parse(JSON.stringify(segmentsGroupByEmotion));
     const segments = [];
-    if (segmentsGroup.length > 0) {
+    if (segmentsGroup && segmentsGroup.length > 0) {
       segmentsGroup.sort((a, b) => {
         return (
           emotions.indexOf(a.emotionType) - emotions.indexOf(b.emotionType)
@@ -151,10 +149,13 @@ const EmotionMap = ({ emotionStore }) => {
           wordCloudData.push({
             segmentId: seg.segmentId,
             text: seg.content,
-            // '00:02:41,333 --> 00:02:43,666'
-            // 算一下时间
             value: timeDiffInMs,
-            emotionType: s.emotionType,
+            emotion: s.emotionType,
+            order: seg.order,
+            videoUrl: seg.videoUrl,
+            time: seg.time,
+            videoId: seg.videoId,
+            content: seg.content,
           });
         }
         );
@@ -263,23 +264,29 @@ const EmotionMap = ({ emotionStore }) => {
           .on("drag", dragged)
           .on("end", dragended)
       )
-      .on("mouseover", handleMouseOver)
-      .on("mouseout", handleMouseOut);
 
     node
       .filter((d) => d.cluster != 0 && !d.title)
-      .attr("fill", (d) => `url(#image${d.id})`);
+      .attr("fill", (d) => `url(#image${d.id})`)
+      .on("mouseover", handleMouseOver)
+      .on("mouseout", handleMouseOut)
+      .on("click", handleNodeClick);
 
-    function handleMouseOver(d, i) {
-      // Add interactivity
-      // console.log("handleMouseOver");
-      // const element = d3.select(i.id);
-      // console.log(element);
+    function handleMouseOver() {
+    //cursor: pointer;
+      d3.select(this).style("cursor", "pointer")
+      .attr("stroke", "red")
+      .attr("stroke-width", 2)
     }
 
-    function handleMouseOut(d, i) {
-      // Use D3 to select element, change color back to normal
-      // console.log("handleMouseOut");
+    function handleMouseOut() {
+      d3.select(this).style("cursor", "default");
+      d3.select(this).attr("stroke", "none");
+    }
+
+    function handleNodeClick(d, i) {
+      setSegmentInfo(i);
+      toggleModal(true)
     }
 
     const hulls = hullG

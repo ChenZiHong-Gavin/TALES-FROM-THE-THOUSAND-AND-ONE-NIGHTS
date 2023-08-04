@@ -1,12 +1,11 @@
 import { WordCloud } from "@ant-design/plots";
-import { useEffect, useState } from "react";
 import { inject, observer } from "mobx-react";
 
 const WordCloudChart = ({emotionStore}) => {
-    if (!emotionStore || !emotionStore.wordCloudData) {
+  if (!emotionStore || !emotionStore.wordCloudData) {
     return null;
   }
-  const { wordCloudData: data } = emotionStore;
+  const { wordCloudData: data, toggleModal, setSegmentInfo } = emotionStore;
   
   const config = {
     data,
@@ -41,6 +40,14 @@ const WordCloudChart = ({emotionStore}) => {
         value: `时长${datum.value/1000}秒` };
       },
     },
+    onReady: (plot) => {
+      plot.on('element:click', (...args) => {
+        const { target } = args[0];
+        const data = target.get('origin').data.datum;
+        toggleModal(true);
+        setSegmentInfo(data);
+      });
+    }
   };
 
   return <WordCloud {...config} style={

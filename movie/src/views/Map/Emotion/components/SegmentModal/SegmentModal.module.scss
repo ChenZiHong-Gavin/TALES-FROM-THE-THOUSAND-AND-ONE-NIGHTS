@@ -1,0 +1,25 @@
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: var(--primary-color);
+  color: #000000;
+  border-radius: 5px;
+  border: solid #000000 1px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  opacity: 0.7;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.segmentModal {
+  text-align: center;
+  h2 {
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+}

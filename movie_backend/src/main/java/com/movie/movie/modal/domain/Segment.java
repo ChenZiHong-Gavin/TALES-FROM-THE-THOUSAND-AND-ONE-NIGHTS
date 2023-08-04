@@ -24,4 +24,5 @@ public class Segment implements Serializable {
     private String emotion;
     private Integer videoId;
     private String thumbnail;
+    private String videoUrl;
 }
