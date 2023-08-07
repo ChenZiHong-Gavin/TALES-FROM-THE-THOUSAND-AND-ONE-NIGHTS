@@ -3,14 +3,15 @@ import VideoJS from "../../../../../components/Video/VideoJS";
 import videojs from "video.js";
 import { useRef } from "react";
 import Styles from "./SegmentModal.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const SegmentModal = ({ emotionStore }) => {
+  const navigate = useNavigate();
   const { segmentInfo } = emotionStore;
   const {
     content,
     emotion,
     order,
-    segmentId,
     time,
     videoId,
     videoUrl,
@@ -42,9 +43,9 @@ const SegmentModal = ({ emotionStore }) => {
     });
   };
 
-  const gotoFullVideo = () => {
+  const gotoFullVideo = (videoId) => {
     return () => {
-      window.open(`/video/${videoId}`);
+      navigate(`/movie?videoId=${videoId}`);
     };
   };
 
@@ -56,7 +57,7 @@ const SegmentModal = ({ emotionStore }) => {
         <p>第{order}句台词</p>
         <p>{time}</p>
         <a onClick={
-          gotoFullVideo()
+          gotoFullVideo(videoId)
         } className={Styles.btn}>
           观看完整视频
         </a>

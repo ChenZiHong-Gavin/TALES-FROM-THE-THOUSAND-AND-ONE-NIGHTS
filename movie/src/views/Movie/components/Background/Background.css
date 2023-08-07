@@ -1,0 +1,326 @@
+.oldMovieEffectSlideDeck {
+  background: #222;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1!important;
+}
+
+.oldMovieEffectSlideDeck {
+  color: rgba(227, 227, 227, 0.8);
+  font-size: 60px; /* old */
+  font-size: 6vm; /* IE9 */
+  font-size: 6vmin;
+  font-family: "Geneva, Verdana, “Lucida Sans”, “Lucida Grande”, “Lucida Sans Unicode”, sans-serif";
+  -webkit-text-shadow: 1px 4px 1px #e0e0e0, 0 0 0 #000, 1px 4px 1px #e0e0e0;
+  position: fixed;
+  text-shadow: 1px 4px 6px #e0e0e0, 0 0 0 #000, 1px 4px 6px #e0e0e0;
+}
+
+.oldMovieContainer {
+  background-color: #696969;
+  -webkit-box-shadow: inset 0 0 150px #000;
+  box-shadow: inset 0 0 150px #000;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@keyframes jumpy {
+  0% {
+    transform: translateY(2px);
+  }
+  20% {
+    transform: translateY(-2px);
+  }
+  35% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  65% {
+    transform: translateY(-2px);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@-webkit-keyframes jumpy {
+  0% {
+    -webkit-transform: translateY(2px);
+  }
+  20% {
+    -webkit-transform: translateY(-2px);
+  }
+  35% {
+    -webkit-transform: translateY(-2px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+  }
+  65% {
+    -webkit-transform: translateY(-2px);
+  }
+  80% {
+    -webkit-transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+
+@keyframes vignette {
+  0% {
+    box-shadow: inset 0 0 150px #000;
+  }
+  20% {
+    box-shadow: inset 0 0 550px #000;
+  }
+  35% {
+    box-shadow: inset 0 0 150px #000;
+  }
+  50% {
+    box-shadow: inset 0 0 200px #000;
+  }
+  65% {
+    box-shadow: inset 0 0 550px #000;
+  }
+  80% {
+    box-shadow: inset 0 0 250px #000;
+  }
+  100% {
+    box-shadow: inset 0 0 150px #000;
+  }
+}
+@-webkit-keyframes vignette {
+  0% {
+    -webkit-box-shadow: inset 0 0 150px #000;
+  }
+  20% {
+    -webkit-box-shadow: inset 0 0 550px #000;
+  }
+  35% {
+    -webkit-box-shadow: inset 0 0 150px #000;
+  }
+  50% {
+    -webkit-box-shadow: inset 0 0 200px #000;
+  }
+  65% {
+    -webkit-box-shadow: inset 0 0 550px #000;
+  }
+  80% {
+    -webkit-box-shadow: inset 0 0 250px #000;
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 150px #000;
+  }
+}
+
+@keyframes movingstripe {
+  0% {
+    /*transform: translateX(0px) rotate(4.5deg);*/
+    transform: translateX(0px);
+  }
+  15% {
+    transform: translateX(300px);
+  }
+  50% {
+    transform: translateX(500px);
+  }
+  80% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(1400px);
+  }
+}
+@-webkit-keyframes movingstripe {
+  0% {
+    -webkit-transform: translateX(0px);
+  }
+  15% {
+    -webkit-transform: translateX(300px);
+  }
+  50% {
+    -webkit-transform: translateX(500px);
+  }
+  80% {
+    -webkit-transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(1400px);
+  }
+}
+
+@keyframes movingstripe2 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(600px);
+  }
+}
+@-webkit-keyframes movingstripe2 {
+  0% {
+    -webkit-transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(600px);
+  }
+}
+
+@keyframes speckles {
+  0% {
+    visibility: hidden;
+  }
+  55% {
+    visibility: visible;
+  }
+  60% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes speckles {
+  0% {
+    visibility: hidden;
+  }
+  55% {
+    visibility: visible;
+  }
+  60% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+.oldMovieEffectSlideDeck {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: jumpy;
+  animation-name: jumpy;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  content: "";
+  visibility: visible;
+  z-index: 4;
+}
+
+.oldMovieEffectSlideDeck:before {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: movingstripe;
+  animation-name: movingstripe;
+  border-left: solid 3px rgba(85, 85, 85, 0.4);
+  border-right: solid 2px rgba(85, 85, 85, 0.4);
+  -webkit-box-shadow: 0 0 10px rgba(85, 85, 85, 0.5);
+  box-shadow: 0 0 10px rgba(85, 85, 85, 0.5);
+  content: "";
+  height: 100%;
+  left: -300px;
+  padding: 2px;
+  position: absolute;
+  width: 500px; /* old */
+  width: 500vm; /* IE9 */
+  width: 50vmin;
+  z-index: 2;
+}
+
+.oldMovieEffectSlideDeck div:before {
+  /*why is last-child etc not working*/
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: movingstripe2;
+  animation-name: movingstripe;
+  border-left: solid 2px rgba(85, 85, 85, 0.4);
+  border-right: solid 2px rgba(85, 85, 85, 0.4);
+  content: "";
+  height: 100%;
+  left: 50%;
+  padding: 2px;
+  position: absolute;
+  width: 400px; /* old */
+  width: 40vm; /* IE9 */
+  width: 40vmin;
+  z-index: 4;
+}
+
+.oldMovieEffectSlideDeck:after {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: vignette;
+  animation-name: vignette;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  -ms-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  width: 100%;
+  visibility: visible;
+  z-index: 5;
+}
+
+.oldMovieEffectSlideDeck :first-child:after {
+  -webkit-animation: speckles 1s steps(1) infinite;
+  animation: speckles 1s steps(1) infinite;
+  color: rgba(105, 105, 105, 0.3);
+  content: ".";
+  font-size: 150px; /* old */
+  font-size: 15vm; /* IE9 */
+  font-size: 15vmin;
+  text-shadow: 0 0 30px #fff;
+  visibility: hidden;
+  z-index: 5;
+}
+
+.oldMovieEffectSlideDeck :first-child:before {
+  animation: speckles 1.3s 2s steps(1) infinite;
+  -webkit-animation: speckles 1s 2s steps(1) infinite;
+  color: rgba(255, 255, 255, 0.3);
+  content: "~";
+  font-size: 150px; /* old */
+  font-size: 15vm; /* IE9 */
+  font-size: 15vmin;
+  text-shadow: 0 0 30px #fff;
+  visibility: hidden;
+  z-index: 5;
+}
+
+.oldMovieEffectSlideDeck :first-child {
+  /*http://jsfiddle.net/NeqCC/*/
+  /* Shadows are visible under slightly transparent text color */
+  animation: letterfocus 15s steps(1) infinite;
+  -webkit-animation: letterfocus 15s steps(1) infinite;
+  color: rgba(227, 227, 227, 0.8);
+}
