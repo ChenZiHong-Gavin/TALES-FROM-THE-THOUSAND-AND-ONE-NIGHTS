@@ -42,14 +42,16 @@ function Movie() {
       </div>
       <div className={Styles.video}>
         <div className={Styles.videoContainer}>
+          <Video videoPath={videoInfo.videoPath}/>
           <div className={Styles.buttonGroup}>
             <Button>字幕</Button>
+            <Button>换一部</Button>
             <Button>彩色</Button>
+            <Button>问号表示信息</Button>
           </div>
-          <Video videoPath={videoInfo.videoPath}/>
         </div>
         <div className={Styles.emotionPiece}>
-          <EmotionPiece />
+          <EmotionPiece emotionData={videoInfo.emotionList}/>
         </div>
       </div>
         字幕 情感波折地图 时长台词地图 视频 + AI上色后的视频 筛选项 数量统计

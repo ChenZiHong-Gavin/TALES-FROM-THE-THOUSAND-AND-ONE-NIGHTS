@@ -26,6 +26,6 @@ public class Video implements Serializable {
     private String uri;
     private String contributor;
     private Object audioSpectrum;
-    private List<Integer> emotionList;
+    private List<Object> emotionList;
 
 }

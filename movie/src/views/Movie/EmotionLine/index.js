@@ -1,6 +1,5 @@
 import { Scatter } from "@ant-design/plots";
 import Styles from "./EmotionLine.module.scss";
-import { useEffect, useState } from "react";
 
 const EmotionLine = (props) => {
   const emotionMap = {
@@ -18,8 +17,8 @@ const EmotionLine = (props) => {
     propsData.forEach((item, index) => {
       data.push({
         x: index + 1,
-        y: item,
-        label: emotionMap[item],
+        y: item["emotionId"],
+        label: emotionMap[item["emotionId"]],
         size: Math.random(),
       });
     });
@@ -28,6 +27,17 @@ const EmotionLine = (props) => {
   const config = {
     appendPadding: 30,
     data,
+    color: [
+      "r(0.4, 0.3, 0.7) 0:rgba(255,255,255,0.5) 1:#ff7f0e",
+      "r(0.4, 0.4, 0.7) 0:rgba(255,255,255,0.5) 1:#2ca02c",
+      "r(0.4, 0.4, 0.7) 0:rgba(255,255,255,0.5) 1:#d62728",
+      "r(0.4, 0.4, 0.7) 0:rgba(255,255,255,0.5) 1:#9467bd",
+      "r(0.4, 0.4, 0.7) 0:rgba(255,255,255,0.5) 1:#8c564b",
+      "r(0.4, 0.4, 0.7) 0:rgba(255,255,255,0.5) 1:#e377c2",
+      "r(0.4, 0.4, 0.7) 0:rgba(255,255,255,0.5) 1:#7f7f7f",
+      "r(0.4, 0.4, 0.7) 0:rgba(255,255,255,0.5) 1:#bcbd22",
+      "r(0.4, 0.4, 0.7) 0:rgba(255,255,255,0.5) 1:#17becf",
+    ],
     xField: "x",
     yField: "y",
     colorField: "label",

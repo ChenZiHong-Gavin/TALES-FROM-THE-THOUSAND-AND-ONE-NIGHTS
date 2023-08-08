@@ -11,6 +11,8 @@ const Video = (props) => {
     controls: true,
     responsive: true,
     fluid: true,
+    // 根据高度自适应宽度
+    aspectRatio: "16:9",
     sources: [
       {
         src: videoPath,

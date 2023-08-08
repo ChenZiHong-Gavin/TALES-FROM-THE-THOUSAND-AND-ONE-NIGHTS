@@ -4,18 +4,12 @@ import videojs from "video.js";
 import { useRef } from "react";
 import Styles from "./SegmentModal.module.scss";
 import { useNavigate } from "react-router-dom";
+import { Tag } from "antd";
 
 const SegmentModal = ({ emotionStore }) => {
   const navigate = useNavigate();
   const { segmentInfo } = emotionStore;
-  const {
-    content,
-    emotion,
-    order,
-    time,
-    videoId,
-    videoUrl,
-  } = segmentInfo;
+  const { content, emotion, order, time, videoId, videoUrl } = segmentInfo;
   const playerRef = useRef(null);
   const videoJsOptions = {
     autoplay: true,
@@ -28,6 +22,15 @@ const SegmentModal = ({ emotionStore }) => {
         type: "video/mp4",
       },
     ],
+  };
+  const emotionMap = {
+    难过: "#ff7f0e",
+    愉快: "#2ca02c",
+    喜欢: "#d62728",
+    平静: "#9467bd",
+    惊讶: "#8c564b",
+    害怕: "#e377c2",
+    厌恶: "#7f7f7f",
   };
 
   const handlePlayerReady = (player) => {
@@ -53,12 +56,12 @@ const SegmentModal = ({ emotionStore }) => {
     <div className={Styles.segmentModal}>
       <div className={Styles.content}>
         <h2>“{content}”</h2>
-        <h3>{emotion}</h3>
+        {
+          emotion && <Tag color={emotionMap[emotion]}>{emotion}</Tag>
+        }
         <p>第{order}句台词</p>
         <p>{time}</p>
-        <a onClick={
-          gotoFullVideo(videoId)
-        } className={Styles.btn}>
+        <a onClick={gotoFullVideo(videoId)} className={Styles.btn}>
           观看完整视频
         </a>
       </div>
