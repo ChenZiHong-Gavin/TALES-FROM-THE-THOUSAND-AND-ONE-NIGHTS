@@ -1,15 +1,15 @@
 import TheatreStore from "./TheatreStore";
-import BlobStore from "./BlobStore";
 import EmotionStore from "./EmotionStore";
+import BlobStore  from "./BlobStore";
 
 const theatreStore = new TheatreStore();
-const blobStore = new BlobStore();
 const emotionStore = new EmotionStore();
+const blobStore = new BlobStore();
 
 const stores = {
     theatreStore,
-    blobStore,
-    emotionStore
+    emotionStore,
+    blobStore
 }
 
 

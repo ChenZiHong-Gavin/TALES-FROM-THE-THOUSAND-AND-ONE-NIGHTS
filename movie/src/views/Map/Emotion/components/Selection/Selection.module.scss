@@ -1,0 +1,19 @@
+.selectionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.blobContainer {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .title {
+    text-align: center;
+  }
+}

@@ -189,7 +189,7 @@
 }
 
 /*** Floating Text ***/
-.textBox{
+.homeTextBox{
   position: absolute;
   top: 20%;
   margin-left: auto;
@@ -203,6 +203,8 @@
   font-size: 3.5vmax;
   img {
     width: 10%;
+    margin-left: auto;
+    margin-right: auto;
   }
   pointer-events: none;
   .explore{
@@ -211,7 +213,7 @@
   }
 }
 
-.text{
+.homeText{
   display: block;
   text-align: center;
   img{

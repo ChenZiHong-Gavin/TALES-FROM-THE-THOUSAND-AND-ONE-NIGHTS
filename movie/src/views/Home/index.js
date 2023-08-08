@@ -71,12 +71,12 @@ function Home() {
         ))}
       </div>
 
-      <div className={Styles.textBox}>
+      <div className={Styles.homeTextBox}>
         <img src={logoGif} alt="LOGO"></img>
-        <span className={Styles.text}>
+        <span className={Styles.homeText}>
           <img src={titleGif} alt="一千零一夜" />
         </span>
-        <span className={Styles.text}>1916-2001</span>
+        <span className={Styles.homeText}>1916-2001</span>
         <Button className={Styles.explore} type="dashed" ghost onClick={
           () => {
             navigate('/selection');

@@ -1,4 +1,7 @@
-import React, { useRef, useState } from 'react';
+import { Flex, Spinner, useColorModeValue } from '@chakra-ui/react';
+import { useRef, useState } from 'react';
+import * as Patterns from './patterns';
+import LoadingImg from '../images/loadingimg.png';
 
 const Blob = ({
   size,
@@ -8,9 +11,11 @@ const Blob = ({
   color,
   colors,
   image,
+  pattern,
 }) => {
   const ref = useRef(null);
   const [imgLoaded, setImgLoaded] = useState(false);
+  const pattenBgColor = useColorModeValue('#d1d8e0', '#6c7c93');
 
   const props = {
     fill: color,
@@ -28,9 +33,9 @@ const Blob = ({
   }
   if (!svgPath) {
     return (
-      <div>
-        Loading
-      </div>
+      <Flex justify="center" alignItems="center" h="100%">
+        <Spinner />
+      </Flex>
     );
   }
 
@@ -39,7 +44,8 @@ const Blob = ({
       viewBox={`0 0 ${size} ${size}`}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="100%"
+      width="80%"
+      style={{ margin: 'auto' }}
       id="blobSvg"
       ref={ref}
     >
@@ -55,6 +61,25 @@ const Blob = ({
           <path id="blob" d={svgPath} {...props} />
         </>
       )}
+      {type === 'pattern' && (
+        <>
+          <defs>
+            <pattern
+              id="pattern"
+              x="0"
+              y="0"
+              width={Patterns[pattern].width}
+              height={Patterns[pattern].height}
+              patternUnits="userSpaceOnUse"
+              fill={pattenBgColor}
+            >
+              <path d={Patterns[pattern].path} />
+            </pattern>
+          </defs>
+          <path id="blob" d={svgPath} {...props} fill="url(#pattern)" />
+        </>
+      )}
+
       {type === 'image' && (
         <>
           <defs>
@@ -62,7 +87,7 @@ const Blob = ({
               <path id="blob" d={svgPath} {...props} />
             </clipPath>
           </defs>
-          {/* {!imgLoaded && (
+          {!imgLoaded && (
             <image
               x="0"
               y="0"
@@ -72,7 +97,7 @@ const Blob = ({
               xlinkHref={LoadingImg}
               preserveAspectRatio="none"
             />
-          )} */}
+          )}
           <image
             x="0"
             y="0"
