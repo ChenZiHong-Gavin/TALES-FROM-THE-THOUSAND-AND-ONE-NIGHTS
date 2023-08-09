@@ -8,10 +8,14 @@ import Blob from './Blob';
 import { inject, observer } from 'mobx-react'; 
 
 const BlobContainer = ({blobStore}) => {
-  const { edges, growth, color, colors, type, isOutline, svgPath } = blobStore;
+  const { edges, growth, color, colors, type, isOutline, svgPath, orderArray } = blobStore;
   useEffect(() => {
     createInitialBlob(blobStore);
   }, []);
+
+  useEffect(() => {
+    console.log(orderArray);
+  }, [orderArray]);
 
   useEffect(() => {
     if (svgPath) createFixedBlob(blobStore);

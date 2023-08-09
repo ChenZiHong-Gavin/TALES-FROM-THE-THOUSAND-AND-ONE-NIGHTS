@@ -4,3 +4,8 @@ import { fetchGet } from "./http/http";
 export function getVideoInfoSelected(videoId) {
   return fetchGet('/api/info/videos?videoId=' + videoId);
 }
+
+// 根据emotion顺序获取视频详细信息
+export function getVideoInfoByEmotionOrder(emotionOrder) {
+  return fetchGet('/api/videos/emotionOrder?emotionOrder=' + emotionOrder);
+}

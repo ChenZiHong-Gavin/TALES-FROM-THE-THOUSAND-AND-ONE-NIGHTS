@@ -18,6 +18,12 @@ import java.util.List;
 public class Video implements Serializable {
     private static final long serialVersionUID = 6900009364684268016L;
 
+    @Data
+    public class SegmentPair {
+        private Integer segmentId;
+        private Integer emotionId;
+    }
+
     @Id
     private Integer videoId;
     private String videoPath;
@@ -26,7 +32,8 @@ public class Video implements Serializable {
     private String uri;
     private String contributor;
     private Object audioSpectrum;
-    private List<Object> emotionList;
+    private List<SegmentPair> emotionList;
     private List<Integer> emotionOrder;
+    private String pictureUrl;
 
 }

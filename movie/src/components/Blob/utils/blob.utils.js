@@ -63,7 +63,7 @@ export const createRandomBlob = () => {
 };
 
 export const setBlobTheme = (props) => {
-  // const currentState = store.getState();
-  // updateStore(props);
-  // updateUrl({ ...currentState, ...props });
+  const currentState = blobStore.getState();
+  updateStore(props);
+  updateUrl({ ...currentState, ...props });
 };

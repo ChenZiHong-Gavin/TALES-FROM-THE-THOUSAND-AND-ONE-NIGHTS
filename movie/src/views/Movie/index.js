@@ -20,7 +20,6 @@ function Movie() {
       if (res.status === 200) {
         const data = res.data.data;
         setVideoInfo(data);
-        console.log(data);
       }
     })
     .catch((err) => {

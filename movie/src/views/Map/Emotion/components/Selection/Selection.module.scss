@@ -17,3 +17,14 @@
     text-align: center;
   }
 }
+
+.dragContainer {
+  margin: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+ .dragContainer {
+  display: none;
+ }
+}

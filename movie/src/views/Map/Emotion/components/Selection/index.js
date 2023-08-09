@@ -5,6 +5,7 @@ import BlobSettingsSection from "../../../../../components/Blob/components/BlobS
 import Styles from "./Selection.module.scss";
 import { Box } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
+import { useState } from "react";
 
 const Selection = () => {
   return (

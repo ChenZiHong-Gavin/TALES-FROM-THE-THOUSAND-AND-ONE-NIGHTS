@@ -55,16 +55,18 @@ function Actor() {
       const rectWidth = width / rows;
       const rectHeight = height / cols;
 
-      for (let i = 0; i < total; i++) {
+      for (let i=0; i<total;i++) {
         allPeeps.push(
           new Peep({
             image: img,
+            index: i + 1,
             rect: [
-              (i % rows) * rectWidth,
-              ((i / rows) | 0) * rectHeight,
-              rectWidth,
-              rectHeight,
+              (i % rows) * rectWidth + 1,
+              ((i / rows) | 0) * rectHeight + 1,
+              rectWidth - 2,
+              rectHeight - 2,
             ],
+            canvas
           })
         );
       }
@@ -88,7 +90,8 @@ function Actor() {
     }
 
     function initCrowd() {
-      while (availablePeeps.length) {
+      const desiredCrowdSize = 60;
+      while (availablePeeps.length && crowd.length < desiredCrowdSize) {
         // setting random tween progress spreads the peeps out
         addPeepToCrowd().walk.progress(Math.random());
       }

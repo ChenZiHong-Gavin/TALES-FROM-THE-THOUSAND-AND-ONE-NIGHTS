@@ -3,7 +3,7 @@ import { inject, observer } from "mobx-react";
 import Slider from "../Common/Slider";
 
 const ComplexitySlider = ({ blobStore }) => {
-  const { edges, updateEdges } = blobStore;
+  const { edges, updateEdges, changeImage } = blobStore;
   return (
     <Slider
       name="复杂性"
@@ -11,7 +11,10 @@ const ComplexitySlider = ({ blobStore }) => {
       value={edges}
       min={3}
       max={20}
-      onChange={updateEdges}
+      onChange={(value) => {
+        updateEdges(value);
+        changeImage();
+      }} 
     />
   );
 };

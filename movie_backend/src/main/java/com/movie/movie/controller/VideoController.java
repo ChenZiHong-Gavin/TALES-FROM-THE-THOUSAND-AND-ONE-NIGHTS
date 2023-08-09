@@ -19,7 +19,7 @@ public class VideoController {
 
     @RequestMapping("/videos/emotionOrder")
     public Result<Object> getVideoInfoByEmotionOrder(String emotionOrder) {
-        return ResultGenerator.genSuccessResult(videoService.getVideoSelectedByEmotionOrder(emotionOrder));
+        return ResultGenerator.genSuccessResult(videoService.getVideoPictureSelectedByEmotionOrder(emotionOrder));
     }
 
 }

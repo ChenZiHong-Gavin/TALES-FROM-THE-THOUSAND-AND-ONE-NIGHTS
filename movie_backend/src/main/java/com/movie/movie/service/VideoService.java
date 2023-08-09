@@ -1,7 +1,10 @@
 package com.movie.movie.service;
 
 import com.movie.movie.vo.PictureBasicVO;
+import com.movie.movie.vo.SegmentVO;
 import com.movie.movie.vo.VideoInfoVO;
+
+import java.util.List;
 
 public interface VideoService {
     /**
@@ -9,6 +12,6 @@ public interface VideoService {
      * @return 返回视频的详细信息
      */
     VideoInfoVO getVideoSelected(Integer videoId);
-    VideoInfoVO getVideoSelectedByEmotionOrder(String emotionOrder);
+    List<SegmentVO> getVideoPictureSelectedByEmotionOrder(String emotionOrder);
 
 }

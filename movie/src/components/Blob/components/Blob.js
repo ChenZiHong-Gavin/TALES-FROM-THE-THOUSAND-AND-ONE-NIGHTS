@@ -1,7 +1,7 @@
-import { Flex, Spinner, useColorModeValue } from '@chakra-ui/react';
-import { useRef, useState } from 'react';
-import * as Patterns from './patterns';
-import LoadingImg from '../images/loadingimg.png';
+import { Flex, Spinner, useColorModeValue } from "@chakra-ui/react";
+import { useRef, useState } from "react";
+import * as Patterns from "./patterns";
+import LoadingImg from "../images/loadingimg.png";
 
 const Blob = ({
   size,
@@ -13,23 +13,24 @@ const Blob = ({
   image,
   pattern,
 }) => {
+  console.log(image);
   const ref = useRef(null);
   const [imgLoaded, setImgLoaded] = useState(false);
-  const pattenBgColor = useColorModeValue('#d1d8e0', '#6c7c93');
+  const pattenBgColor = useColorModeValue("#d1d8e0", "#6c7c93");
 
   const props = {
     fill: color,
   };
-  if (type === 'gradient') {
-    props.fill = 'url(#gradient)';
+  if (type === "gradient") {
+    props.fill = "url(#gradient)";
   }
   if (isOutline) {
-    props.strokeWidth = '7px';
-    props.fill = 'none';
+    props.strokeWidth = "7px";
+    props.fill = "none";
     props.stroke = color;
   }
-  if (type === 'gradient' && isOutline) {
-    props.stroke = 'url(#gradient)';
+  if (type === "gradient" && isOutline) {
+    props.stroke = "url(#gradient)";
   }
   if (!svgPath) {
     return (
@@ -45,12 +46,12 @@ const Blob = ({
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="80%"
-      style={{ margin: 'auto' }}
+      style={{ margin: "auto" }}
       id="blobSvg"
       ref={ref}
     >
-      {type === 'solid' && <path id="blob" d={svgPath} {...props} />}
-      {type === 'gradient' && (
+      {type === "solid" && <path id="blob" d={svgPath} {...props} />}
+      {type === "gradient" && (
         <>
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -61,7 +62,7 @@ const Blob = ({
           <path id="blob" d={svgPath} {...props} />
         </>
       )}
-      {type === 'pattern' && (
+      {type === "pattern" && (
         <>
           <defs>
             <pattern
@@ -76,11 +77,47 @@ const Blob = ({
               <path d={Patterns[pattern].path} />
             </pattern>
           </defs>
-          <path id="blob" d={svgPath} {...props} fill="url(#pattern)" />
+          <defs>
+            <clipPath id="shape">
+              <path id="blob" d={svgPath} {...props} />
+            </clipPath>
+          </defs>
+          <path
+            id="blob"
+            d={svgPath}
+            {...props}
+            fill="url(#pattern)"
+            opacity="0.8"
+          />
+          {!imgLoaded && (
+            <image
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              // 透明度
+              opacity="0.5"
+              clipPath="url(#shape)"
+              xlinkHref={LoadingImg}
+              preserveAspectRatio="none"
+            />
+          )}
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            opacity="0.5"
+            clipPath="url(#shape)"
+            xlinkHref={image}
+            preserveAspectRatio="none"
+            onLoad={() => {
+              setImgLoaded(true);
+            }}
+          />
         </>
       )}
-
-      {type === 'image' && (
+      {type !== "pattern" && (
         <>
           <defs>
             <clipPath id="shape">
@@ -93,6 +130,8 @@ const Blob = ({
               y="0"
               width="100%"
               height="100%"
+              // 透明度
+              opacity="0.5"
               clipPath="url(#shape)"
               xlinkHref={LoadingImg}
               preserveAspectRatio="none"
@@ -103,6 +142,7 @@ const Blob = ({
             y="0"
             width="100%"
             height="100%"
+            opacity="0.5"
             clipPath="url(#shape)"
             xlinkHref={image}
             preserveAspectRatio="none"

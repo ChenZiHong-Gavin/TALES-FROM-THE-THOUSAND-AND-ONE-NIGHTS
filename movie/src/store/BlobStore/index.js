@@ -4,6 +4,7 @@ import {
   getAllBlobs,
   saveBlob,
 } from "../../components/Blob/utils/storage.utils";
+import { getVideoInfoByEmotionOrder } from "../../api/video";
 configure({ enforceActions: "observed" });
 
 const START_COLOR = "#d1d8e0";
@@ -23,6 +24,8 @@ class BlobStore {
   @observable image = "https://source.unsplash.com/5PVXkqt2s9k/500x500";
   @observable playSound = false;
   @observable savedBlobs = null;
+  @observable orderArray = [];
+  @observable imageList = [];
 
   constructor() {
     makeObservable(this);
@@ -39,6 +42,8 @@ class BlobStore {
     this.image = "https://source.unsplash.com/5PVXkqt2s9k/500x500";
     this.playSound = false;
     this.savedBlobs = null;
+    this.orderArray = [];
+    this.imageList = [];
   }
 
   @action
@@ -67,7 +72,6 @@ class BlobStore {
   @action
   updateGrowth = (value) => {
     this.growth = value;
-    console.log(this);
   };
 
   @action
@@ -95,19 +99,23 @@ class BlobStore {
   @action
   switchToImage = (url) => {
     this.image = url;
-    this.type = "image";
     this.color = START_COLOR;
     this.colors = [START_COLOR, END_COLOR];
     this.pattern = null;
   };
 
   @action
+  changeImage = () => {
+    if (this.imageList.length > 0) {
+      const index = Math.floor(Math.random() * this.imageList.length);
+      this.image = this.imageList[index].pictureUrl;
+    }
+  }
+
+  @action
   switchToPattern = (name) => {
     this.pattern = name;
     this.type = "pattern";
-    this.color = START_COLOR;
-    this.colors = [START_COLOR, END_COLOR];
-    this.image = "";
   };
 
   @action
@@ -170,6 +178,22 @@ class BlobStore {
   @action
   setStaticBlobData = (data) => {
     Object.assign(this, data);
+  };
+
+  @action
+  setOrderArray = (array) => {
+    this.orderArray = array;
+    const arrString = array.join(";");
+    getVideoInfoByEmotionOrder(arrString).then((res) => {
+      if (res.status === 200) {
+        const data = res.data.data;
+        this.imageList = data;
+        // 随机选一个
+        const randomIndex = Math.floor(Math.random() * data.length);
+        const randomImage = data[randomIndex];
+        this.image = randomImage.pictureUrl;
+      }
+    });
   };
 }
 

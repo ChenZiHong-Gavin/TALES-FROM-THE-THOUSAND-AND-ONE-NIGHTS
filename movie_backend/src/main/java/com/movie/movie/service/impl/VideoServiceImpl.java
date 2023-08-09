@@ -1,14 +1,21 @@
 package com.movie.movie.service.impl;
+import com.movie.movie.modal.domain.Picture;
+import com.movie.movie.modal.domain.Segment;
 import com.movie.movie.modal.domain.Video;
+import com.movie.movie.repository.PictureRepository;
+import com.movie.movie.repository.SegmentRepository;
 import com.movie.movie.repository.VideoCusRepository;
 import com.movie.movie.repository.VideoRepository;
 import com.movie.movie.service.VideoService;
+import com.movie.movie.vo.PictureBasicVO;
+import com.movie.movie.vo.SegmentVO;
 import com.movie.movie.vo.VideoInfoVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -18,6 +25,10 @@ public class VideoServiceImpl implements VideoService {
 
     @Autowired
     private VideoCusRepository videoCusRepository;
+
+
+    @Autowired
+    private SegmentRepository segmentRepository;
 
     @Override
     public VideoInfoVO getVideoSelected(Integer videoId) {
@@ -37,7 +48,7 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public VideoInfoVO getVideoSelectedByEmotionOrder(String emotionOrder) {
+    public List<SegmentVO> getVideoPictureSelectedByEmotionOrder(String emotionOrder) {
         String[] emotionOrderArray = emotionOrder.split(";");
         ArrayList<Integer> emotionOrderList = new ArrayList<>();
         for (String s : emotionOrderArray) {
@@ -47,16 +58,30 @@ public class VideoServiceImpl implements VideoService {
             emotionOrderList.add(Integer.parseInt(s));
         }
         Video video = videoCusRepository.findVideoByEmotionOrder(emotionOrderList);
-        VideoInfoVO videoInfoVO = VideoInfoVO.builder()
-                .videoId(video.getVideoId())
-                .videoPath(video.getVideoPath())
-                .type(video.getType())
-                .title(video.getTitle())
-                .uri(video.getUri())
-                .contributor(video.getContributor())
-                .audioSpectrum(video.getAudioSpectrum())
-                .emotionList(video.getEmotionList())
-                .build();
-        return videoInfoVO;
+        List<Video.SegmentPair> emotionList = video.getEmotionList();
+        // 根据emotionList的segmentId获取segment的图片
+        List<Integer> ids = new ArrayList<>();
+        for (Video.SegmentPair segmentPair : emotionList) {
+            ids.add(segmentPair.getSegmentId());
+        }
+        List<Segment> segmentList = segmentRepository.findSegmentByIds(ids);
+        List<SegmentVO> segmentVOList = new ArrayList<>();
+        for (Segment segment : segmentList) {
+            SegmentVO segmentVO = SegmentVO.builder()
+                    .segmentId(segment.getSegmentId())
+                    .order(segment.getOrder())
+                    .videoId(segment.getVideoId())
+                    .pictureUrl(segment.getPictureUrl())
+                    .build();
+            segmentVOList.add(segmentVO);
+        }
+        if (segmentVOList.isEmpty()) {
+            SegmentVO segmentVO = SegmentVO.builder()
+                    .videoId(video.getVideoId())
+                    .pictureUrl(video.getPictureUrl())
+                    .build();
+            segmentVOList.add(segmentVO);
+        }
+        return segmentVOList;
     }
 }

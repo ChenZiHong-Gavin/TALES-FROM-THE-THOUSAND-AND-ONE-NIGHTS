@@ -7,9 +7,16 @@ import SegmentModal from "./components/SegmentModal";
 import { inject, observer } from "mobx-react";
 import Selection from "./components/Selection";
 import { Modal } from "antd";
+import { useEffect } from "react";
 
 function Emotion({ emotionStore }) {
   const { mode, isShowModal, toggleModal } = emotionStore;
+
+  useEffect(() => {
+    return () => {
+      emotionStore.setMode("emotion");
+    };
+  }, []);
 
   return (
     <div className={Styles.page}>

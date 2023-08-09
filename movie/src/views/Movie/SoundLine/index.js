@@ -6,47 +6,18 @@ import { useRef } from "react";
 function SoundLine(props) {
   const [loading, setLoading] = useState(true);
   const [start, setStart] = useState(false);
+  const [audioData, setData] = useState(null);
   const graphRef = useRef(null);
 
   useEffect(() => {
-    if (loading) return;
+    setData(props.audioSpectrum);
+  }, [props.audioSpectrum]);
+
+
+  useEffect(() => {
     if (!graphRef.current) return;
     if (!props.audioSpectrum) return;
     const Plotly = window.Plotly;
-
-    const selectorOptions = {
-      buttons: [
-        {
-          step: "month",
-          stepmode: "backward",
-          count: 1,
-          label: "1m",
-        },
-        {
-          step: "month",
-          stepmode: "backward",
-          count: 6,
-          label: "6m",
-        },
-        {
-          step: "year",
-          stepmode: "todate",
-          count: 1,
-          label: "YTD",
-        },
-        {
-          step: "year",
-          stepmode: "backward",
-          count: 1,
-          label: "1y",
-        },
-        {
-          step: "all",
-        },
-      ],
-    };
-
-    const localData = props.audioSpectrum;
 
     const prepData = (data) => {
       return [
@@ -58,11 +29,10 @@ function SoundLine(props) {
       ];
     };
 
-    var data = prepData(localData);
+    var data = prepData(audioData);
     var layout = {
       title: "频谱分析dB/s(ref=max)",
       xaxis: {
-        rangeselector: selectorOptions,
         rangeslider: {},
         tickfont: {
           color: "white",
@@ -77,20 +47,21 @@ function SoundLine(props) {
         color: "white",
       },
     };
-    Plotly.plot("graph", data, layout, { showSendToCloud: false });
-
+    Plotly.plot("soundGraph", data, layout, { showSendToCloud: false });
     const handleResize = () => {
       graphRef.current.innerHTML = "";
       setStart(!start);
     };
-
     window.addEventListener("resize", handleResize);
-
     return () => {
+      const graphElement = document.getElementById("soundGraph");
+      if (graphElement) {
+        Plotly.purge(graphElement);
+      }
       window.removeEventListener("resize", handleResize);
-      Plotly.purge("graph");
     };
   }, [loading, start]);
+
 
   return (
     <>
@@ -98,7 +69,7 @@ function SoundLine(props) {
         url={process.env.PUBLIC_URL + "/plotly.min.js"}
         onLoad={() => setLoading(false)}
       />
-      <div id="graph" ref={graphRef} className={Styles.graphContainer}></div>
+      <div id="soundGraph" ref={graphRef} className={Styles.graphContainer}></div>
     </>
   );
 }

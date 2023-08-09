@@ -1,5 +1,6 @@
 package com.movie.movie.vo;
 
+import com.movie.movie.modal.domain.Video;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,5 +24,5 @@ public class VideoInfoVO implements Serializable {
     private String uri;
     private String contributor;
     private Object audioSpectrum;
-    private List<Object> emotionList;
+    private List<Video.SegmentPair> emotionList;
 }
