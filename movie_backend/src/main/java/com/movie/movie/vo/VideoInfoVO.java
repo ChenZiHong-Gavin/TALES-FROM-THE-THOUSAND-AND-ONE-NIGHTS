@@ -25,4 +25,6 @@ public class VideoInfoVO implements Serializable {
     private String contributor;
     private Object audioSpectrum;
     private List<Video.SegmentPair> emotionList;
+    private String captionUrl;
+    private String videoUrl;
 }

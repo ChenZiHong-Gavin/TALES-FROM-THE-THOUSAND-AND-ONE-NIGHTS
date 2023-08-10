@@ -8,26 +8,29 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getVideoInfoSelected } from "../../api/video";
 import Background from "./components/Background";
-import { Button, Modal } from "antd";
+import { Button, Modal, Tag, Space } from "antd";
 import SegmentModal from "../Map/Emotion/components/SegmentModal";
 import { inject, observer } from "mobx-react";
 
-function Movie({emotionStore}) {
+function Movie({ emotionStore }) {
   const { isShowModal, toggleModal } = emotionStore;
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const videoId = searchParams.get("videoId");
   const [videoInfo, setVideoInfo] = useState({});
+  const [tags, setTags] = useState([]);
   useEffect(() => {
-    getVideoInfoSelected(videoId).then((res) => {
-      if (res.status === 200) {
-        const data = res.data.data;
-        setVideoInfo(data);
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+    getVideoInfoSelected(videoId)
+      .then((res) => {
+        if (res.status === 200) {
+          const data = res.data.data;
+          setVideoInfo(data);
+          setTags(data.type.split("；"));
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [videoId]);
   useEffect(() => {
     return () => {
@@ -36,7 +39,7 @@ function Movie({emotionStore}) {
   }, []);
   return (
     <>
-        <Modal
+      <Modal
         centered
         open={isShowModal}
         footer={null}
@@ -49,30 +52,35 @@ function Movie({emotionStore}) {
       </Modal>
       <div className={Styles.videoPage}>
         <h1>《{videoInfo.title}》</h1>
-      <div className={Styles.chart}>
-        <div className={Styles.soundLine}>
-          <SoundLine audioSpectrum={videoInfo.audioSpectrum} />
+        <div className={Styles.tags}>
+        <Space size={[0, 8]} wrap>
+          {tags.map((tag, index) => {
+            return <Tag key={index} color="#f50">{tag}</Tag>;
+          })}
+        </Space>
         </div>
-        <div className={Styles.emotionLine}>
-          <span className={Styles.emotionTitle}>情感散点图</span>
-          <EmotionLine emotionData={videoInfo.emotionList}/>
-        </div>
-      </div>
-      <div className={Styles.video}>
         <div className={Styles.videoContainer}>
-          <Video videoPath={videoInfo.videoPath}/>
+          <Video videoUrl={videoInfo.videoUrl} captionUrl={videoInfo.captionUrl}/>
           <div className={Styles.buttonGroup}>
-            <Button>字幕</Button>
             <Button>换一部</Button>
             <Button>彩色</Button>
             <Button>问号表示信息</Button>
           </div>
         </div>
-        <div className={Styles.emotionPiece}>
-          <EmotionPiece emotionData={videoInfo.emotionList}/>
+        {/* <div className={Styles.chart}>
+          <div className={Styles.soundLine}>
+            <SoundLine audioSpectrum={videoInfo.audioSpectrum} />
+          </div>
+          <div className={Styles.emotionLine}>
+            <span className={Styles.emotionTitle}>情感散点图</span>
+            <EmotionLine emotionData={videoInfo.emotionList} />
+          </div>
         </div>
-      </div>
-        字幕 情感波折地图 时长台词地图 视频 + AI上色后的视频 筛选项 数量统计
+        <div className={Styles.video}>
+          <div className={Styles.emotionPiece}>
+            <EmotionPiece emotionData={videoInfo.emotionList} />
+          </div>
+        </div> */}
       </div>
       <Background />
     </>

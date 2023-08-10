@@ -5,24 +5,23 @@ import BlobSettingsSection from "../../../../../components/Blob/components/BlobS
 import Styles from "./Selection.module.scss";
 import { Box } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { useState } from "react";
 
 const Selection = () => {
   return (
-  <ChakraProvider>
     <div className={Styles.selectionContainer}>
       <div className={Styles.blobContainer}>
-        <Box>
-          <BlobContainer />
-          <BlobActionBar />
-          <BlobSettingsSection />
-        </Box>
+        <ChakraProvider>
+          <Box>
+            <BlobContainer />
+            <BlobActionBar />
+            <BlobSettingsSection />
+          </Box>
+        </ChakraProvider>
       </div>
       <div className={Styles.dragContainer}>
         <DragAndDrop />
       </div>
     </div>
-  </ChakraProvider>
   );
 };
 

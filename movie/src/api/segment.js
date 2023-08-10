@@ -1,5 +1,5 @@
 import { fetchGet } from "./http/http";
 
-export function getSegmentById(){
-  return null;
+export function getSegmentById(segmentId){
+  return fetchGet('/api/info/segment?segmentId=' + segmentId);
 }

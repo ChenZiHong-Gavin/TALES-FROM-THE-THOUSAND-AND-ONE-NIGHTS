@@ -6,7 +6,16 @@ import { inject, observer } from "mobx-react";
 import { parseTimeString } from "../../../../../utils/time";
 
 const EmotionMap = ({ emotionStore }) => {
-  const { fetchSegmentsGroupByEmotion, segmentsGroupByEmotion, rerender, setRerender, setRoseData, setWordCloudData, toggleModal, setSegmentInfo } = emotionStore;
+  const {
+    fetchSegmentsGroupByEmotion,
+    segmentsGroupByEmotion,
+    rerender,
+    setRerender,
+    setRoseData,
+    setWordCloudData,
+    toggleModal,
+    setSegmentInfo,
+  } = emotionStore;
   const svgRef = useRef();
   const padding = 5;
   const clusterPadding = 20;
@@ -19,10 +28,10 @@ const EmotionMap = ({ emotionStore }) => {
   const line = d3.line().curve(d3.curveBasisClosed);
   const emotions = ["难过", "愉快", "喜欢", "愤怒", "害怕", "惊讶", "厌恶"];
   const numberRange = [
-    [30, 50],
     [20, 40],
-    [5, 15],
     [20, 30],
+    [5, 10],
+    [10, 20],
     [10, 20],
     [2, 10],
     [2, 10],
@@ -32,13 +41,11 @@ const EmotionMap = ({ emotionStore }) => {
     return Math.floor(Math.random() * (range[1] - range[0]) + range[0]);
   });
 
-
   // type: emotion, value: number
-  const roseData = 
-    emotions.map((e, idx) => ({
-      type: e,
-      value: numbers[idx],
-    })); 
+  const roseData = emotions.map((e, idx) => ({
+    type: e,
+    value: numbers[idx],
+  }));
 
   useEffect(() => {
     fetchSegmentsGroupByEmotion();
@@ -61,7 +68,7 @@ const EmotionMap = ({ emotionStore }) => {
       while (idx >= sum) {
         sum += numbers[++i];
       }
-      const r = Math.random() * (maxRadius - minRadius) + minRadius;
+      const r = (Math.random() * (maxRadius - minRadius) + minRadius)*1.2;
       return {
         id: idx + 50,
         cluster: i + 1,
@@ -121,7 +128,7 @@ const EmotionMap = ({ emotionStore }) => {
   };
 
   useEffect(() => {
-    if((!segmentsGroupByEmotion) || segmentsGroupByEmotion.length === 0) return;
+    if (!segmentsGroupByEmotion || segmentsGroupByEmotion.length === 0) return;
     const segmentsGroup = JSON.parse(JSON.stringify(segmentsGroupByEmotion));
     const segments = [];
     if (segmentsGroup && segmentsGroup.length > 0) {
@@ -136,7 +143,7 @@ const EmotionMap = ({ emotionStore }) => {
           segmentList: segmentsGroup[idx].segmentList.slice(0, num),
         });
       });
-      const wordCloudData = []
+      const wordCloudData = [];
       segments.forEach((s) => {
         s.segmentList.forEach((seg) => {
           let timeList = seg.time.split(" --> ");
@@ -157,8 +164,7 @@ const EmotionMap = ({ emotionStore }) => {
             videoId: seg.videoId,
             content: seg.content,
           });
-        }
-        );
+        });
       });
       setWordCloudData(wordCloudData);
     }
@@ -168,7 +174,7 @@ const EmotionMap = ({ emotionStore }) => {
     const nodes = generateNodes(width, height, segments);
     const clusters = generateClusters(nodes);
 
-    setRoseData(roseData)
+    setRoseData(roseData);
 
     function collide(alpha) {
       const quadtree = d3
@@ -263,7 +269,7 @@ const EmotionMap = ({ emotionStore }) => {
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended)
-      )
+      );
 
     node
       .filter((d) => d.cluster != 0 && !d.title)
@@ -273,10 +279,11 @@ const EmotionMap = ({ emotionStore }) => {
       .on("click", handleNodeClick);
 
     function handleMouseOver() {
-    //cursor: pointer;
-      d3.select(this).style("cursor", "pointer")
-      .attr("stroke", "red")
-      .attr("stroke-width", 2)
+      //cursor: pointer;
+      d3.select(this)
+        .style("cursor", "pointer")
+        .attr("stroke", "red")
+        .attr("stroke-width", 2);
     }
 
     function handleMouseOut() {
@@ -286,7 +293,7 @@ const EmotionMap = ({ emotionStore }) => {
 
     function handleNodeClick(d, i) {
       setSegmentInfo(i);
-      toggleModal(true)
+      toggleModal(true);
     }
 
     const hulls = hullG
@@ -323,9 +330,7 @@ const EmotionMap = ({ emotionStore }) => {
       .select("svg.emotion-map")
       .select("g.nodes")
       .selectAll("text")
-      .data(
-        nodes.filter((d) => d.title)
-      )
+      .data(nodes.filter((d) => d.title))
       .enter()
       .append("text")
       .attr("x", (d) => d.x)

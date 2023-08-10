@@ -8,7 +8,7 @@ const Introduction = ({ emotionStore }) => {
   const [modeText, setModeText] = useState("emotion");
   return (
     <div className={Styles.content}>
-      <h1 className={Styles.title}>情感地图</h1>
+        <div className={Styles.title}>情感地图</div>
       <p>一部电影，就是一段不一样的人生。一句对白，便能代表曲折交错的情感。</p>
       <p>
         我们将老电影拆解成片段，使用

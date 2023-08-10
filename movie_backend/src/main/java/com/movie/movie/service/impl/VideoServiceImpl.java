@@ -42,6 +42,8 @@ public class VideoServiceImpl implements VideoService {
                 .contributor(video.get().getContributor())
                 .audioSpectrum(video.get().getAudioSpectrum())
                 .emotionList(video.get().getEmotionList())
+                .captionUrl(video.get().getCaptionUrl())
+                .videoUrl(video.get().getVideoUrl())
                 .build();
 
         return videoInfoVO;

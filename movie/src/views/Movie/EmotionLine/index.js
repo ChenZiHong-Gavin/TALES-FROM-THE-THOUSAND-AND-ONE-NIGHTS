@@ -1,7 +1,10 @@
 import { Scatter } from "@ant-design/plots";
 import Styles from "./EmotionLine.module.scss";
+import { inject, observer } from "mobx-react";
 
 const EmotionLine = (props) => {
+  const { emotionStore } = props;
+  const { toggleModal, fetchSegmentInfoById } = emotionStore;
   const emotionMap = {
     1: "难过",
     2: "愉快",
@@ -90,20 +93,23 @@ const EmotionLine = (props) => {
         },
       },
     },
-    // 点击事件
     onReady: (plot) => {
-      plot.on('element:click', (...args) => {
+      plot.on("element:click", (...args) => {
         const { target } = args[0];
         console.log(target);
         // cfg element data
-        const data = target['cfg']['origin']['data'];
-        const segmentId = data['segmentId'];
-        
+        const data = target["cfg"]["origin"]["data"];
+        const segmentId = data["segmentId"];
+        fetchSegmentInfoById(segmentId);
+        toggleModal(true);
       });
-    }
+    },
+    // 设置hover时cursor的样式
+    interactions: [{ type: "element-active" }],
+    
   };
 
   return <Scatter {...config} className={Styles.tinyLine} />;
 };
 
-export default EmotionLine;
+export default inject("emotionStore")(observer(EmotionLine));

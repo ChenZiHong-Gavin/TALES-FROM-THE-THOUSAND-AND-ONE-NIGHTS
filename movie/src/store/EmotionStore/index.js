@@ -1,5 +1,6 @@
 import { observable, action, makeObservable, runInAction } from "mobx";
 import { getSegmentGroupedByEmotion } from "../../api/emotion";
+import { getSegmentById } from "../../api/segment";
 
 class EmotionStore {
   @observable segmentsGroupByEmotion = [];
@@ -77,7 +78,18 @@ class EmotionStore {
   @action fetchSegmentInfoById = (id) => {
     this.segmentInfo = [];
     this.state = "pending";
-    
+    getSegmentById(id).then(
+      (res) => {
+        const data = res.data.data;
+        runInAction(() => {
+          this.segmentInfo = data;
+          this.state = "done";
+        });
+      },
+      (err) => {
+        this.state = "error";
+      }
+    );
   };
 
 }

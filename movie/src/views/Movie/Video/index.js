@@ -1,41 +1,63 @@
 import VideoJS from "../../../components/Video/VideoJS";
-import videojs from "video.js";
 import { useRef } from "react";
 import Styles from "./Video.module.scss";
 
 const Video = (props) => {
   const playerRef = useRef(null);
-  const videoPath = props.videoPath;
+  if (!props.videoUrl) {
+    return <div>loading</div>;
+  }
+  const videoUrl = props.videoUrl;
+  const captionUrl = props.captionUrl;
+  console.log(captionUrl);
   const videoJsOptions = {
     autoplay: true,
     controls: true,
+    crossOrigin: "anonymous",
     responsive: true,
     fluid: true,
     // 根据高度自适应宽度
     aspectRatio: "16:9",
     sources: [
       {
-        src: videoPath,
-        type: "application/x-mpegURL"
+        src: videoUrl,
+        type: "video/mp4",
       },
     ],
+    // 字幕
+    // tracks: [
+    //   {
+    //     kind: "captions",
+    //     src: captionUrl,
+    //     srcLang: "zh",
+    //     label: "Chinese",
+    //     default: true,
+    //   },
+    // ],
   };
 
   const handlePlayerReady = (player) => {
     playerRef.current = player;
-
-    // You can handle player events here, for example:
-    player.on("waiting", () => {
-      videojs.log("player is waiting");
-    });
-
-    player.on("dispose", () => {
-      videojs.log("player will dispose");
-    });
+    player.on("waiting", () => {});
+    player.on("dispose", () => {});
+    player.addRemoteTextTrack(
+      {
+        kind: "captions",
+        src: captionUrl,
+        srcLang: "zh",
+        label: "Chinese",
+        default: true,
+      },
+      true
+    );
   };
 
   return (
-      <VideoJS className={Styles.videoPlayer} options={videoJsOptions} onReady={handlePlayerReady} />
+    <VideoJS
+      className={Styles.videoPlayer}
+      options={videoJsOptions}
+      onReady={handlePlayerReady}
+    />
   );
 };
 

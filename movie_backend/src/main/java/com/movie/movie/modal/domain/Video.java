@@ -35,5 +35,7 @@ public class Video implements Serializable {
     private List<SegmentPair> emotionList;
     private List<Integer> emotionOrder;
     private String pictureUrl;
+    private String captionUrl;
+    private String videoUrl;
 
 }
