@@ -1,5 +1,3 @@
-import { index } from "d3";
-
 const randomRange = (min, max) => min + Math.random() * (max - min);
 
 const randomIndex = (array) => randomRange(0, array.length) | 0;
@@ -17,7 +15,7 @@ const getRandomFromArray = (array) => array[randomIndex(array) | 0];
 const resetPeep = ({ stage, peep, gsap }) => {
   const direction = Math.random() > 0.5 ? 1 : -1;
   // using an ease function to skew random to lower values to help hide that peeps have no legs
-  const offsetY = 50 - 250 * gsap.parseEase("power2.in")(Math.random());
+  const offsetY = 60 - 250 * gsap.parseEase("power2.in")(Math.random());
   const startY = stage.height - peep.height + offsetY;
   let startX;
   let endX;
@@ -75,7 +73,7 @@ const normalWalk = ({ peep, props, gsap }) => {
 };
 
 class Peep {
-  constructor({ image, index, rect, canvas }) {
+  constructor({ image, index, rect }) {
     this.image = image;
     this.index = index;
     this.setRect(rect);
@@ -85,19 +83,15 @@ class Peep {
     this.anchorY = 0;
     this.scaleX = 1;
     this.walk = null;
-    this.handleClick = this.handleClick.bind(this);
   }
 
   setRect(rect) {
     this.rect = rect;
     this.width = rect[2];
     this.height = rect[3];
-
     this.drawArgs = [this.image, ...rect, 0, 0, this.width, this.height];
   }
 
-  handleClick(e) {
-  }
 
   render(ctx) {
     ctx.save();

@@ -6,9 +6,11 @@ import {
 } from '../utils/blob.utils';
 import Blob from './Blob';
 import { inject, observer } from 'mobx-react'; 
+import { useNavigate } from 'react-router-dom';
 
 const BlobContainer = ({blobStore}) => {
-  const { edges, growth, color, colors, type, isOutline, svgPath, orderArray } = blobStore;
+  const navigate = useNavigate();
+  const { edges, growth, color, colors, type, isOutline, svgPath, orderArray, imageList} = blobStore;
   useEffect(() => {
     createInitialBlob(blobStore);
   }, []);
@@ -29,7 +31,14 @@ const BlobContainer = ({blobStore}) => {
     if (svgPath) setBlobTheme(blobStore);
   }, [color, colors, isOutline, type]);
 
-  return <Blob {...blobStore} />;
+  const handleBlobClick = () => {
+    const videoId = imageList[0].videoId;
+    navigate(`/movie?videoId=${videoId}`);
+  }
+
+  return <Blob {...blobStore} 
+    handleBlobClick={handleBlobClick}
+  />;
 };
 
 export default inject("blobStore")(observer(BlobContainer));

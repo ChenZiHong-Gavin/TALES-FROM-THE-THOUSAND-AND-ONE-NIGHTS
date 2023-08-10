@@ -73,6 +73,13 @@ class EmotionStore {
   @action setSegmentInfo = (info) => {
     this.segmentInfo = info;
   };
+
+  @action fetchSegmentInfoById = (id) => {
+    this.segmentInfo = [];
+    this.state = "pending";
+    
+  };
+
 }
 
 export default EmotionStore;

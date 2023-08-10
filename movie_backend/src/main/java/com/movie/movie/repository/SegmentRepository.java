@@ -12,4 +12,8 @@ import java.util.List;
 public interface SegmentRepository extends MongoRepository<Segment, Long> {
     @Query("{ '_id' : { $in: ?0 } }")
     List<Segment> findSegmentByIds(List<Integer> ids);
+
+    // _id = ?0
+    @Query("{ '_id' : ?0 }")
+    Segment findSegmentById(Integer id);
 }

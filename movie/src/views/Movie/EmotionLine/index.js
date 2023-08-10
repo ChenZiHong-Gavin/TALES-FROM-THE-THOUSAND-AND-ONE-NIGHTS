@@ -20,6 +20,7 @@ const EmotionLine = (props) => {
         y: item["emotionId"],
         label: emotionMap[item["emotionId"]],
         size: Math.random(),
+        segmentId: item["segmentId"],
       });
     });
   }
@@ -89,6 +90,17 @@ const EmotionLine = (props) => {
         },
       },
     },
+    // 点击事件
+    onReady: (plot) => {
+      plot.on('element:click', (...args) => {
+        const { target } = args[0];
+        console.log(target);
+        // cfg element data
+        const data = target['cfg']['origin']['data'];
+        const segmentId = data['segmentId'];
+        
+      });
+    }
   };
 
   return <Scatter {...config} className={Styles.tinyLine} />;

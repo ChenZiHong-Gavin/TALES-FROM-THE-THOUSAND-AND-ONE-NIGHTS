@@ -11,6 +11,7 @@ import Script from "react-load-script";
 import { useEffect, useState } from "react";
 import avatarUrl from "../../../assets/png/avatar.png";
 import ReturnButton from "../../../components/ReturnButton";
+import Chat from "./chat";
 
 const config = {
   src: avatarUrl,
@@ -42,7 +43,6 @@ function Actor() {
 
     function init() {
       createPeeps();
-      // resize also (re)populates the stage
       resize();
       gsap.ticker.add(render);
       window.addEventListener("resize", resize);
@@ -55,7 +55,7 @@ function Actor() {
       const rectWidth = width / rows;
       const rectHeight = height / cols;
 
-      for (let i=0; i<total;i++) {
+      for (let i = 0; i < total; i++) {
         allPeeps.push(
           new Peep({
             image: img,
@@ -66,7 +66,6 @@ function Actor() {
               rectWidth - 2,
               rectHeight - 2,
             ],
-            canvas
           })
         );
       }
@@ -143,10 +142,18 @@ function Actor() {
       <ReturnButton />
       <div className={Styles.Actor}>
         <canvas className={Styles.canvas} id="canvas"></canvas>
+
         <Script
           url={process.env.PUBLIC_URL + "/gsap.min.js"}
           onLoad={() => setLoading(false)}
         />
+      </div>
+      <div className={Styles.chatModule}>
+      <Chat />
+      </div>
+      <div className={Styles.title}>
+        <h1>演员的世界</h1>
+        <p>使用SAM模型进行演员头像的图像分割，并线稿化。让演员的光芒在艺术的舞台上绽放，成为一幅幅永恒的画卷</p>
       </div>
     </>
   );

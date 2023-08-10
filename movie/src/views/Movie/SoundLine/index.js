@@ -2,8 +2,11 @@ import Script from "react-load-script";
 import { useState, useEffect } from "react";
 import Styles from "./SoundLine.module.scss";
 import { useRef } from "react";
+import { inject, observer } from "mobx-react";
 
 function SoundLine(props) {
+  const { emotionStore } = props;
+  const { toggleModal } = emotionStore;
   const [loading, setLoading] = useState(true);
   const [start, setStart] = useState(false);
   const [audioData, setData] = useState(null);
@@ -74,4 +77,4 @@ function SoundLine(props) {
   );
 }
 
-export default SoundLine;
+export default inject("emotionStore")(observer(SoundLine));

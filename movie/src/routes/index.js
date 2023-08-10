@@ -1,7 +1,8 @@
 import Home from '../views/Home';
 import Selection from '../views/Selection';
-import { Theatre, Actor, Emotion } from '../views/Map';
+import { Theatre, Actor, Emotion, Photo, Tag } from '../views/Map';
 import Movie from '../views/Movie';
+import AIExperiment from '../views/AIExperiment';
 
 const routes = [
   {
@@ -26,12 +27,24 @@ const routes = [
       {
         path: '/map/actor',
         element: <Actor />,
+      },
+      {
+        path: '/map/photo',
+        element: <Photo />,
+      },
+      {
+        path: '/map/tag',
+        element: <Tag />,
       }
     ],
   },
   {
     path: '/movie',
     element: <Movie />
+  },
+  {
+    path: '/aiexperiment',
+    element: <AIExperiment />
   }
 ];
 

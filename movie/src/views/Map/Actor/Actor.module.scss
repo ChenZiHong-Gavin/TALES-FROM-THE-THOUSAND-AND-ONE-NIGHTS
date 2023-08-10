@@ -1,8 +1,37 @@
 .Actor {
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
   .canvas {
     width: 100%;
     height: 100%;
 }
 }
+
+.chatModule {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+
+  width: 400px;
+  display: inline-block;
+  @media (max-width: 768px) {
+    width: 350px;
+  }
+}
+
+.title {
+  // 左上角
+  position: absolute;
+  top: 0;
+  left: 100px;
+  p {
+    width: 300px;
+  }
+}
+
+  @media (max-width: 768px) {
+    .title {
+      display: none;
+    }
+  }

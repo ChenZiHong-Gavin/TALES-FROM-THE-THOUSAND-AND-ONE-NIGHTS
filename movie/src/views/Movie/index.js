@@ -8,9 +8,12 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getVideoInfoSelected } from "../../api/video";
 import Background from "./components/Background";
-import { Button } from "antd";
+import { Button, Modal } from "antd";
+import SegmentModal from "../Map/Emotion/components/SegmentModal";
+import { inject, observer } from "mobx-react";
 
-function Movie() {
+function Movie({emotionStore}) {
+  const { isShowModal, toggleModal } = emotionStore;
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const videoId = searchParams.get("videoId");
@@ -26,8 +29,24 @@ function Movie() {
       console.log(err);
     });
   }, [videoId]);
+  useEffect(() => {
+    return () => {
+      toggleModal(false);
+    };
+  }, []);
   return (
     <>
+        <Modal
+        centered
+        open={isShowModal}
+        footer={null}
+        onCancel={() => {
+          toggleModal(false);
+        }}
+        width={1000}
+      >
+        <SegmentModal />
+      </Modal>
       <div className={Styles.videoPage}>
         <h1>《{videoInfo.title}》</h1>
       <div className={Styles.chart}>
@@ -60,4 +79,4 @@ function Movie() {
   );
 }
 
-export default Movie;
+export default inject("emotionStore")(observer(Movie));

@@ -15,6 +15,7 @@ function Emotion({ emotionStore }) {
   useEffect(() => {
     return () => {
       emotionStore.setMode("emotion");
+      toggleModal(false);
     };
   }, []);
 

@@ -12,8 +12,8 @@ const Blob = ({
   colors,
   image,
   pattern,
+  handleBlobClick,
 }) => {
-  console.log(image);
   const ref = useRef(null);
   const [imgLoaded, setImgLoaded] = useState(false);
   const pattenBgColor = useColorModeValue("#d1d8e0", "#6c7c93");
@@ -114,6 +114,11 @@ const Blob = ({
             onLoad={() => {
               setImgLoaded(true);
             }}
+            // 点击图片跳转
+            onClick={() => {
+              handleBlobClick();
+            }}
+            style={{ cursor: "pointer" }}
           />
         </>
       )}
@@ -149,6 +154,10 @@ const Blob = ({
             onLoad={() => {
               setImgLoaded(true);
             }}
+            onClick={() => {
+              handleBlobClick();
+            }}
+            style={{ cursor: "pointer" }}
           />
         </>
       )}
