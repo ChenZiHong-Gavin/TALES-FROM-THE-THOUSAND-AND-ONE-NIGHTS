@@ -29,40 +29,52 @@
   }
 }
 
-.chart{
-  display: flex;
+.chart {
+  top: 500px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
 }
-.emotionPiece,
-.emotionLine,
-.soundLine {
-  width: 50vw;
-  margin: 10px;
+
+.soundLine,
+.emotionPiece {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 90vw;
+}
+
+.StockMap,
+.emotionLine {
+  width: 45vw;
   font-size: 18px;
   text-align: center;
-}
-
-
-.emotionLine{
-  padding-top: 30px;
-  @media screen and (max-width: 768px) {
-    padding-top: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  height: 400px;
+  margin-bottom: 50px;
 }
 
 .emotionTitle {
   text-align: center;
 }
 
-
 @media screen and (max-width: 768px) {
   .chart {
+    top: 500px;
+    position: absolute;
+    display: flex;
     flex-direction: column;
   }
+
+  .StockMap,
   .emotionPiece,
   .emotionLine,
   .soundLine {
     width: 100vw;
+  }
+  .StockMap,
+  .emotionPiece,
+  .emotionLine {
+    padding: 10px;
   }
 }

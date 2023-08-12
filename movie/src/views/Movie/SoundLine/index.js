@@ -2,24 +2,23 @@ import Script from "react-load-script";
 import { useState, useEffect } from "react";
 import Styles from "./SoundLine.module.scss";
 import { useRef } from "react";
-import { inject, observer } from "mobx-react";
 
 function SoundLine(props) {
-  const { emotionStore } = props;
-  const { toggleModal } = emotionStore;
   const [loading, setLoading] = useState(true);
   const [start, setStart] = useState(false);
   const [audioData, setData] = useState(null);
   const graphRef = useRef(null);
 
   useEffect(() => {
+    if (!props.audioSpectrum) return;
     setData(props.audioSpectrum);
   }, [props.audioSpectrum]);
 
 
   useEffect(() => {
+    if (loading) return;
     if (!graphRef.current) return;
-    if (!props.audioSpectrum) return;
+    if (!audioData) return;
     const Plotly = window.Plotly;
 
     const prepData = (data) => {
@@ -50,6 +49,7 @@ function SoundLine(props) {
         color: "white",
       },
     };
+
     Plotly.plot("soundGraph", data, layout, { showSendToCloud: false });
     const handleResize = () => {
       graphRef.current.innerHTML = "";
@@ -63,7 +63,7 @@ function SoundLine(props) {
       }
       window.removeEventListener("resize", handleResize);
     };
-  }, [loading, start]);
+  }, [loading, start, audioData]);
 
 
   return (
@@ -77,4 +77,4 @@ function SoundLine(props) {
   );
 }
 
-export default inject("emotionStore")(observer(SoundLine));
+export default SoundLine;
