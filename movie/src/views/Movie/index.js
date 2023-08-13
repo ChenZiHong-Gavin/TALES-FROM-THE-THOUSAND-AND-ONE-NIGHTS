@@ -76,21 +76,27 @@ function Movie({ emotionStore }) {
           </div>
         </div>
         <div className={Styles.chart}>
-          <div className={Styles.soundLine}>
-            <SoundLine audioSpectrum={videoInfo.audioSpectrum} />
-          </div>
-          <div className={Styles.emotionLine}>
-            <span className={Styles.emotionTitle}>情感散点图</span>
-            <EmotionLine emotionData={videoInfo.emotionList} />
-          </div>
-          <div className={Styles.StockMap}>
-            <span className={Styles.emotionTitle}>情感走势图</span>
-            <StockMap />
-          </div>
-          <div className={Styles.emotionPiece}>
-            <span className={Styles.emotionTitle}>情感热力图</span>
-            <EmotionPiece emotionData={videoInfo.emotionList} />
-          </div>
+          {videoInfo.audioSpectrum && videoInfo.audioSpectrum['x'].length > 0 && (
+            <div className={Styles.soundLine}>
+              <SoundLine audioSpectrum={videoInfo.audioSpectrum} />
+            </div>
+          )}
+          {videoInfo.emotionList && videoInfo.emotionList.length > 0 && (
+            <>
+              <div className={Styles.emotionLine}>
+                <span className={Styles.emotionTitle}>情感散点图emo/No.</span>
+                <EmotionLine emotionData={videoInfo.emotionList} />
+              </div>
+              <div className={Styles.StockMap}>
+                <span className={Styles.emotionTitle}>音量走势图dBFS/No.</span>
+                <StockMap emotionData={videoInfo.emotionList} />
+              </div>
+              <div className={Styles.emotionPiece}>
+                <span className={Styles.emotionTitle}>情感热力图</span>
+                <EmotionPiece emotionData={videoInfo.emotionList} />
+              </div>
+            </>
+          )}
         </div>
       </div>
       <Background />

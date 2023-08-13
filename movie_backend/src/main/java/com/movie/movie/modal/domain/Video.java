@@ -22,6 +22,11 @@ public class Video implements Serializable {
     public class SegmentPair {
         private Integer segmentId;
         private Integer emotionId;
+        private Float startVolume;
+        private Float endVolume;
+        private Float maxVolume;
+        private Float minVolume;
+        private String time;
     }
 
     @Id

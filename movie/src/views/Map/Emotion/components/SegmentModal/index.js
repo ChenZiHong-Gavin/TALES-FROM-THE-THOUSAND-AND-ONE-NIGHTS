@@ -32,18 +32,17 @@ const SegmentModal = ({ emotionStore }) => {
     惊讶: "#e377c2",
     厌恶: "#7f7f7f",
   };
+  if (!videoUrl) {
+    return <div>loading</div>;
+  }
 
   const handlePlayerReady = (player) => {
     playerRef.current = player;
 
     // You can handle player events here, for example:
-    player.on("waiting", () => {
-      videojs.log("player is waiting");
-    });
+    player.on("waiting", () => {});
 
-    player.on("dispose", () => {
-      videojs.log("player will dispose");
-    });
+    player.on("dispose", () => {});
   };
 
   const gotoFullVideo = (videoId) => {
@@ -56,9 +55,7 @@ const SegmentModal = ({ emotionStore }) => {
     <div className={Styles.segmentModal}>
       <div className={Styles.content}>
         <h2>“{content}”</h2>
-        {
-          emotion && <Tag color={emotionMap[emotion]}>{emotion}</Tag>
-        }
+        {emotion && <Tag color={emotionMap[emotion]}>{emotion}</Tag>}
         <p>第{order}句台词</p>
         <p>{time}</p>
         <a onClick={gotoFullVideo(videoId)} className={Styles.btn}>

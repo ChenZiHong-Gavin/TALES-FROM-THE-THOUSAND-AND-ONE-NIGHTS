@@ -51,7 +51,9 @@ const EmotionLine = (props) => {
     shape: "circle",
     tooltip: {
       title: "情感",
-      fields: ["label"],
+        formatter: (datum) => {
+        return { name: "情感", value: datum['label'] };
+      },
     },
     yAxis: {
       nice: true,
@@ -96,7 +98,6 @@ const EmotionLine = (props) => {
     onReady: (plot) => {
       plot.on("element:click", (...args) => {
         const { target } = args[0];
-        console.log(target);
         // cfg element data
         const data = target["cfg"]["origin"]["data"];
         const segmentId = data["segmentId"];

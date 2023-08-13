@@ -14,7 +14,6 @@ function SoundLine(props) {
     setData(props.audioSpectrum);
   }, [props.audioSpectrum]);
 
-
   useEffect(() => {
     if (loading) return;
     if (!graphRef.current) return;
@@ -22,10 +21,16 @@ function SoundLine(props) {
     const Plotly = window.Plotly;
 
     const prepData = (data) => {
+      const xInMinutesAndSeconds = data.x.map((seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        if (minutes === 0) return `${remainingSeconds.toFixed(0)}秒`;
+        else return `${minutes}分${remainingSeconds.toFixed(0)}秒`;
+      });
       return [
         {
           mode: "lines",
-          x: data.x,
+          x: xInMinutesAndSeconds,
           y: data.y,
         },
       ];
@@ -42,6 +47,9 @@ function SoundLine(props) {
       },
       yaxis: {
         fixedrange: true,
+        tickfont: {
+          color: "white",
+        },
       },
       plot_bgcolor: "rgba(255, 240, 240, 0.4)",
       paper_bgcolor: "rgba(255, 255, 255, 0)",
@@ -65,14 +73,17 @@ function SoundLine(props) {
     };
   }, [loading, start, audioData]);
 
-
   return (
     <>
       <Script
         url={process.env.PUBLIC_URL + "/plotly.min.js"}
         onLoad={() => setLoading(false)}
       />
-      <div id="soundGraph" ref={graphRef} className={Styles.graphContainer}></div>
+      <div
+        id="soundGraph"
+        ref={graphRef}
+        className={Styles.graphContainer}
+      ></div>
     </>
   );
 }
