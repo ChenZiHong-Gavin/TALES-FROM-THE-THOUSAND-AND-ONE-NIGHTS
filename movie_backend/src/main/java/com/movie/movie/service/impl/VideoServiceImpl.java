@@ -44,6 +44,7 @@ public class VideoServiceImpl implements VideoService {
                 .emotionList(video.get().getEmotionList())
                 .captionUrl(video.get().getCaptionUrl())
                 .videoUrl(video.get().getVideoUrl())
+                .coloredUrl(video.get().getColoredUrl())
                 .build();
 
         return videoInfoVO;

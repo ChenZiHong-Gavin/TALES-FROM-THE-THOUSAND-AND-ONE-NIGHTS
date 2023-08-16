@@ -1,36 +1,34 @@
 import Styles from "./Chat.module.scss";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { getActorsWithAvatar } from "../../../../api/actor";
+import { inject, observer } from "mobx-react";
+import { setChatTemplate } from "./util";
 
-const Chat = () => {
+const Chat = ({actorStore}) => {
+  const {toggleModal} = actorStore;
   const chatContainerRef = useRef(null);
-  const chatData = [
-  {
-    name: "Alice",
-    text: "Hello there!",
-    hasImg: false,
-    hasRichBody: false,
-  },
-  {
-    name: "Bob",
-    text: "Hey! How's it going?",
-    hasImg: false,
-    hasRichBody: false,
-  }
-];
+  const [chatData, setChatData] = useState([]);
+
   useEffect(() => {
-    let amountOfColors = 18; 
+    getActorsWithAvatar().then((res) => {
+      if (res.status === 200) {
+        const data = res.data.data;
+        const actorInfoList = [];
+        data.forEach((n) => {
+          const tempActorInfoList = setChatTemplate(n);
+          for (let i = 0; i < tempActorInfoList.length; i++) {
+            actorInfoList.push(tempActorInfoList[i]);
+          }
+        });
+        setChatData(actorInfoList);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!chatData.length) return;
     let container = chatContainerRef.current;
-    let lineWidth = 300;
-    let profileImgWidth = 40;
-    let textWidth = lineWidth - 20 - profileImgWidth - 10;
     let chats = [];
-    let maxTexts = 3;
-    if (window.innerWidth < 768) {
-      lineWidth = 250;
-      profileImgWidth = 10;
-      textWidth = lineWidth - 20 - profileImgWidth - 10;
-      maxTexts = 2;
-    }
 
     function createElement(opts = {}) {
       let ele = document.createElement("div");
@@ -75,7 +73,7 @@ const Chat = () => {
         }
         this.addLine();
         this.removeOldest();
-        this.anim = setTimeout(() => this.loop(), Math.random() * 1300 + 180);
+        this.anim = setTimeout(() => this.loop(), Math.random() * 5200 + 180);
       }
       stopLoop() {
         clearTimeout(this.anim);
@@ -85,37 +83,19 @@ const Chat = () => {
 
     class Line {
       constructor() {
-        this.pickColor();
-        this.pickName();
-        this.pickText();
+        this.pickActor();
         this.pickHasImg();
         this.pickHasRichBody();
         this.setupElements();
         this.animateIn();
       }
 
-      pickColor() {
-        this.hue =
-          Math.floor(Math.random() * amountOfColors) * (360 / amountOfColors);
-        this.color = `hsl(${this.hue}, 90%, 50%)`;
-        this.profileImgColor = `hsl(${this.hue}, 40%, 55%)`;
-        return this.hue;
-      }
-
-      pickName() {
-        this.name = Math.max(0.3, Math.random());
-      }
-
-      pickText() {
-        let lengthChoice = Math.random();
-        let lengthWeight = 1;
-        if (lengthChoice < 0.5) {
-          lengthWeight = 0.6;
-        } else if (lengthChoice < 0.9) {
-          lengthWeight = 0.8;
-        }
-        this.length = Math.max(0.02, lengthChoice * lengthWeight);
-        this.textCount = this.length * maxTexts;
+      pickActor() {
+        let actor = chatData[Math.floor(Math.random() * chatData.length)];
+        this.actor = actor;
+        this.avatarUrl = actor.avatarUrl;
+        this.name = actor.name;
+        return actor;
       }
 
       pickHasImg() {
@@ -129,16 +109,26 @@ const Chat = () => {
       setupElements() {
         let ele = this.createElement();
         this.ele = ele;
-        ele.name.style.width = this.name * (textWidth / 2) + "px";
-        ele.texts.forEach((n, i, arr) => {
-          let w = textWidth;
-          if (i === arr.length - 1) {
-            w = Math.max(0.2, this.textCount - i) * textWidth;
-          }
-          n.style.width = w + "px";
+        // profile image
+        ele.profileImg.style.background = `url(${this.avatarUrl})`;
+        ele.profileImg.style.backgroundSize = "cover";
+        ele.profileImg.style.backgroundPosition = "center";
+        // name
+        ele.name.innerText = this.name;
+        // ele.name.style.width = this.name * (textWidth / 2) + "px";
+        // text
+        ele.text.innerText = this.actor.text;
+        // ele.texts.forEach((n, i, arr) => {
+        //   let w = textWidth;
+        //   if (i === arr.length - 1) {
+        //     w = Math.max(0.2, this.textCount - i) * textWidth;
+        //   }
+        //   n.style.width = w + "px";
+        // });
+        // 增加点击事件
+        ele.line.addEventListener("click", () => {
+          toggleModal(true);
         });
-        ele.name.style.backgroundColor = this.color;
-        ele.profileImg.style.backgroundColor = this.profileImgColor;
       }
 
       animateIn() {
@@ -150,7 +140,7 @@ const Chat = () => {
           ele.lineContainer.style.transform = "translateX(0px) scale(1)";
         }, delay);
 
-        let otherEleList = [ele.profileImg, ele.name, ...ele.texts];
+        let otherEleList = [ele.profileImg, ele.name, ele.text];
 
         if ("img" in ele) {
           otherEleList.push(ele.img);
@@ -167,9 +157,9 @@ const Chat = () => {
           }, (delay += 50));
         });
 
-        ele.texts.forEach((n, i, arr) =>
-          setTimeout(() => (n.style.opacity = 1), 70 * (i + 3) + delay)
-        );
+        // ele.texts.forEach((n, i, arr) =>
+        //   setTimeout(() => (n.style.opacity = 1), 70 * (i + 3) + delay)
+        // );
       }
 
       createElement() {
@@ -178,19 +168,15 @@ const Chat = () => {
         let profileImg = createElement({ class: Styles.profileImg });
         let body = createElement({ class: Styles.body });
         let name = createElement({ class: Styles.name });
-        let texts = [];
+        let text = createElement({ class: Styles.text });
         let img = createElement({ class: Styles.img });
         let richBody = createElement({ class: Styles.richBody });
         body.appendChild(name);
-        for (let i = 0; i < (this.textCount || 1); i++) {
-          let text = createElement({ class: Styles.text });
-          texts.push(text);
-          body.appendChild(text);
-        }
+        body.appendChild(text);
         line.appendChild(profileImg);
         line.appendChild(body);
         lineContainer.appendChild(line);
-        let out = { lineContainer, line, profileImg, body, name, texts };
+        let out = { lineContainer, line, profileImg, body, name, text };
         this.hasImg && (out.img = img) && body.appendChild(img);
         this.hasRichBody &&
           (out.richBody = richBody) &&
@@ -208,14 +194,8 @@ const Chat = () => {
     }
 
     addChat();
-  }, []);
-  return (
-    <div className={Styles.chatContainer} ref={chatContainerRef}>
-      <div className={Styles.chatInput} id="chat-input">
-        <div className={Styles.fileInput} id="file-input"></div>
-      </div>
-    </div>
-  );
+  }, [chatData]);
+  return <div className={Styles.chatContainer} ref={chatContainerRef}></div>;
 };
 
-export default Chat;
+export default inject("actorStore")(observer(Chat));

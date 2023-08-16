@@ -1,8 +1,5 @@
 package com.movie.movie.service;
-import com.movie.movie.util.ParamQuery;
 import com.movie.movie.vo.TheatreInfoVO;
-
-import java.util.List;
 
 public interface TheatreService {
     /**

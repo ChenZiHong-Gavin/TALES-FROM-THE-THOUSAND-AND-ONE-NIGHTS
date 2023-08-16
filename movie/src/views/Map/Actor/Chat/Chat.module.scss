@@ -1,0 +1,130 @@
+$contBgClr: linear-gradient(to left bottom, #f2e3c6 0%, #a7a1a5 100%);
+$appShadowClr: rgba(#000, 0.3);
+
+
+.chatContainer {
+  margin-left: 80px;
+  margin-right: 20px;
+
+  @media (max-width: 768px) {
+    // 居中
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+.chat {
+  position: fixed;
+  bottom: 20px;
+  width: 400px;
+  display: inline-block;
+
+  @media (max-width: 768px) {
+    width: 350px;
+  }
+}
+
+.lineContainer {
+  overflow: hidden;
+  border-radius: 6px;
+  max-height: 0px;
+  opacity: 0;
+  transform: translateX(-300px) scale(0.2);
+  transition: margin-bottom 200ms, max-height 500ms, opacity 100ms,
+    transform 250ms;
+  transition-timing-function: ease-out;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.line {
+  padding: 10px;
+  background-color: #233d4d;
+
+  &>div {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .profileImg {
+    cursor: pointer;
+    border-radius: 6px;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+}
+
+.body {
+  .text {
+    border-radius: 2px;
+    height: 16px;
+    color: whitesmoke;
+  }
+}
+
+.name {
+  width: auto;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+  color: whitesmoke;
+
+}
+
+.text {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  width: auto;
+}
+
+.richBody {
+  margin-left: 14px;
+  margin-top: 36px;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -26px;
+    left: -14px;
+    bottom: 0;
+    width: 4px;
+    background-color: inherit;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 16px;
+    width: 200px;
+    top: -26px;
+    background-color: inherit;
+    border-radius: 2px;
+  }
+}
+
+.img,
+.rich-body {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+
+.profile-img,
+.text,
+.img,
+.rich-body {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 200ms;
+}

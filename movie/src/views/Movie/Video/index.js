@@ -1,6 +1,5 @@
 import VideoJS from "../../../components/Video/VideoJS";
 import { useRef } from "react";
-import Styles from "./Video.module.scss";
 
 const Video = (props) => {
   const playerRef = useRef(null);
@@ -9,7 +8,6 @@ const Video = (props) => {
   }
   const videoUrl = props.videoUrl;
   const captionUrl = props.captionUrl;
-  console.log(captionUrl);
   const videoJsOptions = {
     autoplay: true,
     controls: true,
@@ -54,7 +52,6 @@ const Video = (props) => {
 
   return (
     <VideoJS
-      className={Styles.videoPlayer}
       options={videoJsOptions}
       onReady={handlePlayerReady}
     />

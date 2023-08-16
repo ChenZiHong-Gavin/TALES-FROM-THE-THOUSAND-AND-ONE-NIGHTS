@@ -42,5 +42,6 @@ public class Video implements Serializable {
     private String pictureUrl;
     private String captionUrl;
     private String videoUrl;
+    private String coloredUrl;
 
 }

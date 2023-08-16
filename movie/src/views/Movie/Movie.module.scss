@@ -64,6 +64,18 @@
   padding: 20px;
 }
 
+.returnButton {
+  // 左上角
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  align-items: center;
+  font-size: 40px;
+}
+
 @media screen and (max-width: 768px) {
   .chart {
     top: 500px;
