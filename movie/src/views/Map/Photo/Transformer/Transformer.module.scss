@@ -1,0 +1,12 @@
+.menu {
+		position: absolute; 
+		z-index: 100;
+		width: 100%; 
+		bottom: 50px; 
+		text-align: center; 
+		font-size: 32px;
+    // 里面的元素间距10px
+    & > * {
+      margin: 10px;
+    }
+}

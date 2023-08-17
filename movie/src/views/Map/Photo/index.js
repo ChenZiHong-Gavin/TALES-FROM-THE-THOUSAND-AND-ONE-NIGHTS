@@ -1,11 +1,11 @@
 import Background from "./Background";
-import Title from "./Title";
 import ReturnButton from "../../../components/ReturnButton";
+import Transformer from "./Transformer";
 const Photo = () => {
   return (
     <div>
       <ReturnButton />
-      <Title />
+      <Transformer />
       <Background />
     </div>
   );

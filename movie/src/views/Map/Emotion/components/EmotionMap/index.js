@@ -22,9 +22,31 @@ const EmotionMap = ({ emotionStore }) => {
   const numClusters = 8;
   const minRadius = 80;
   const maxRadius = 150;
+  // const color = d3
+  //   .scaleOrdinal(d3.schemeCategory10)
+  //   .domain(d3.range(numClusters));
+  // const color = [
+  //   "#2b2f3a",
+  //   "#8f9f85",
+  //   "#8f6447",
+  //   "#733712",
+  //   "#CABE89",
+  //   "#ede6d9",
+  //   "#6d6d6e"
+  // ]
   const color = d3
-    .scaleOrdinal(d3.schemeCategory10)
-    .domain(d3.range(numClusters));
+    .scaleOrdinal()
+    .domain(d3.range(numClusters))
+    .range([
+      "#423E14",
+      "#2b2f3a",
+      "#8f9f85",
+      "#993712",
+      "#8f6447",
+      "#ECBC31",
+      "#ed96d9",
+      "#6d6d6e",
+    ]);
   const line = d3.line().curve(d3.curveBasisClosed);
   const emotions = ["难过", "愉快", "喜欢", "愤怒", "害怕", "惊讶", "厌恶"];
   const numberRange = [
@@ -68,7 +90,7 @@ const EmotionMap = ({ emotionStore }) => {
       while (idx >= sum) {
         sum += numbers[++i];
       }
-      const r = (Math.random() * (maxRadius - minRadius) + minRadius)*1.2;
+      const r = (Math.random() * (maxRadius - minRadius) + minRadius) * 1.2;
       return {
         id: idx + 50,
         cluster: i + 1,

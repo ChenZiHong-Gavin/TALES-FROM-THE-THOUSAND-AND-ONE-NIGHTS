@@ -44,7 +44,7 @@ const HorizonImage = ({actorStore}) => {
         }
         setPictureList(randomPictureList)
       }
-    });
+    })
     return () => {
       toggleModal(false)
     };

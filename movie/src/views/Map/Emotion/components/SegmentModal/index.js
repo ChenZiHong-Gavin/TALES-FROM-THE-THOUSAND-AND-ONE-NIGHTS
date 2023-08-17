@@ -23,14 +23,15 @@ const SegmentModal = ({ emotionStore }) => {
       },
     ],
   };
+
   const emotionMap = {
-    难过: "#ff7f0e",
-    愉快: "#2ca02c",
-    喜欢: "#d62728",
-    愤怒: "#9467bd",
-    害怕: "#8c564b",
-    惊讶: "#e377c2",
-    厌恶: "#7f7f7f",
+    难过: "#2b2f3a",
+    愉快: "#8f9f85",
+    喜欢: "#993712",
+    愤怒: "#8f6447",
+    害怕: "#ECBC31",
+    惊讶: "#ed96d9",
+    厌恶: "#6d6d6e",
   };
   if (!videoUrl) {
     return <div>loading</div>;

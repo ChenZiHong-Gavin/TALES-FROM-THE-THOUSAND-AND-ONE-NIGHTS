@@ -3,9 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { getActorsWithAvatar } from "../../../../api/actor";
 import { inject, observer } from "mobx-react";
 import { setChatTemplate } from "./util";
+import MovieCard from "./Card";
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-const Chat = ({actorStore}) => {
-  const {toggleModal} = actorStore;
+const Chat = ({ actorStore }) => {
+  const { toggleModal } = actorStore;
   const chatContainerRef = useRef(null);
   const [chatData, setChatData] = useState([]);
 
@@ -37,6 +40,19 @@ const Chat = ({actorStore}) => {
           opts.class = [opts.class];
         }
         ele.classList.add(...opts.class);
+      }
+      // 如果是text，则在div中创建p标签
+      if ("text" in opts) {
+        let p = document.createElement("p");
+        p.innerText = opts.text;
+        ele.appendChild(p);
+      }
+      if ("card" in opts) {
+        const movieCardElement = React.createElement(MovieCard, opts.card);
+
+        // 使用 createRoot 渲染 React 元素
+        const movieCardRoot = createRoot(ele);
+        movieCardRoot.render(movieCardElement);
       }
       return ele;
     }
@@ -73,7 +89,18 @@ const Chat = ({actorStore}) => {
         }
         this.addLine();
         this.removeOldest();
-        this.anim = setTimeout(() => this.loop(), Math.random() * 5200 + 180);
+        // 如果是视频或者音频，循环的时候稍微慢一点
+        if (this.lines[this.lines.length - 1].hasCard) {
+          this.anim = setTimeout(
+            () => this.loop(),
+            Math.random() * 10000 + 400
+          );
+        } else {
+          this.anim = setTimeout(
+            () => this.loop(),
+            Math.random() * 6000 + 180
+          );
+        }
       }
       stopLoop() {
         clearTimeout(this.anim);
@@ -85,7 +112,7 @@ const Chat = ({actorStore}) => {
       constructor() {
         this.pickActor();
         this.pickHasImg();
-        this.pickHasRichBody();
+        this.pickHasCard();
         this.setupElements();
         this.animateIn();
       }
@@ -99,11 +126,11 @@ const Chat = ({actorStore}) => {
       }
 
       pickHasImg() {
-        this.hasImg = Math.random() > 0.9;
+        this.hasImg = this.actor.hasImage;
       }
 
-      pickHasRichBody() {
-        this.hasRichBody = !this.hasImage && Math.random() > 0.85;
+      pickHasCard() {
+        this.hasCard = this.actor.hasCard;
       }
 
       setupElements() {
@@ -115,18 +142,14 @@ const Chat = ({actorStore}) => {
         ele.profileImg.style.backgroundPosition = "center";
         // name
         ele.name.innerText = this.name;
-        // ele.name.style.width = this.name * (textWidth / 2) + "px";
-        // text
-        ele.text.innerText = this.actor.text;
-        // ele.texts.forEach((n, i, arr) => {
-        //   let w = textWidth;
-        //   if (i === arr.length - 1) {
-        //     w = Math.max(0.2, this.textCount - i) * textWidth;
-        //   }
-        //   n.style.width = w + "px";
-        // });
-        // 增加点击事件
-        ele.line.addEventListener("click", () => {
+        // img
+        if (this.hasImg) {
+          ele.img.style.background = `url(${this.actor.imagePath})`;
+          ele.img.style.backgroundSize = "cover";
+          ele.img.style.backgroundPosition = "center";
+        }
+        ele.profileImg.addEventListener("click", () => {
+          console.log(this.actor);
           toggleModal(true);
         });
       }
@@ -136,7 +159,7 @@ const Chat = ({actorStore}) => {
         let ele = this.ele;
         setTimeout(() => {
           ele.lineContainer.style.opacity = 1;
-          ele.lineContainer.style.maxHeight = "200px";
+          ele.lineContainer.style.maxHeight = "500px";
           ele.lineContainer.style.transform = "translateX(0px) scale(1)";
         }, delay);
 
@@ -144,8 +167,6 @@ const Chat = ({actorStore}) => {
 
         if ("img" in ele) {
           otherEleList.push(ele.img);
-        } else if ("richBody" in ele) {
-          otherEleList.push(ele.richBody);
         }
 
         delay += 40;
@@ -156,10 +177,6 @@ const Chat = ({actorStore}) => {
             e.style.transform = "translateY(0px)";
           }, (delay += 50));
         });
-
-        // ele.texts.forEach((n, i, arr) =>
-        //   setTimeout(() => (n.style.opacity = 1), 70 * (i + 3) + delay)
-        // );
       }
 
       createElement() {
@@ -168,19 +185,17 @@ const Chat = ({actorStore}) => {
         let profileImg = createElement({ class: Styles.profileImg });
         let body = createElement({ class: Styles.body });
         let name = createElement({ class: Styles.name });
-        let text = createElement({ class: Styles.text });
+        let text = createElement({ class: Styles.text, text: this.actor.text });
         let img = createElement({ class: Styles.img });
-        let richBody = createElement({ class: Styles.richBody });
+        let card = createElement({ class: Styles.card, card: this.actor });
         body.appendChild(name);
         body.appendChild(text);
         line.appendChild(profileImg);
         line.appendChild(body);
         lineContainer.appendChild(line);
-        let out = { lineContainer, line, profileImg, body, name, text };
+        let out = { lineContainer, line, profileImg, body, name, text, card };
         this.hasImg && (out.img = img) && body.appendChild(img);
-        this.hasRichBody &&
-          (out.richBody = richBody) &&
-          body.appendChild(richBody);
+        this.hasCard && (out.card = card) && body.appendChild(card);
         return out;
       }
     }

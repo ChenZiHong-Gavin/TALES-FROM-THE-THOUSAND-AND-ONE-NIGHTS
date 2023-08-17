@@ -42,7 +42,7 @@ $appShadowClr: rgba(#000, 0.3);
 
 .line {
   padding: 10px;
-  background-color: #233d4d;
+  background-color: #9c7754;
 
   &>div {
     display: inline-block;
@@ -61,8 +61,11 @@ $appShadowClr: rgba(#000, 0.3);
 .body {
   .text {
     border-radius: 2px;
-    height: 16px;
     color: whitesmoke;
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 
@@ -72,15 +75,18 @@ $appShadowClr: rgba(#000, 0.3);
   position: relative;
   cursor: pointer;
   color: whitesmoke;
-
+  // 粗体
+  font-weight: 600;
 }
 
 .text {
   &:not(:last-child) {
     margin-bottom: 10px;
   }
-
-  width: auto;
+  width: 300px;
+  @media (max-width: 768px) {
+    width: 250px;
+  }
 }
 
 .richBody {
@@ -111,12 +117,16 @@ $appShadowClr: rgba(#000, 0.3);
   }
 }
 
-.img,
-.rich-body {
+.img {
   width: 200px;
   height: 200px;
   cursor: pointer;
   border-radius: 6px;
+}
+
+.rich-body {
+  // 让文本能够放下的高度
+  max-height: 400px;
 }
 
 
