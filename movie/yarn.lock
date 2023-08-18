@@ -3949,6 +3949,11 @@
     "@turf/invariant" "^6.5.0"
     "polygon-clipping" "^0.15.3"
 
+"@tweenjs/tween.js@^21.0.0":
+  "integrity" "sha512-qVfOiFh0U8ZSkLgA6tf7kj2MciqRbSCWaJZRwftVO7UbtVDNsZAXpWXqvCDtIefvjC83UJB+vHTDOGm5ibXjEA=="
+  "resolved" "https://registry.npmjs.org/@tweenjs/tween.js/-/tween.js-21.0.0.tgz"
+  "version" "21.0.0"
+
 "@types/acorn@^4.0.5":
   "integrity" "sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ=="
   "resolved" "https://registry.npmjs.org/@types/acorn/-/acorn-4.0.6.tgz"
@@ -13059,6 +13064,11 @@
   "version" "3.3.1"
   dependencies:
     "any-promise" "^1.0.0"
+
+"three@^0.155.0":
+  "integrity" "sha512-sNgCYmDijnIqkD/bMfk+1pHg3YzsxW7V2ChpuP6HCQ8NiZr3RufsXQr8M3SSUMjW4hG+sUk7YbyuY0DncaDTJQ=="
+  "resolved" "https://registry.npmjs.org/three/-/three-0.155.0.tgz"
+  "version" "0.155.0"
 
 "throat@^6.0.1":
   "integrity" "sha512-WKexMoJj3vEuK0yFEapj8y64V0A6xcuPuK9Gt1d0R+dzCSJc0lHqQytAbSB4cDAK0dWh4T0E2ETkoLE2WZ41OQ=="

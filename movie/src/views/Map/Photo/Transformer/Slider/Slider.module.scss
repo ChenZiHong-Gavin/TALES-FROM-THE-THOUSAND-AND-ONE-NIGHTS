@@ -1,0 +1,8 @@
+.sliderContainer {
+  // 放在屏幕最右边的中间
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}

@@ -5,7 +5,7 @@ function Photo() {
   const navigate = useNavigate();
 
   function gotoPhoto() {
-    navigate("/map/theatre");
+    navigate("/map/photo");
   }
   return (
     <div className={Styles.container}>

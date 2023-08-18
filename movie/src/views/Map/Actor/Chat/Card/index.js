@@ -3,7 +3,7 @@ import VideoJS from "../../../../../components/Video/VideoJS";
 import { useRef } from "react";
 
 const MovieCard = (props) => {
-    const playerRef = useRef(null);
+  const playerRef = useRef(null);
   // 分为电影、音频、视频三种卡片
   // 电影卡片
   if (props.isMovie) {
@@ -49,7 +49,7 @@ const MovieCard = (props) => {
                     )}`}
                     key={index}
                   >
-                    {item}
+                    {item.length > 10 ? item.substring(0, 10) + "..." : item}
                   </Tag>
                 );
               })
@@ -97,7 +97,7 @@ const MovieCard = (props) => {
                     )}`}
                     key={index}
                   >
-                    {item}
+                    {item.length > 10 ? item.substring(0, 10) + "..." : item}
                   </Tag>
                 );
               })
@@ -148,7 +148,7 @@ const MovieCard = (props) => {
         // 背景颜色
         style={{ background: "#e1c7ae", maxWidth: "300px" }}
       >
-      <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+        <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
         <div>
           <Button>前往视频页</Button>
         </div>

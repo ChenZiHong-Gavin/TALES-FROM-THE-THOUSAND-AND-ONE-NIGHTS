@@ -66,6 +66,9 @@ function Home() {
             <div
               key={index}
               className={Styles.item}
+              onClick={() => {
+                navigate('/aiExperiment?pictureId=' + item.pictureId);
+              }}
               style={{ backgroundImage: `url(${item.imgPath})` }}
             ></div>
         ))}

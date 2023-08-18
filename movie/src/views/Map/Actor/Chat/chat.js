@@ -77,10 +77,11 @@ const Chat = ({ actorStore }) => {
         return l;
       }
       removeOldest() {
-        let maxCount = Math.ceil((window.innerHeight / 1080) * 12);
+        let maxCount = Math.ceil((window.innerHeight / 1080) * 9);
         if (this.lines.length > maxCount) {
           let oldest = this.lines.splice(0, this.lines.length - maxCount);
           oldest.forEach((n) => this.ele.removeChild(n.ele.lineContainer));
+
         }
       }
       loop() {

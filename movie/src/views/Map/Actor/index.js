@@ -6,6 +6,7 @@ import HorizonImage from "./HorizonImage";
 import Walk from "./Walk";
 import { Modal } from "antd";
 import { inject, observer } from "mobx-react";
+import ActorModal from "./ActorModal";
 
 const Actor = ({actorStore}) => {
   const {isShowModal, toggleModal} = actorStore;
@@ -80,7 +81,7 @@ const Actor = ({actorStore}) => {
         }}
         width={1000}
       >
-      modal
+      <ActorModal />
       </Modal>
     </div>
   );
