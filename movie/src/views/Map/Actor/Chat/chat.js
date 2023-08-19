@@ -8,7 +8,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 
 const Chat = ({ actorStore }) => {
-  const { toggleModal } = actorStore;
+  const { toggleModal, getActorInfo } = actorStore;
   const chatContainerRef = useRef(null);
   const [chatData, setChatData] = useState([]);
 
@@ -150,7 +150,7 @@ const Chat = ({ actorStore }) => {
           ele.img.style.backgroundPosition = "center";
         }
         ele.profileImg.addEventListener("click", () => {
-          console.log(this.actor);
+          getActorInfo(this.actor.actorId);
           toggleModal(true);
         });
       }

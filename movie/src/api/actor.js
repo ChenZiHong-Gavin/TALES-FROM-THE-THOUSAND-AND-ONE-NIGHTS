@@ -7,3 +7,8 @@ export function getRandomActor(limit) {
 export function getActorsWithAvatar() {
   return fetchGet("/api/avatars/actors")
 }
+
+
+export function getActorInfo(id) {
+  return fetchGet("/api/info/actor/id?id=" + id);
+}

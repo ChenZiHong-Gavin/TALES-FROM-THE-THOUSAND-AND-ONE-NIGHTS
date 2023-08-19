@@ -15,4 +15,9 @@ public interface ActorService {
      * @return 返回头像列表
      */
     List<ActorVO> getActorAvatars();
+
+    /**
+     * @return 返回演员信息
+     */
+    ActorVO getActorInfoById(Integer id);
 }

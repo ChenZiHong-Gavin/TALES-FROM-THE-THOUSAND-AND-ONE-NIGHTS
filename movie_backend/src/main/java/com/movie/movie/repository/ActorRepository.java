@@ -15,4 +15,8 @@ public interface ActorRepository extends MongoRepository<Actor, Integer> {
     // 返回全部avatarUrl不为空的演员
     @Query("{ 'avatarUrl' : { $ne : '' } }")
     List<Actor> findAllWithAvatarUrl();
+
+    // 根据演员id返回演员信息
+    @Query("{ 'actorId' : ?0 }")
+    Actor findActorByActorId(Integer actorId);
 }

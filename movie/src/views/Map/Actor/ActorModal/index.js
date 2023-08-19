@@ -1,39 +1,31 @@
 import { inject, observer } from "mobx-react";
 import * as d3 from "d3";
 import { useRef, useEffect, useState } from "react";
+import constructNodesAndLinks from "./utils";
 
 const ActorModal = ({ actorStore }) => {
+  const { actorInfo } = actorStore;
+  const info = JSON.parse(JSON.stringify(actorInfo));
   const svgRef = useRef(null);
-  const [collide, setCollide] = useState(false);
+  const [collide, setCollide] = useState(true);
   const [useRadial, setUseRadial] = useState(false);
   const [radialForce, setRadialForce] = useState(0.5);
 
-  const data = {
-    nodes: [
-      { id: "RuPaul's Drag Race", group: "FRAN" },
-      { id: "RuPaul's Drag Race All Stars", group: "FRAN" },
-    ],
-    links: [
-      {
-        source: "RuPaul's Drag Race",
-        target: "RuPaul's Drag Race All Stars",
-        value: 1,
-      },
-    ],
-  };
+  // 从info中构造数据
+  const data = constructNodesAndLinks(info);
 
-  function createTooltipText(links, id) {
-    return `<strong>${id}</strong><br/>${links}`;
+  function createTooltipText(links, d) {
+    if (d.type === "img") {
+      return `<img src="${d.imgUrl}" 
+      style="width: 100px"/>`;
+    }
+    else
+      return `<strong>${d.name}</strong><br/>`;
   }
 
   useEffect(() => {
     const width = 800;
     const height = 600;
-    const strokeColor = "black";
-    const highlightStroke = "pink";
-    const imgLength = 24;
-    const imgWidth = 24;
-    const radius = 13;
     const svg = d3
       .select(svgRef.current)
       .style("overflow", "visible")
@@ -50,22 +42,22 @@ const ActorModal = ({ actorStore }) => {
         d3
           .forceLink(links)
           .id((d) => d.id)
-          .distance(30)
+          .distance(100)
           .strength(0.25)
       )
       .force("charge", d3.forceManyBody())
-      .force("collide", collide ? d3.forceCollide(11).iterations(4) : null)
+      .force("collide", collide ? d3.forceCollide(30).iterations(4) : null)
       .force(
         "position",
         useRadial
           ? d3
-              .forceRadial(
-                (d) =>
-                  d.id.includes("Drag Race") ? width * 0.01 : width * 0.5,
-                width / 2,
-                height / 2
-              )
-              .strength(radialForce)
+            .forceRadial(
+              (d) =>
+                d.id.includes("Drag Race") ? width * 0.01 : width * 0.5,
+              width / 2,
+              height / 2
+            )
+            .strength(radialForce)
           : null
       )
       .force("x", d3.forceX(width / 2))
@@ -98,7 +90,7 @@ const ActorModal = ({ actorStore }) => {
     const nodeMouseOver = (d, links) => {
       tooltip
         .style("visibility", "visible")
-        .html(createTooltipText(links, d.id));
+        .html(createTooltipText(links, d));
 
       node.transition(500).style("opacity", (o) => {
         const isConnectedValue = isConnected(o.id, d.id);
@@ -111,7 +103,6 @@ const ActorModal = ({ actorStore }) => {
       link
         .transition(500)
         .style("stroke-opacity", (o) => {
-          // console.log(o.source.id === d.id);
           return o.source.id === d.id || o.target.id === d.id ? 1 : 0.1;
         })
         .transition(500)
@@ -180,43 +171,57 @@ const ActorModal = ({ actorStore }) => {
       .attr("fill", "black")
       //color & size of circle depends on what node represents (franchise? season? queen?)
       .attr("r", (d) =>
-        /S\d+/.test(d.id) ? 10 : d.id.includes("Drag Race") ? 12 : 10
+        d.id.includes("root") ? 24 :
+          15
       )
       .attr("fill", (d) =>
-        /S\d+/.test(d.id)
-          ? "#B248F8"
-          : d.id.includes("Drag Race")
-          ? "#5448C8"
-          : "black"
+        d.id.includes("root")
+          ? "#99004D" :
+          d.type == "name"
+            ? "#004D99" :
+            d.type == "basicInfo"
+              ? "#009999" :
+              d.type == "relation"
+                ? "#999900" :
+                d.type == "organization"
+                  ? "#6B00D6" :
+                  d.type == "time"
+                    ? "#994D00" :
+                    d.type == "createdWork"
+                      ? "#000099" :
+                      d.type == "uri"
+                        ? "black"
+                        :
+                        "#009900"
       )
-      .attr("stroke", (d) =>
-        /S\d+/.test(d.id)
-          ? "white"
-          : d.id.includes("Drag Race")
-          ? "white"
-          : "black"
-      );
+      .attr("stroke", "black");
 
     // add text to nodes representing seasons
     node
       .append("text")
-      .text((d) => (/S\d+/.test(d.id) ? d.id.match(/S\d+/)[0] : ""))
+      .text((d) => {
+        if (d.type == "root") {
+          return d.name;
+        }
+        else {
+          return d.name ? (d.name.length > 3 ? "" : d.name) : "";
+        }
+      })
       .attr("text-anchor", "middle")
       .attr("font-size", 10)
       .attr("font-family", "Chivo Mono")
       .attr("dominant-baseline", "central")
       .attr("fill", "white");
 
-    //add images for queens
+    //add images
     node
       .append("image")
       .attr("xlink:href", (d) => {
-        //set up custom functuon to look up the image url for each queen based on id (name)
-        const matchingRefImg =
-          "https://static.wikia.nocookie.net/logosrupaulsdragrace/images/0/07/Sof%C3%ADaCamar%C3%A1TSDR1CastMug.png";
-        return matchingRefImg ? matchingRefImg.link_image : "";
+        return d.type == "img" ? d.imgUrl : "";
       })
       .attr("x", "-10px")
+      // 拉成正方形
+      .attr("preserveAspectRatio", "xMidYMid slice")
       .attr("clip-path", "inset(0 0 0 0 round 50%)")
       .attr("y", "-10px")
       .attr("width", "20px")
@@ -225,11 +230,26 @@ const ActorModal = ({ actorStore }) => {
       // hovering out returns image to regular size
       .on("mouseout", nodeMouseOut)
       //from Raven
-      .on("mousemove", (event) =>
-        tooltip
-          .style("top", event.pageY - 10 + "px")
-          .style("left", event.pageX + 10 + "px")
+      .on("mousemove", (event, d) => {
+        return tooltip
+          .style("top", event.pageY + "px")
+          .style("left", event.pageX + "px")
+      }
       );
+
+    const linkLabels = svg
+      .selectAll(".link-label")
+      .data(links)
+      .enter()
+      .append("text")
+      .attr("class", "link-label")
+      .attr("text-anchor", "middle")
+      .attr("font-size", 10)
+      .attr("font-family", "Chivo Mono")
+      .attr("fill", "black")
+      .text((d) => d.label);
+
+
 
     const tick = () => {
       link
@@ -239,17 +259,22 @@ const ActorModal = ({ actorStore }) => {
         .attr("y2", (d) => d.target.y);
 
       node.attr("transform", (d) => `translate(${d.x}, ${d.y})`);
+      // Position the text elements
+      linkLabels.attr("x", (d) => (d.source.x + d.target.x) / 2)
+        .attr("y", (d) => (d.source.y + d.target.y) / 2);
     };
 
     simulation.on("tick", tick);
 
     return () => {
       simulation.stop();
+      d3.select(svgRef.current).selectAll("*").remove();
     };
-  }, []);
+  }, [info]);
+
   return (
     <div id="actorBody">
-      <svg ref={svgRef}></svg>
+      <svg ref={svgRef} id='actorSvg'></svg>
     </div>
   );
 };

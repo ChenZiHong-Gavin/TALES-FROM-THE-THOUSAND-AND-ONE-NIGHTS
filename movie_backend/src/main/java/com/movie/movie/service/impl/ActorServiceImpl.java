@@ -66,4 +66,22 @@ public class ActorServiceImpl implements ActorService {
         }
         return actorVOList;
     }
+
+    /**
+     * @return 返回演员信息
+     */
+    public ActorVO getActorInfoById(Integer id) {
+        Actor actor = actorRepository.findActorByActorId(id);
+        ActorVO actorVO = ActorVO.builder()
+                .actorId(actor.getActorId())
+                .uri(actor.getUri())
+                .avatarUrl(actor.getAvatarUrl())
+                .audioOfPerson(actor.getAudioOfPerson())
+                .photoOfPerson(actor.getPhotoOfPerson())
+                .movieOfPerson(actor.getMovieOfPerson())
+                .personDetail(actor.getPersonDetail())
+                .videoOfPerson(actor.getVideoOfPerson())
+                .build();
+        return actorVO;
+    }
 }

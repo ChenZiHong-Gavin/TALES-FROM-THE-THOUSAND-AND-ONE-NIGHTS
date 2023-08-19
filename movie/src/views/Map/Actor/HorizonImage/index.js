@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { inject, observer } from "mobx-react";
 
 const HorizonImage = ({actorStore}) => {
-  const { toggleModal } = actorStore;
+  const { toggleModal, getActorInfo } = actorStore;
   const getRandomStyle = () => {
     const styles = [
       Styles.slower,
@@ -62,6 +62,7 @@ const HorizonImage = ({actorStore}) => {
             <div key={index} className={`${randomStyle}`}>
               <img src={item.url} alt="" onClick={
                 ()=> {
+                  getActorInfo(item.actorId)
                   toggleModal(true)
                 }
               }/>

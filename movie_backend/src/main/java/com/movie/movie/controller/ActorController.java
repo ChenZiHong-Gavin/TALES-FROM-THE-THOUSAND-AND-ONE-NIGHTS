@@ -23,4 +23,10 @@ public class ActorController {
     public Result<Object> getActorAvatars() {
         return ResultGenerator.genSuccessResult(actorService.getActorAvatars());
     }
+
+    // 根据演员id获取演员信息
+    @RequestMapping("/info/actor/id")
+    public Result<Object> getActorInfoById(Integer id) {
+        return ResultGenerator.genSuccessResult(actorService.getActorInfoById(id));
+    }
 }
