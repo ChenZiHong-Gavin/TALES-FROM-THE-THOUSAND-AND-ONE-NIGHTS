@@ -95,7 +95,7 @@ const Transformer = () => {
       function createTableVertices() {
         for (let i = 0; i < len; i += 5) {
           const object = new THREE.Object3D();
-          object.position.x = table[i + 3] * 140 - 1260;
+          object.position.x = table[i + 3] * 140 - 1760;
           object.position.y = -table[i + 4] * 180 + 1000;
           object.position.z = 0;
 
@@ -206,7 +206,7 @@ const Transformer = () => {
       function transformSphere2(duration) {
         TWEEN.removeAll();
 
-        const sphereGeom = new THREE.SphereGeometry(800, 12, 11);
+        const sphereGeom = new THREE.SphereGeometry(800, 10, 9);
         const positions = sphereGeom.attributes.position.array;
         const vector = new THREE.Vector3();
 
@@ -253,7 +253,7 @@ const Transformer = () => {
       function transformPlane(duration) {
         TWEEN.removeAll();
 
-        const planeGeom = new THREE.PlaneGeometry(1400, 1800, 10, 10);
+        const planeGeom = new THREE.PlaneGeometry(1400, 1800, 9, 9);
         const positions = planeGeom.attributes.position.array;
         const vector = new THREE.Vector3();
 
