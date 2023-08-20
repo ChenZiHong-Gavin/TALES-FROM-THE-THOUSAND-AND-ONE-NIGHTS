@@ -42,12 +42,24 @@ const AIExperiment = () => {
     {
       name: "风格迁移",
       icon: <SendOutlined />,
-      component: <StyleTransfer />
+      component: <StyleTransfer 
+      imgPath={pictureInfo.imgPath}
+      />
+    },
+    {
+      name: "花式滤镜",
+      icon: <AreaChartOutlined />,
+      component: <div>花式滤镜</div>
     },
     {
       name: "电影海报生成",
       icon: <AreaChartOutlined />,
       component: <div>电影海报生成</div>
+    },
+    {
+      name: "chatGPT",
+      icon: <AreaChartOutlined />,
+      component: <div>chatGPT</div>
     }
   ]
 
@@ -57,7 +69,7 @@ const AIExperiment = () => {
       <div className={Styles.title}>
         <h1>AI实验室</h1>
       </div>
-      <Tabs centered defaultActiveKey="1"
+      <Tabs centered defaultActiveKey="2"
       tabBarExtraContent={
         <div className={Styles.extraContent}>
           <Button type="default"

@@ -5,18 +5,12 @@ import Styles from "./Juxtapose.module.scss";
 
 function Juxtapose({ imgPath, uri }) {
   const [loading, setLoading] = useState(true);
-  const [img, setImg] = useState(null);
-  const [colorImg, setColorImg] = useState(null);
+  const colorImgPath = uri ? "https://old-movie.oss-cn-shanghai.aliyuncs.com/picture/picture_colorful/" + uri.split("/")[uri.split("/").length - 1] + ".jpg" : null;
+
 
   useEffect(() => {
     if (loading) return;
   }, [loading]);
-
-  useEffect(() => {
-    setImg(imgPath);
-    const colorImgPath = uri ? "https://old-movie.oss-cn-shanghai.aliyuncs.com/picture/picture_colorful/" + uri.split("/")[uri.split("/").length - 1] + ".jpg" : null;
-    setColorImg(colorImgPath);
-  }, [imgPath, uri]);
 
 
   return (
@@ -30,11 +24,11 @@ function Juxtapose({ imgPath, uri }) {
         <p>我们使用PaddleGAN进行图像上色、提高分辨率以及填补丢失的帧数。这些技术可以帮助我们恢复影像的质量，让过去的回忆和历史更清晰和生动</p>
       </div>
       {
-        img && colorImg &&
+        imgPath && colorImgPath &&
         <div
           className={`${Styles.juxtaposeContainer} juxtapose`}>
-          <img src={img} alt="" />
-          <img src={colorImg} alt="" />
+          <img src={imgPath} alt="" />
+          <img src={colorImgPath} alt="" />
         </div>
       }
     </div>
