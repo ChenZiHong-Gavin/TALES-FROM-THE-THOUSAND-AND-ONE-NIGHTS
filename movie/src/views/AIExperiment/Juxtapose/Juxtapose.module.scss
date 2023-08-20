@@ -1,11 +1,23 @@
 .juxtapose {
   width: 100%;
+  text-align: center;
   .juxtaposeContainer {
     width: 50vw;
+    margin: 0 auto;
+    height: auto;
   }
   @media screen and (max-width: 768px) {
     .juxtaposeContainer {
       width: 100vw;
+      margin: 0 auto;
     }
   }
+}
+
+.description {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
 }

@@ -24,6 +24,7 @@
     "mobx": "^6.10.0",
     "mobx-react": "^9.0.0",
     "node-sass": "npm:dart-sass",
+    "openai": "^4.0.1",
     "project-name-generator": "^2.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

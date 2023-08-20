@@ -24,4 +24,16 @@ public class ImageController {
         return ResultGenerator.genSuccessResult(pictureService.getPictureListSelected(paramQuery));
     }
 
+    @RequestMapping(value = "/image/info/list", method = RequestMethod.GET)
+    public Result<Object> getPictureInfoListSelected(@RequestParam Map<String, String> params) {
+        ParamQuery paramQuery = new ParamQuery(params);
+        return ResultGenerator.genSuccessResult(pictureService.getPictureInfoListSelected(paramQuery));
+    }
+
+    // 根据pictureId获取图片信息
+    @RequestMapping(value = "/image/info", method = RequestMethod.GET)
+    public Result<Object> getPictureInfo(Integer pictureId) {
+        return ResultGenerator.genSuccessResult(pictureService.getPictureInfo(pictureId));
+    }
+
 }

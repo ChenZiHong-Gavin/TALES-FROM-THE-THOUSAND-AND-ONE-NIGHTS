@@ -752,13 +752,9 @@ for (let i = 0; i < grid.length; i++) {
   table.push("xxxxx")
   table.push("xxxxxx")
   table.push("xxxxxx")
-  console.log(grid[i])
   table.push(grid[i][0])
   table.push(grid[i][1])
 }
-
-console.log(table)
-
 
 export default table;
 

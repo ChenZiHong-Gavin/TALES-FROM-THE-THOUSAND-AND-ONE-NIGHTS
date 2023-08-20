@@ -9,13 +9,29 @@ import {
   CSS3DObject,
 } from "three/addons/renderers/CSS3DRenderer";
 import { TrackballControls } from "three/addons/controls/TrackballControls.js";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import table from "./config";
+import { createRoot } from "react-dom/client";
+import { getPictureListSelected } from "../../../../api/picture";
+import { inject, observer } from "mobx-react";
 
-const Transformer = () => {
+
+const Transformer = ({ photoStore }) => {
+  const { eventRange } = photoStore;
   const containerRef = useRef(null);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
+    getPictureListSelected(100).then((res) => {
+      if (res.status === 200) {
+        const data = res.data.data;
+        setData(data);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    if (data.length === 0) return;
     let scene, camera, renderer, controls;
     const objects = [];
     const targets = {
@@ -48,6 +64,7 @@ const Transformer = () => {
       renderer.domElement.style.position = "absolute";
       WebGLoutput.appendChild(renderer.domElement);
 
+
       controls = new TrackballControls(camera, renderer.domElement);
 
       controls.rotateSpeed = 1;
@@ -59,28 +76,28 @@ const Transformer = () => {
       const len = table.length;
 
       for (let i = 0; i < len; i += 5) {
-        const element = document.createElement("div");
-        element.className = "element";
-        element.style.backgroundColor = `rgba(0, 127, 127, ${
-          Math.random() * 0.5 + 0.25
-        })`;
+        // element是渲染后的Element对象
+        const element = <Element
+          props={
+            {
+              imgPath: data[i / 5].imgPath,
+              date: data[i / 5].date,
+              creator: data[i / 5].creator,
+              movie: data[i / 5].movie,
+              movieName: data[i / 5].movieName,
+              type: data[i / 5].type,
+              donator: data[i / 5].donator,
+              eventRange: eventRange,
+            }
+          }
+        />;
+        const elementContainer = document.createElement("div");
+        elementContainer.className = Styles.elementContainer;
+        elementContainer.setAttribute('onpointerdown', `window.location.href = '/aiexperiment?pictureId=${data[i / 5].pictureId}'`);
+        const root = createRoot(elementContainer);
+        root.render(element);
 
-        const number = document.createElement("div");
-        number.className = "number";
-        number.textContent = i / 5 + 1;
-        element.appendChild(number);
-
-        const symbol = document.createElement("div");
-        symbol.className = "symbol";
-        symbol.textContent = table[i];
-        element.appendChild(symbol);
-
-        const detail = document.createElement("div");
-        detail.className = "detail";
-        detail.innerHTML = `${table[i + 1]}<br/>${table[i + 2]}`;
-        element.appendChild(detail);
-
-        const object = new CSS3DObject(element);
+        const object = new CSS3DObject(elementContainer);
         object.position.set(
           Math.random() * 4000 - 2000,
           Math.random() * 4000 - 2000,
@@ -88,6 +105,7 @@ const Transformer = () => {
         );
         scene.add(object);
         objects.push(object);
+
       }
 
       const objLength = objects.length;
@@ -381,7 +399,27 @@ const Transformer = () => {
         renderer.domElement.innerHTML = "";
       }
     };
-  }, []);
+  }, [data]);
+
+  useEffect(() => {
+    const startYear = eventRange[0];
+    const endYear = eventRange[1];
+    const elements = document.getElementsByClassName(Styles.elementContainer);
+    for (let i = 0; i < elements.length; ++i) {
+      const element = elements[i];
+      // Element组件的date属性代表它的
+      const date = data[i].date;
+      if (date == null || date == "") continue;
+      // 前4位数
+      const year = date.substring(0, 4);
+      if (year >= startYear && year <= endYear) {
+        element.style.display = "block";
+      }
+      else {
+        element.style.display = "none";
+      }
+    }
+  }, [eventRange]);
 
   return (
     <div className={Styles.container}>
@@ -411,4 +449,4 @@ const Transformer = () => {
   );
 };
 
-export default Transformer;
+export default inject("photoStore")(observer(Transformer));

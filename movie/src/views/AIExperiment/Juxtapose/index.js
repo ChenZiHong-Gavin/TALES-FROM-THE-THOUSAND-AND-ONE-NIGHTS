@@ -3,24 +3,40 @@ import { useEffect, useState } from "react";
 import "../../../assets/css/juxtapose.css";
 import Styles from "./Juxtapose.module.scss";
 
-function Juxtapose() {
+function Juxtapose({ imgPath, uri }) {
   const [loading, setLoading] = useState(true);
+  const [img, setImg] = useState(null);
+  const [colorImg, setColorImg] = useState(null);
 
   useEffect(() => {
     if (loading) return;
   }, [loading]);
 
+  useEffect(() => {
+    setImg(imgPath);
+    const colorImgPath = uri ? "https://old-movie.oss-cn-shanghai.aliyuncs.com/picture/picture_colorful/" + uri.split("/")[uri.split("/").length - 1] + ".jpg" : null;
+    setColorImg(colorImgPath);
+  }, [imgPath, uri]);
+
+
   return (
     <div className={Styles.juxtapose}>
-    <Script
+      <Script
         url={process.env.PUBLIC_URL + "/juxtapose.min.js"}
         onLoad={() => setLoading(false)}
-    />
-    <div
-      className={`${Styles.juxtaposeContainer} juxtapose`}>
-        <img src="http://img.library.sh.cn/dy/img/vrh8m2mtt6hhoyyo.jpg" alt=""/>
-        <img src="http://img.library.sh.cn/dy/img/yjz50kwuvtn2h6ur.jpg" alt=""/>
-    </div>
+      />
+      <div className={Styles.description}>
+        <p>电影老照片和视频记录了过去的时光，保存了美好的回忆和重要的历史片段。然而，这些旧影像通常会出现模糊、色彩暗淡、帧数丢失的问题</p>
+        <p>我们使用PaddleGAN进行图像上色、提高分辨率以及填补丢失的帧数。这些技术可以帮助我们恢复影像的质量，让过去的回忆和历史更清晰和生动</p>
+      </div>
+      {
+        img && colorImg &&
+        <div
+          className={`${Styles.juxtaposeContainer} juxtapose`}>
+          <img src={img} alt="" />
+          <img src={colorImg} alt="" />
+        </div>
+      }
     </div>
   );
 }
