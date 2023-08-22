@@ -1,12 +1,21 @@
 import { ChatContextProvider } from './context/chatContext';
-import SideBar from './components/SideBar';
-import ChatView from './components/ChatView';
+import SideBar from './components/sidebar.js';
+import ChatView from './components/chatview.js';
 import { useEffect, useState } from 'react';
-import Modal from './components/Modal';
-import Setting from './components/Setting';
+import Modal from './components/modal';
+import Setting from './components/setting';
+// import SCSSStyle from './index.module.scss'
+import Styles from './index.module.scss'
+
+
 
 const ChatBot = () => {
   const [modalOpen, setModalOpen] = useState(false);
+
+
+  useEffect(() => {
+
+  }, []);
 
   useEffect(() => {
     const apiKey = window.localStorage.getItem('api-key');
@@ -15,15 +24,22 @@ const ChatBot = () => {
     }
   }, []);
   return (
-    <ChatContextProvider>
-      <Modal title='Setting' modalOpen={modalOpen} setModalOpen={setModalOpen}>
-        <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      </Modal>
-      <div className='flex transition duration-500 ease-in-out'>
-        <SideBar />
-        <ChatView />
-      </div>
-    </ChatContextProvider>
+    <div className={Styles.chatBotPage}>
+      <ChatContextProvider>
+        <Modal title='Setting' modalOpen={modalOpen} setModalOpen={setModalOpen}>
+          <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
+        </Modal>
+        <div
+          // className='flex transition duration-500 ease-in-out'
+          className={
+            `${Styles.flex} ${Styles.transition} ${Styles["duration-500"]} ${Styles["ease-in-out"]}}`
+          }
+        >
+          <SideBar />
+          <ChatView />
+        </div>
+      </ChatContextProvider>
+    </div>
   );
 };
 

@@ -23,10 +23,10 @@ const StyleTransfer = ({ imgPath }) => {
       )
         .then(style1 => style1.transfer(inputImg))
         .then(result => {
+          setStyleALoaded(true);
           const newImage1 = new Image(250, 250);
           newImage1.src = result.src;
           resultA.appendChild(newImage1);
-          setStyleALoaded(true);
         });
     }
   }, [styleAImageLoaded, loading]);
@@ -42,10 +42,10 @@ const StyleTransfer = ({ imgPath }) => {
       )
         .then(style2 => style2.transfer(inputImg))
         .then(result => {
+          setStyleBLoaded(true);
           const newImage2 = new Image(250, 250);
           newImage2.src = result.src;
           resultB.appendChild(newImage2);
-          setStyleBLoaded(true);
         }
         );
     }

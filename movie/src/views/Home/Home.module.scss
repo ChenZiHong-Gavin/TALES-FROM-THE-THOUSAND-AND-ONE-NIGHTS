@@ -1,7 +1,6 @@
-/*** Fonts ***/
+
 @import url('https://fonts.googleapis.com/css?family=Bangers');
 
-/*** Box Reset ***/
 * {
   box-sizing: border-box;
 }
@@ -209,7 +208,7 @@
   pointer-events: none;
   .explore{
     pointer-events: auto;
-    width: 10vmax;
+    width: 15vmax;
   }
 }
 

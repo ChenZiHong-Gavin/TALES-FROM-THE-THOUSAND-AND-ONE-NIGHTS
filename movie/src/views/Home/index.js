@@ -67,7 +67,8 @@ function Home() {
               key={index}
               className={Styles.item}
               onClick={() => {
-                navigate('/aiExperiment?pictureId=' + item.pictureId);
+                // navigate('/aiExperiment?pictureId=' + item.pictureId);
+                window.location.href = '/aiExperiment?pictureId=' + item.pictureId;
               }}
               style={{ backgroundImage: `url(${item.imgPath})` }}
             ></div>
@@ -80,12 +81,14 @@ function Home() {
           <img src={titleGif} alt="一千零一夜" />
         </span>
         <span className={Styles.homeText}>1916-2001</span>
-        <Button className={Styles.explore} type="dashed" ghost onClick={
+        <Button
+        size='large'
+        className={Styles.explore} type="dashed" ghost onClick={
           () => {
             navigate('/selection');
           }
         }>
-          开始
+          <span>开始</span>
         </Button>
       </div>
 

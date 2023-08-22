@@ -1,7 +1,10 @@
 import Juxtapose from "./Juxtapose";
 import StyleTransfer from "./StyleTransfer";
+import Filters from "./Filters";
+import Painting from "./Painting";
+import ChatBot from "./ChatBot";
 import { Button, Tabs } from "antd";
-import { PictureOutlined, SendOutlined, AreaChartOutlined } from '@ant-design/icons';
+import { PictureOutlined, SendOutlined, AreaChartOutlined, MessageOutlined, NodeIndexOutlined } from '@ant-design/icons';
 import Styles from "./AIExperiment.module.scss"
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -42,24 +45,27 @@ const AIExperiment = () => {
     {
       name: "风格迁移",
       icon: <SendOutlined />,
-      component: <StyleTransfer 
-      imgPath={pictureInfo.imgPath}
+      component: <StyleTransfer
+        imgPath={pictureInfo.imgPath}
       />
     },
     {
       name: "花式滤镜",
       icon: <AreaChartOutlined />,
-      component: <div>花式滤镜</div>
+      component: <Filters
+        imgPath={pictureInfo.imgPath}
+        uri={pictureInfo.uri}
+      />
     },
     {
       name: "电影海报生成",
-      icon: <AreaChartOutlined />,
-      component: <div>电影海报生成</div>
+      icon: <NodeIndexOutlined />,
+      component: <Painting />
     },
     {
-      name: "chatGPT",
-      icon: <AreaChartOutlined />,
-      component: <div>chatGPT</div>
+      name: "movieGPT",
+      icon: <MessageOutlined/>,
+      component: <ChatBot />
     }
   ]
 
@@ -70,24 +76,24 @@ const AIExperiment = () => {
         <h1>AI实验室</h1>
       </div>
       <Tabs centered defaultActiveKey="2"
-      tabBarExtraContent={
-        <div className={Styles.extraContent}>
-          <Button type="default"
-          style={
-            {marginRight: "20px"}
-          }
-          onClick={() => {
-            // 1-1740
-            while (true) {
-              const random = Math.ceil(Math.random() * 1740);
-              if (random !== pictureId) {
-                window.location.href = `/aiexperiment?pictureId=${random}`;
-                break;
+        tabBarExtraContent={
+          <div className={Styles.extraContent}>
+            <Button type="default"
+              style={
+                { marginRight: "20px" }
               }
-            }
-          }}>换一张</Button>
-        </div>
-      }
+              onClick={() => {
+                // 1-1740
+                while (true) {
+                  const random = Math.ceil(Math.random() * 1740);
+                  if (random !== pictureId) {
+                    window.location.href = `/aiexperiment?pictureId=${random}`;
+                    break;
+                  }
+                }
+              }}>换一张</Button>
+          </div>
+        }
         items={modules.map((module, i) => {
           return {
             label: (

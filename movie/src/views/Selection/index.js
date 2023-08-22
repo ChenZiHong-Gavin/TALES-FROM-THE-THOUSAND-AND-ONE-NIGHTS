@@ -4,9 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import { colorArray, captionArray, invitationInfo } from "./config";
 import Jump from "react-reveal/Jump";
 import { Fade } from "react-reveal";
-import { FloatingMap, Emotion, Actors, Photo, Search } from "./components";
+import { FloatingMap, Emotion, Actors, Photo } from "./components";
+import ReturnButton from "../../components/ReturnButton";
+import { useNavigate } from "react-router-dom";
 
 const Selction = () => {
+  const navigate = useNavigate();
   const containerRef = useRef(null);
   const sectionRefs = useRef([]);
   const dotsRef = useRef(null);
@@ -120,6 +123,7 @@ const Selction = () => {
 
   return (
     <>
+      <ReturnButton />
       <div className={Styles.masterWrap}>
         <div className={Styles.panelWrap} ref={containerRef}>
           {captionArray.map((item, index) => {
@@ -144,11 +148,30 @@ const Selction = () => {
             activeSlide === 0 ? <FloatingMap /> :
             activeSlide === 1 ? <Emotion /> :
             activeSlide === 2 ? <Actors /> : 
-            activeSlide === 3 ? <Photo /> :
-            activeSlide === 4 ? <Search /> : null
+            activeSlide === 3 ? <Photo /> : null
+            // activeSlide === 4 ? <Search /> : null
           }
         </div>
-        <div className={Styles.ticket}>
+        <div className={Styles.ticket}
+        onClick = {() => {
+          if (activeSlide === 0)
+          {
+            navigate("/map/theatre");
+          }
+          else if (activeSlide === 1)
+          {
+            navigate("/map/emotion");
+          }
+          else if (activeSlide === 2)
+          {
+            navigate("/map/actor");
+          }
+          else if (activeSlide === 3)
+          {
+            navigate("/map/photo");
+          }
+        }}
+        >
           <div
             className={Styles.stub}
             style={{

@@ -5,7 +5,7 @@ function Search() {
   const navigate = useNavigate();
 
   function gotoSearch() {
-    navigate("/map/theatre");
+    navigate("/map/tag");
   }
   return (
     <div className={Styles.container}>

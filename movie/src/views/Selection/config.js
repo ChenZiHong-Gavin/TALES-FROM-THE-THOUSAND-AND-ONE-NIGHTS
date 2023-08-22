@@ -29,13 +29,13 @@ const slideInfo = [
         "Temporal Lens: Analysis of Still Images in Relation to Historical Context",
     },
   },
-  {
-    color: "#404935",
-    caption: {
-      title: "标签化分类视角下的电影探索",
-      subtitle: "Exploring Movies from a Tag-based Categorization Perspective",
-    },
-  },
+  // {
+  //   color: "#404935",
+  //   caption: {
+  //     title: "标签化分类视角下的电影探索",
+  //     subtitle: "Exploring Movies from a Tag-based Categorization Perspective",
+  //   },
+  // },
 ];
 
 const invitationInfo = [
@@ -91,19 +91,19 @@ const invitationInfo = [
       },
     },
   },
-  {
-    url: "/map/other",
-    name_en: "FlickFrame",
-    name_cn: "大观影戏",
-    number: "#5",
-    number_cn: "伍",
-    color: {
-      stub: {
-        background: "#c09c6e",
-        color: "#404935",
-      },
-    },
-  },
+  // {
+  //   url: "/map/other",
+  //   name_en: "FlickFrame",
+  //   name_cn: "大观影戏",
+  //   number: "#5",
+  //   number_cn: "伍",
+  //   color: {
+  //     stub: {
+  //       background: "#c09c6e",
+  //       color: "#404935",
+  //     },
+  //   },
+  // },
 ];
 
 // slideInfo的colorArray
