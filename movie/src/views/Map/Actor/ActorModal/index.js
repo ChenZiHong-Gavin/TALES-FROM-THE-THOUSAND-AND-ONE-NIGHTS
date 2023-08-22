@@ -172,7 +172,7 @@ const ActorModal = ({ actorStore }) => {
       //color & size of circle depends on what node represents (franchise? season? queen?)
       .attr("r", (d) =>
         d.id.includes("root") ? 24 :
-          15
+          10
       )
       .attr("fill", (d) =>
         d.id.includes("root")

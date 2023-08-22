@@ -16,7 +16,6 @@ const BlobContainer = ({blobStore}) => {
   }, []);
 
   useEffect(() => {
-    console.log(orderArray);
   }, [orderArray]);
 
   useEffect(() => {

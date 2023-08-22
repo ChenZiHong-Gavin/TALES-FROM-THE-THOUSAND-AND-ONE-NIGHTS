@@ -12,7 +12,8 @@ import SegmentModal from "../Map/Emotion/components/SegmentModal";
 import StockMap from "./StockMap";
 import { inject, observer } from "mobx-react";
 import { useNavigate } from "react-router-dom";
-import { QuestionCircleOutlined, LeftCircleFilled } from '@ant-design/icons';
+import { QuestionCircleOutlined } from '@ant-design/icons';
+import ReturnButton from "../../components/ReturnButton";
 
 function Movie({ emotionStore }) {
   const navigate = useNavigate();
@@ -117,10 +118,10 @@ function Movie({ emotionStore }) {
                 黑白
               </Button>
             )}
-                  <Tooltip title="使用Dexxx模型重新上色"
-                  >
-        <Button type="default" shape="circle" icon={<QuestionCircleOutlined />} />
-      </Tooltip>
+            <Tooltip title="使用DAIN模型补帧、DeOldify模型上色、RealSR模型超分辨率重建"
+            >
+              <QuestionCircleOutlined />
+            </Tooltip>
           </div>
         </div>
         <div className={Styles.chart}>
@@ -149,11 +150,7 @@ function Movie({ emotionStore }) {
         </div>
       </div>
       <Background />
-      <LeftCircleFilled
-        onClick={() => {
-          navigate("/map/emotion");
-        }}
-      className={Styles.returnButton}/>
+      <ReturnButton />
     </>
   );
 }

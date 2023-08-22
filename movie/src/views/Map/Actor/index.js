@@ -34,7 +34,10 @@ const Actor = ({actorStore}) => {
       <div className={Styles.cont}>
         <div className={Styles.title}>
           <h1>演员的世界</h1>
-          <p>介绍介绍介绍</p>
+          <p>利用上海图书馆的关系数据库，构建演员身份的知识图谱与关系网络</p>
+          <p>
+            利用知识图谱构建创意应用，让上世纪的老演员们重回上海滩
+          </p>
         </div>
         <div
           className={`${Styles.app} 
