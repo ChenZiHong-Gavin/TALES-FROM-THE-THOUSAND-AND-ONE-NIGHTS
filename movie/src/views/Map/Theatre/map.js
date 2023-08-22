@@ -308,7 +308,12 @@ function Map({ theatreStore }) {
     <>
       <div ref={mapContainer} className={Styles.mapContainer} />
       <div className="map-overlay top">
-        <div className="map-overlay-inner">
+        <div className="map-overlay-inner"
+          // 背景透明
+          style={{ backgroundColor: "rgba(0,0,0,0.3)" ,
+          color: "whitesmoke"
+        }}
+        >
           <label>旧图显影</label>
           <input
             ref={sliderRef}
