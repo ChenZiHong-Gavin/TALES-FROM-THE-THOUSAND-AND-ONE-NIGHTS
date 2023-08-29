@@ -1,9 +1,16 @@
 spring:
   data:
-    mongodb:
-      host: localhost
-      port: 27017
+#    mongodb:
+#      host: localhost
+#      port: 27017
+#      database: movie
+     mongodb:
+      host: dds-uf6ded63e5e9a4441635-pub.mongodb.rds.aliyuncs.com
+      port: 3717
+      authentication-database: admin
       database: movie
+      username: root
+      password: '***REMOVED***'
   servlet:
     multipart:
       max-file-size: 20MB
@@ -14,8 +21,3 @@ server:
   port: 8080
   servlet:
     context-path: /api
-
-#file:
-#  upload-dir: /Users/duhy/Documents/project/TraditioNowproject/NMuseum/sharepost
-
-# debug: true

@@ -1,59 +1,101 @@
-import Script from "react-load-script";
 import { useEffect, useState } from "react";
 import Styles from "./StyleTransfer.module.scss";
-import WaveUrl from "../../../assets/jpg/wave.jpg"
-import UdnieUrl from "../../../assets/jpg/udnie.jpg"
-import { LoadingOutlined } from "@ant-design/icons";
+import { LoadingOutlined, DownOutlined } from "@ant-design/icons";
+import * as ml5 from "ml5";
+import { Dropdown, Space, Button } from 'antd';
 
 const StyleTransfer = ({ imgPath }) => {
-  const [loading, setLoading] = useState(true);
-  const [styleAImageLoaded, setStyleAImageLoaded] = useState(false);
-  const [styleBImageLoaded, setStyleBImageLoaded] = useState(false);
-  const [styleALoaded, setStyleALoaded] = useState(false);
-  const [styleBLoaded, setStyleBLoaded] = useState(false);
+  const [disabled, setDisabled] = useState(true);
+  const [styleChoose, setStyleChoose] = useState(null);
+  const [styleImageLoaded, setStyleImageLoaded] = useState(false);
+  const [result, setResult] = useState(null);
+
+  const items = [
+    {
+      key: '1',
+      label: 'Wave风格',
+      href: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/wave",
+      source: "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
+      image: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/wave.jpg"
+    },
+    {
+      key: '2',
+      label: 'Udnie风格',
+      href: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/udnie",
+      source: "https://en.wikipedia.org/wiki/Udnie",
+      image: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/udnie.jpg"
+    },
+    {
+      key: '3',
+      label: 'La Muse风格',
+      href: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/la_muse",
+      image: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/la_muse.jpg"
+    },
+    {
+      key: '4',
+      label: 'Mathura风格',
+      href: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/mathura",
+      image: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/maturana.jpg"
+    },
+    {
+      key: '5',
+      label: 'Matilde Perez风格',
+      href: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/matilde_perez",
+      image: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/matildeperez.jpg"
+    },
+    {
+      key: '6',
+      label: 'Matta风格',
+      href: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/matta",
+      image: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/matta.jpg"
+    },
+    {
+      key: '7',
+      label: 'Rain Princess风格',
+      href: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/rain_princess",
+      image: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/rain-princess.jpg"
+    },
+    {
+      key: '8',
+      label: 'Scream风格',
+      href: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/scream",
+      image: "https://old-movie.oss-cn-shanghai.aliyuncs.com/model/scream.jpg"
+    },
+  ];
 
   useEffect(() => {
-    if (loading) return;
-    if (styleAImageLoaded) {
-      const ml5 = window.ml5;
-      const inputImg = document.getElementById('inputImgA');
-      const resultA = document.getElementById('resultA');
-      ml5.styleTransfer(
-        `${process.env.PUBLIC_URL}/ml5/models/wave`
-      )
-        .then(style1 => style1.transfer(inputImg))
-        .then(result => {
-          setStyleALoaded(true);
-          const newImage1 = new Image(250, 250);
-          newImage1.src = result.src;
-          resultA.appendChild(newImage1);
-        });
+    if (styleImageLoaded) {
+      setDisabled(false);
     }
-  }, [styleAImageLoaded, loading]);
+  }, [styleImageLoaded]);
 
-  useEffect(() => {
-    if (loading) return;
-    if (styleBImageLoaded) {
-      const ml5 = window.ml5;
-      const inputImg = document.getElementById('inputImgB');
-      const resultB = document.getElementById('resultB');
-      ml5.styleTransfer(
-        `${process.env.PUBLIC_URL}/ml5/models/udnie`
-      )
-        .then(style2 => style2.transfer(inputImg))
-        .then(result => {
-          setStyleBLoaded(true);
-          const newImage2 = new Image(250, 250);
-          newImage2.src = result.src;
-          resultB.appendChild(newImage2);
+  const handleMenuClick = (e) => {
+    setDisabled(true);
+    setResult(null);
+    const id = e.key;
+    setStyleChoose(id);
+    const inputImg = document.getElementById('inputImg');
+    ml5.styleTransfer(
+      items[id - 1].href
+    )
+      .then(
+        (style1) => {
+          style1.transfer(inputImg).then((result) => {
+            setResult(result.src);
+            setDisabled(false);
+          });
         }
-        );
-    }
-
-  }, [styleBImageLoaded, loading]);
+      )
 
 
+  };
 
+  const menuProps = {
+    items,
+    onClick: handleMenuClick,
+    disabled: disabled,
+    selectable: true,
+  };
 
   return (
     <div>
@@ -61,10 +103,6 @@ const StyleTransfer = ({ imgPath }) => {
         <p>风格迁移是一种令人着迷的图像处理技术，它可以赋予照片或图像全新的艺术风格，让它们看起来仿佛是由大师亲手创作的作品</p>
         <p>这个过程利用了ml5js的方法和pix2pix模型，通过将电影剧照与所选艺术风格相融合，创造出独特而富有创意的视觉效果</p>
       </div>
-      <Script
-        url={process.env.PUBLIC_URL + "/ml5.min.js"}
-        onLoad={() => setLoading(false)}
-      />
       <div className={Styles.styleImages}>
         <div className={Styles.part}>
           <p>输入图片</p>
@@ -72,68 +110,45 @@ const StyleTransfer = ({ imgPath }) => {
             imgPath && <img
               src={imgPath}
               alt="input img"
-              id="inputImgA"
+              id="inputImg"
               onLoad={() => {
-                setStyleAImageLoaded(true);
+                setStyleImageLoaded(true);
               }}
               crossOrigin='anonymous'
             />
           }
         </div>
-        <div id="styleA" className={Styles.part}>
+        <div id="style" className={Styles.part}>
           <p>
-            <a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">
-              Wave风格
-            </a>
+            <Dropdown menu={menuProps}>
+              <Button>
+                <Space>
+                  风格选择
+                  <DownOutlined />
+                </Space>
+              </Button>
+            </Dropdown>
           </p>
-          <img
-            src={WaveUrl}
-            alt="style img"
-          />
-        </div>
-        <div className={Styles.part} id="resultA">
-          <p>结果</p>
           {
-            styleALoaded === false && <LoadingOutlined
-              style={{
-                fontSize: "50px"
-              }}
+            styleChoose && <img
+              src={items[styleChoose - 1].image}
+              alt="style img"
             />
           }
         </div>
-        <div className={Styles.part}>
-          <p>输入图片</p>
-          {
-            imgPath && <img
-              src={imgPath}
-              alt="input img"
-              id="inputImgB"
-              onLoad={() => {
-                setStyleBImageLoaded(true);
-              }}
-              crossOrigin='anonymous'
-            />
-          }
-        </div>
-        <div id="styleB" className={Styles.part}>
-          <p>
-            <a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">
-              Udnie风格
-            </a>
-          </p>
-          <img
-            src={UdnieUrl}
-            alt="style img"
-          />
-        </div>
-        <div className={Styles.part} id='resultB'>
+        <div className={Styles.part} id="result">
           <p>结果</p>
           {
-            styleBLoaded === false && <LoadingOutlined
-              style={{
-                fontSize: "50px"
-              }}
-            />
+            styleChoose && (
+              result ? <img
+                src={result}
+                alt="result img"
+              /> : <LoadingOutlined
+                style={{
+                  fontSize: "50px"
+                }}
+              />
+            )
           }
         </div>
       </div>

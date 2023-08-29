@@ -45,18 +45,17 @@ const Setting = ({ modalOpen, setModalOpen }) => {
         <form
             onSubmit={saveKey}
             className={`${Styles['flex']} ${Styles['flex-col']} ${Styles['items-center']} ${Styles['justify-center']} ${Styles['gap-2']}`}>
-            <p className={`${Styles['text-lg']} ${Styles['font-semibold']}`}>Use your own API-key.</p>
-            <p>keys are saved in your own browser</p>
+            <p className={`${Styles['text-lg']} ${Styles['font-semibold']}`}>使用你自己的API Key</p>
             <p className={`${Styles['italic']}`}>
-                Get OpenAI API key{' '}
+                在
                 <a
                     className={`${Styles['text-blue-600']}`}
                     rel='noreferrer'
                     target='_blank'
                     href='https://platform.openai.com/account/api-keys'>
-                    here
+                    这里
                 </a>
-                .
+                获取API
             </p>
             <input
                 value={input}
@@ -68,7 +67,7 @@ const Setting = ({ modalOpen, setModalOpen }) => {
                 {loading ? (
                     <span className={`${Styles['w-56']} ${Styles['progress']} ${Styles['progress-info']}`} />
                 ) : (
-                    'save to localStorage'
+                    '保存到本地'
                 )}
             </button>
             {apiKey && input && (
@@ -76,7 +75,7 @@ const Setting = ({ modalOpen, setModalOpen }) => {
                     onClick={removeApiKey}
                     disabled={loading}
                     className={`${Styles['w-full']} ${Styles['max-w-xs']} ${Styles['btn']} ${Styles['btn-error']}`}>
-                    remove keys
+                    删除密钥
                 </span>
             )}
             <p>{errorMsg}</p>

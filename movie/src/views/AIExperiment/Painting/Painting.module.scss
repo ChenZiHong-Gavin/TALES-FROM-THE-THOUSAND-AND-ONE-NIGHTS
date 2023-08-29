@@ -5,3 +5,25 @@
     font-weight: bold;
     text-align: center;
 }
+.imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    img {
+        height: 300px;
+    }
+    .img{
+        margin: 10px;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+        text-align: center;
+    }
+}

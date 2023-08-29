@@ -35,6 +35,7 @@ movie/bower_components
 movie/.lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+movie/build/
 movie/build/Release
 
 # Dependency directories
@@ -130,6 +131,15 @@ movie/.pnp.*
 
 # data
 data/
+
+# database
+dump/
+
+# logo
+logo/
+
+# video
+video/
 
 # Spring Boot
 movie_backend/HELP.md

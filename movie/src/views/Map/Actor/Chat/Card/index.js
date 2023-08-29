@@ -150,7 +150,12 @@ const MovieCard = (props) => {
       >
         <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
         <div>
-          <Button>前往视频页</Button>
+          <Button
+          onClick={() => {
+            // todo
+            // window.location.href = VideoUri;
+          }}
+          >前往视频页</Button>
         </div>
       </Card>
     );

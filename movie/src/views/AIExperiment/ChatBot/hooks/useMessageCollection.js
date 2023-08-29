@@ -9,7 +9,7 @@ const useMessageCollection = () => {
   const initialMsg = {
     id: 1,
     createdAt: Date.now(),
-    text: '**Hello!** *How can I help you today?*',
+    text: '**你好!** *我是经过prompt微调后的智能机器人movieGPT，在聊天框左侧可以设置使用chatGPT聊天或者dalle绘画，您有何吩咐?*',
     ai: true
   }
   const [messages, setMessages] = useState([initialMsg]);

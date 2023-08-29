@@ -30,7 +30,6 @@ const ChatBot = () => {
           <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
         </Modal>
         <div
-          // className='flex transition duration-500 ease-in-out'
           className={
             `${Styles.flex} ${Styles.transition} ${Styles["duration-500"]} ${Styles["ease-in-out"]}}`
           }

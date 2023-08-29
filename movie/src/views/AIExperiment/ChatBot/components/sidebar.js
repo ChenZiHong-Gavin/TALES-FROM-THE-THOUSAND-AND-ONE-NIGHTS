@@ -59,7 +59,7 @@ const SideBar = () => {
                     <div className={`${Styles['nav__icons']}`}>
                         <MdAdd />
                     </div>
-                    <h1 className={`${!open && Styles['hidden']}`}>New chat</h1>
+                    <h1 className={`${!open && Styles['hidden']}`}>新一轮聊天</h1>
                 </span>
             </div>
 
@@ -69,11 +69,11 @@ const SideBar = () => {
                         <div className={`${Styles['nav__icons']}`}>
                             <MdOutlineVpnKey />
                         </div>
-                        <h1 className={`${!open && Styles['hidden']}`}>OpenAI Key</h1>
+                        <h1 className={`${!open && Styles['hidden']}`}>OpenAI密钥</h1>
                     </span>
                 </div>
             </div>
-            <Modal title='Setting' modalOpen={modalOpen} setModalOpen={setModalOpen}>
+            <Modal title='设置' modalOpen={modalOpen} setModalOpen={setModalOpen}>
                 <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
             </Modal>
         </section>

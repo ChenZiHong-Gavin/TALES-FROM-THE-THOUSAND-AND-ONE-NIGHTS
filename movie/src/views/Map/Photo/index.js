@@ -4,7 +4,7 @@ import Transformer from "./Transformer";
 const Photo = () => {
   return (
     <div>
-      <ReturnButton />
+      <ReturnButton/>
       <Transformer />
       <Background />
     </div>

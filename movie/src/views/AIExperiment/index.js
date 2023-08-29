@@ -9,12 +9,12 @@ import Styles from "./AIExperiment.module.scss"
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { getPictureById } from "../../api/picture";
+import ReturnButton from "../../components/ReturnButton";
 
 const AIExperiment = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const pictureId = searchParams.get("pictureId");
-  console.log(pictureId);
   const [pictureInfo, setPictureInfo] = useState({});
 
   useEffect(() => {
@@ -24,7 +24,6 @@ const AIExperiment = () => {
           if (res.status === 200) {
             const data = res.data.data;
             setPictureInfo(data);
-            console.log(data);
           }
         })
         .catch((err) => {
@@ -60,11 +59,14 @@ const AIExperiment = () => {
     {
       name: "电影海报生成",
       icon: <NodeIndexOutlined />,
-      component: <Painting />
+      component: <Painting
+        imgPath={pictureInfo.imgPath}
+        uri={pictureInfo.uri}
+      />
     },
     {
       name: "movieGPT",
-      icon: <MessageOutlined/>,
+      icon: <MessageOutlined />,
       component: <ChatBot />
     }
   ]
@@ -72,6 +74,7 @@ const AIExperiment = () => {
 
   return (
     <div>
+      <ReturnButton />
       <div className={Styles.title}>
         <h1>AI实验室</h1>
       </div>

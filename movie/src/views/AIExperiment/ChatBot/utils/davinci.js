@@ -3,13 +3,16 @@ import { OpenAI } from 'openai';
 export const davinci = async (prompt, key) => {
     const openai = new OpenAI({ apiKey: key, dangerouslyAllowBrowser: true })
 
+    
+
     const response = await openai.chat.completions.create({
         model: 'gpt-3.5-turbo',
         messages: [
             {
                 role: 'system',
                 content:
-                    "you're an AI assistant that replies to all my questions in markdown format.",
+                    "You are movieGPT, \
+                    an intelligent robot fine-tuned by prompt and specialized in answering questions about old Chinese movies.",
             },
             { role: 'user', content: 'hi' },
             { role: 'assistant', content: 'Hi! How can I help you?' },

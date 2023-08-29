@@ -426,22 +426,22 @@ const Transformer = ({ photoStore }) => {
       <TimeSlider />
       <div className={Styles.menu}>
         <Button type="primary" id="table">
-          TABLE
+          SH LIBRARY
         </Button>
         <Button type="primary" id="sphere">
-          SPHERE
+          球形布局-1
         </Button>
         <Button type="primary" id="sphere2">
-          SPHERE2
+          球形布局-2
         </Button>
         <Button type="primary" id="plane">
-          PLANE
+          平面布局
         </Button>
         <Button type="primary" id="helix">
-          HELIX
+          螺旋布局
         </Button>
         <Button type="primary" id="grid">
-          GRID
+          网格布局
         </Button>
       </div>
       <div ref={containerRef} />

@@ -1,5 +1,4 @@
 export function setChatTemplate(actorInfo) {
-  console.log(actorInfo);
   const actorInfoList = [];
   const actorId = actorInfo.actorId;
   const avatarUrl = actorInfo.avatarUrl;
