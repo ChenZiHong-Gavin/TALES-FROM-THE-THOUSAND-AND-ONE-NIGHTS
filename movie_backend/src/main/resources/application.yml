@@ -5,8 +5,8 @@ spring:
 #      port: 27017
 #      database: movie
      mongodb:
-      host: dds-uf6ded63e5e9a4441635-pub.mongodb.rds.aliyuncs.com
-      port: 3717
+      host: localhost
+      port: 27017
       authentication-database: admin
       database: movie
       username: root

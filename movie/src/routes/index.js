@@ -3,7 +3,6 @@ import Selection from '../views/Selection';
 import { Theatre, Actor, Emotion, Photo, Tag } from '../views/Map';
 import Movie from '../views/Movie';
 import AIExperiment from '../views/AIExperiment';
-import Character from '../views/Character';
 
 const routes = [
   {
@@ -33,10 +32,10 @@ const routes = [
         path: '/map/photo',
         element: <Photo />,
       },
-      {
-        path: '/map/tag',
-        element: <Tag />,
-      }
+      // {
+      //   path: '/map/tag',
+      //   element: <Tag />,
+      // }
     ],
   },
   {
@@ -46,10 +45,6 @@ const routes = [
   {
     path: '/aiexperiment',
     element: <AIExperiment />
-  },
-  {
-    path: '/character',
-    element: <Character />,
   }
 ];
 
