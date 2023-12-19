@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "https://47.103.127.114:8080/:match*",
+        "destination": "http://47.103.127.114:8080/:match*"
+      }
+    ]
+  }
