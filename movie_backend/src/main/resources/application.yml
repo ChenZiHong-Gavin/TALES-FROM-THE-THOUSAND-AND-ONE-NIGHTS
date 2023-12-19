@@ -1,16 +1,16 @@
 spring:
   data:
-#    mongodb:
-#      host: localhost
-#      port: 27017
-#      database: movie
-     mongodb:
+    mongodb:
       host: localhost
       port: 27017
-      authentication-database: admin
       database: movie
-      username: root
-      password: '***REMOVED***'
+#     mongodb:
+#      host: localhost
+#      port: 27017
+#      authentication-database: admin
+#      database: movie
+#      username: root
+#      password: '***REMOVED***'
   servlet:
     multipart:
       max-file-size: 20MB
