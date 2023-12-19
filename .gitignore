@@ -138,8 +138,6 @@ dump/
 # logo
 logo/
 
-# video
-video/
 
 # Spring Boot
 movie_backend/HELP.md
