@@ -2,7 +2,7 @@ import axios from 'axios'
 import qs from 'qs'
 axios.defaults.timeout = 2000000;                        //响应时间
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';        //配置请求头
-axios.defaults.baseURL = 'https://47.103.127.114:8080/';   //配置接口地址
+axios.defaults.baseURL = 'https://chinese-old-movie.vercel.app/proxy';   //配置接口地址
 // axios.defaults.baseURL = 'http://47.103.127.114:8080/';   //配置接口地址
 // axios.defaults.baseURL = 'http://localhost:8080/';   //配置接口地址
 
