@@ -14,7 +14,8 @@
     <img src="images/logo.jpg" alt="Logo" width="900" height="570">
   </a>
 
-<h3 align="center">Color Analysis for Nanjing Brocade</h3>
+<h3 align="center">一千零一夜</h3>
+<h3 align="center">A CREATIVE WEBSITE FOR MOVIES</h3>
 
   <p align="center">
     project_description
