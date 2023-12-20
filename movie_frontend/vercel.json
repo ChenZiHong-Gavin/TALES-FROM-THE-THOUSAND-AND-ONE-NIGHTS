@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/proxy/:match*",
-            "destination": "http://47.103.127.114:8080/:match*"
+            "source": "/backend/(.*)",
+            "destination": "/api/proxy"
         }
     ]
 }
