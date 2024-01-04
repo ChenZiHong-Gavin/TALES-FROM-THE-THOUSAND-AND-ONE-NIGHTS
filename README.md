@@ -20,14 +20,14 @@
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ChenZiHong-Gavin/chinese-old-movie"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade">View Demo</a>
+    <a href="https://github.com/ChenZiHong-Gavin/chinese-old-movie">View Demo</a>
     ·
-    <a href="https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade/issues">Report Bug</a>
+    <a href="https://github.com/ChenZiHong-Gavin/chinese-old-movie/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade/issues">Request Feature</a>
+    <a href="https://github.com/ChenZiHong-Gavin/chinese-old-movie/issues">Request Feature</a>
   </p>
 </div>
 
@@ -106,7 +106,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade.git
+   git clone https://github.com/ChenZiHong-Gavin/chinese-old-movie.git
    ```
 3. Install NPM packages
    ```sh
@@ -140,7 +140,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/ChenZiHong-Gavin/chinese-old-movie/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,7 +178,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
-Project Link: [https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade](https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade)
+Project Link: [https://github.com/ChenZiHong-Gavin/chinese-old-movie](https://github.com/ChenZiHong-Gavin/chinese-old-movie)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -197,16 +197,16 @@ Project Link: [https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Br
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade.svg?style=for-the-badge
-[contributors-url]: https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade.svg?style=for-the-badge
-[forks-url]: https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade/network/members
-[stars-shield]: https://img.shields.io/github/stars/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade.svg?style=for-the-badge
-[stars-url]: https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade.svg?style=for-the-badge
-[issues-url]: https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade/issues
-[license-shield]: https://img.shields.io/github/license/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade.svg?style=for-the-badge
-[license-url]: https://github.com/ChenZiHong-Gavin/Color-Analysis-for-Nanjing-Brocade/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
+[contributors-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
+[forks-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/network/members
+[stars-shield]: https://img.shields.io/github/stars/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
+[stars-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
+[issues-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/issues
+[license-shield]: https://img.shields.io/github/license/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
+[license-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png

@@ -187,4 +187,7 @@ movie_backend/logs/
 movie_backend/log
 movie_backend/temp/
 
+### config ###
+movie_backend/src/main/resources/application.yml
+
 
