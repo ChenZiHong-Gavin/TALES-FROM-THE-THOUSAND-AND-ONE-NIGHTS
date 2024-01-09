@@ -15,15 +15,13 @@
   </a>
 
 <h3 align="center">一千零一夜</h3>
-<h3 align="center">A CREATIVE WEBSITE FOR MOVIES</h3>
+<h3 align="center">TALES FROM THE THOUSAND AND ONE NIGHTS</h3>
 
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/ChenZiHong-Gavin/chinese-old-movie"><strong>Explore the docs »</strong></a>
+    A creative platfrom for movies.
     <br />
     <br />
-    <a href="https://github.com/ChenZiHong-Gavin/chinese-old-movie">View Demo</a>
+    <a href="https://chinese-old-movie.vercel.app/">View Website</a>
     ·
     <a href="https://github.com/ChenZiHong-Gavin/chinese-old-movie/issues">Report Bug</a>
     ·
@@ -64,11 +62,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="images/pages.png" alt="pages" />
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+一千零一夜——用<strong>AI和创意</strong>“活化”老电影数据，一款以<strong>时空关系</strong>为表达特性向用户呈现电影知识的产品。
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- 利用大数据分析、可视化和人工智能等最先进的技术，将上海图书馆提供的老电影数据打散、重组、聚类、统计、生成，分析电影片段中的台词、画面、演员等等，为电影研究者提供新的视野，为内容创作者提供新鲜灵感，为电影爱好者提供更深入的欣赏体验。
+
+- 在宏观的电影信息洪流中明察秋毫，为反思中国电影实践、推动中国电影学术创新、公众知识普及等搭建了一个中国电影数字平台。
+
 
 
 
