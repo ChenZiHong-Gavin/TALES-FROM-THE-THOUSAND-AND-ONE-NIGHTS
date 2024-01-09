@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ChenZiHong-Gavin/chinese-old-movie">
-    <img src="images/logo.jpg" alt="Logo" width="900" height="570">
+    <img src="images/logo.jpg" alt="Logo" width="450" height="235">
   </a>
 
 <h3 align="center">一千零一夜</h3>
