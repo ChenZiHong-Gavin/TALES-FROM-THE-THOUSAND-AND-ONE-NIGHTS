@@ -2,8 +2,7 @@ import Styles from "./Selection.module.scss";
 import Script from "react-load-script";
 import { useEffect, useRef, useState } from "react";
 import { colorArray, captionArray, invitationInfo } from "./config";
-import Jump from "react-reveal/Jump";
-import { Fade } from "react-reveal";
+import { Fade, Bounce } from "react-awesome-reveal";
 import { FloatingMap, Emotion, Actors, Photo } from "./components";
 import ReturnButton from "../../components/ReturnButton";
 import { useNavigate } from "react-router-dom";
@@ -193,7 +192,7 @@ const Selction = () => {
               <span className={Styles.textEn}>{invitation.name_en}</span>
               <br />
               <span className={Styles.textCn}>
-                <Jump spy={invitation.name_cn}>{invitation.name_cn}</Jump>
+                <Bounce spy={invitation.name_cn}>{invitation.name_cn}</Bounce>
               </span>
             </div>
             <div className={Styles.number}>{invitation.number}</div>
