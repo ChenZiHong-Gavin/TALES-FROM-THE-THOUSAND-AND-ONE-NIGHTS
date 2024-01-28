@@ -217,7 +217,7 @@ Distributed under the Apache License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Gavin Chen - chenzihong_gavin@gmail.com
+Gavin Chen - chenzihong_gavin@foxmail.com
 
 Project Link: [https://github.com/ChenZiHong-Gavin/chinese-old-movie](https://github.com/ChenZiHong-Gavin/chinese-old-movie)
 
