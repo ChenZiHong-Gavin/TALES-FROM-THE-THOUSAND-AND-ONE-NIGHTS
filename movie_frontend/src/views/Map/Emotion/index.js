@@ -5,16 +5,14 @@ import EmotionChart from "./components/EmotionChart";
 import Introduction from "./components/Introduction";
 import SegmentModal from "./components/SegmentModal";
 import { inject, observer } from "mobx-react";
-import Selection from "./components/Selection";
 import { Modal } from "antd";
 import { useEffect } from "react";
 
 function Emotion({ emotionStore }) {
-  const { mode, isShowModal, toggleModal } = emotionStore;
+  const { isShowModal, toggleModal } = emotionStore;
 
   useEffect(() => {
     return () => {
-      emotionStore.setMode("emotion");
       toggleModal(false);
     };
   }, []);
@@ -34,14 +32,10 @@ function Emotion({ emotionStore }) {
       </Modal>
       <ReturnButton />
       <Introduction />
-      {mode === "emotion" ? (
-        <>
-          <EmotionMap />
-          <EmotionChart />
-        </>
-      ) : (
-        <Selection />
-      )}
+      <>
+        <EmotionMap />
+        <EmotionChart />
+      </>
     </div>
   );
 }

@@ -1,10 +1,7 @@
 import Juxtapose from "./Juxtapose";
 import StyleTransfer from "./StyleTransfer";
-import Filters from "./Filters";
-import Painting from "./Painting";
-import ChatBot from "./ChatBot";
 import { Button, Tabs } from "antd";
-import { PictureOutlined, SendOutlined, AreaChartOutlined, MessageOutlined, NodeIndexOutlined } from '@ant-design/icons';
+import { PictureOutlined, SendOutlined } from '@ant-design/icons';
 import Styles from "./AIExperiment.module.scss"
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -48,27 +45,6 @@ const AIExperiment = () => {
         imgPath={pictureInfo.imgPath}
       />
     },
-    {
-      name: "花式滤镜",
-      icon: <AreaChartOutlined />,
-      component: <Filters
-        imgPath={pictureInfo.imgPath}
-        uri={pictureInfo.uri}
-      />
-    },
-    {
-      name: "电影海报生成",
-      icon: <NodeIndexOutlined />,
-      component: <Painting
-        imgPath={pictureInfo.imgPath}
-        uri={pictureInfo.uri}
-      />
-    },
-    {
-      name: "movieGPT",
-      icon: <MessageOutlined />,
-      component: <ChatBot />
-    }
   ]
 
 

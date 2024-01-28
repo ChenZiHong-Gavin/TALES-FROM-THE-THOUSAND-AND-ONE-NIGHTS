@@ -3,10 +3,6 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 module.exports = (req, res) => {
   let target = ''
 
-  console.log(req.url)
-
-  // 代理目标地址
-  // 如果url中有/backend
   if (req.url.includes('/backend')) {
     target = 'http://47.103.127.114:8080'
   }

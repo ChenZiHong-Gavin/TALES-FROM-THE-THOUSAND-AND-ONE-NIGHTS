@@ -35,15 +35,6 @@ const Introduction = ({ emotionStore }) => {
             setRerender(!rerender);
           }
         }>换一批</Button> : null}
-        <Button
-          onClick={() => {
-            setMode(modeText === "emotion" ? "filter" : "emotion");
-            setModeText(modeText === "emotion" ? "filter" : "emotion");
-          }}
-          type="primary"
-        >
-          {modeText === "emotion" ? "筛选模式" : "分析模式"}
-        </Button>
       </div>
     </div>
   );
