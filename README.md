@@ -260,14 +260,12 @@ Lots of projects that may be helpful to this project.
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
 [contributors-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
-[forks-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/network/members
 [stars-shield]: https://img.shields.io/github/stars/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
 [stars-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/stargazers
 [issues-shield]: https://img.shields.io/github/issues/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
 [issues-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/issues
 [license-shield]: https://img.shields.io/github/license/ChenZiHong-Gavin/chinese-old-movie.svg?style=for-the-badge
-[license-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/blob/master/LICENSE.txt
+[license-url]: https://github.com/ChenZiHong-Gavin/chinese-old-movie/blob/master/LICENSE
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [SpringBoot]: https://img.shields.io/badge/SpringBoot-20232A?style=for-the-badge&logo=springboot
