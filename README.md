@@ -244,7 +244,7 @@ Lots of projects that may be helpful to this project.
 7. 艺术情感地图：[ Art Emotions Map](https://artsexperiments.withgoogle.com/art-emotions-map/)
 8. 音谱：[range slider and selectors](https://codepen.io/plotly/pen/WwXEoV)
 9. 行走模拟器：[Crowd Simulator](https://codepen.io/zadvorsky/details/xxwbBQV)
-10. 星空[Parallax Star background in CSS](https://codepen.io/sarazond/pen/LYGbwj)
+10. 星空：[Parallax Star background in CSS](https://codepen.io/sarazond/pen/LYGbwj)
 11. 标题动效：[COSMOS Title Card CSS3](https://codepen.io/sarazond/pen/vYNoxE)
 12. 响应式相册：[Accordion Image Gallery](https://codepen.io/stefcharle/pen/Gydvbx)
 13. Slider：[Clean Slider With Curved Background](https://codepen.io/mrspok407/pen/NRxBWa)
